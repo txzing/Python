@@ -11,8 +11,13 @@ from signal_slot import *
 
 
 class my_class(QMainWindow): # 主窗体本身占用一个主线程
+    test_signal = QtCore.pyqtSignal(list)  # 定义test_signal 信号
+
     def __init__(self, parent=None):
         super().__init__(parent)
+
+        self.test_signal.connect(self.print_data)  # 将信号与test槽函数关联
+
         self.statusBar().showMessage('Load UI...')
         
         if 0:
@@ -32,6 +37,18 @@ class my_class(QMainWindow): # 主窗体本身占用一个主线程
       
     def ipaddr_disconnect_btn_clicked(self):  # 设置参数
         print("hello world11111111111")
+
+    def toggle(self):
+        a = list([1, 2, 3, 4, 5])
+        self.test_signal.emit(a)  # 向槽函数发送信号
+
+    def print_data(self, list_var):  # 定义槽函数
+        # 槽函数一旦接收到test_signal 发送的数据，立即执行后续内容
+        print("cccc")
+        print(list_var) 
+
+https://blog.csdn.net/txh3093/article/details/119955235
+
 
 
     
