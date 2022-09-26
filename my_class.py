@@ -20,7 +20,7 @@ class my_class(QMainWindow): # 主窗体本身占用一个主线程
 
         self.statusBar().showMessage('Load UI...')
         
-        if 0:
+        if 1:
             self.ui = uic.loadUi('UI.ui',self) #
         else:
             self.ui = Ui_MainWindow()
@@ -28,11 +28,13 @@ class my_class(QMainWindow): # 主窗体本身占用一个主线程
 
 #add you code
 
-            self.ui.ipaddr_connect_btn.clicked.connect(print1)
+        self.ipaddr_connect_btn.clicked.connect(print1) #第一种加载UI方式后，也可如此定义槽函数
+        # self.ui.ipaddr_connect_btn.clicked.connect(print1)
+
 
             # self.ipaddr_disconnect_btn.clicked.connect(MainWindow.print)
 
-    def ipaddr_disconnect_btn_clicked(self):  # 设置参数
+    def ipaddr_disconnect_btn_clicked(self, event):  # 设置参数
         print("hello world11111111111")
       
     def ipaddr_disconnect_btn_clicked(self):  # 设置参数
@@ -47,7 +49,39 @@ class my_class(QMainWindow): # 主窗体本身占用一个主线程
         print("cccc")
         print(list_var) 
 
-https://blog.csdn.net/txh3093/article/details/119955235
+    def closeEvent(self, event):
+        reply = QtWidgets.QMessageBox.question(self,
+                                            '本程序',
+                                            "是否要退出程序？",
+                                            QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
+                                            QtWidgets.QMessageBox.No)
+        if reply == QtWidgets.QMessageBox.Yes:
+            event.accept()
+        else:
+            event.ignore()
+            return
+
+        try:
+            # self.m1
+            pass
+        except Exception as ret:
+            print(ret)
+        else:
+            pass
+            # del self.m1
+          
+        try:
+            # self.ut
+            pass
+        except Exception as ret:
+            print(ret)
+        else:
+            # self.ut.udp_close()
+            pass
+
+
+
+# https://blog.csdn.net/txh3093/article/details/119955235
 
 
 
