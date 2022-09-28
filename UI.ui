@@ -1,963 +1,358 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1075</width>
-    <height>790</height>
+    <width>667</width>
+    <height>603</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>Form</string>
   </property>
-  <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>90</y>
-      <width>1051</width>
-      <height>681</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>2</number>
-    </property>
-    <widget class="QWidget" name="low_level">
-     <property name="accessibleName">
-      <string/>
+  <layout class="QGridLayout" name="gridLayout_3">
+   <item row="0" column="1">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
      </property>
-     <attribute name="title">
-      <string>low_level</string>
-     </attribute>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>30</y>
-        <width>1011</width>
-        <height>451</height>
-       </rect>
-      </property>
-      <layout class="QGridLayout" name="gridLayout">
+     <widget class="QWidget" name="Debug">
+      <attribute name="title">
+       <string>Debug</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_13">
+       <item row="0" column="0" colspan="2">
+        <layout class="QGridLayout" name="gridLayout_11">
+         <item row="0" column="0">
+          <widget class="QTextEdit" name="textEdit_receive">
+           <property name="minimumSize">
+            <size>
+             <width>450</width>
+             <height>320</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>460</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1" alignment="Qt::AlignLeft">
+          <widget class="QGroupBox" name="groupBox_3">
+           <property name="title">
+            <string>网络设置</string>
+           </property>
+           <layout class="QGridLayout" name="gridLayout_9">
+            <item row="0" column="0">
+             <widget class="QLabel" name="label">
+              <property name="text">
+               <string>(1)协议类型</string>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <widget class="QComboBox" name="comboBox_type">
+              <property name="currentIndex">
+               <number>-1</number>
+              </property>
+             </widget>
+            </item>
+            <item row="2" column="0">
+             <widget class="QLabel" name="label_ip">
+              <property name="text">
+               <string>(2)本地主机地址</string>
+              </property>
+             </widget>
+            </item>
+            <item row="3" column="0">
+             <widget class="QComboBox" name="comboBox_ip"/>
+            </item>
+            <item row="4" column="0">
+             <widget class="QLabel" name="label_port">
+              <property name="text">
+               <string>(3)本地主机端口</string>
+              </property>
+             </widget>
+            </item>
+            <item row="5" column="0">
+             <widget class="QLineEdit" name="lineEdit_port"/>
+            </item>
+            <item row="6" column="0">
+             <widget class="QPushButton" name="pushButton_Open">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>打开</string>
+              </property>
+             </widget>
+            </item>
+            <item row="7" column="0">
+             <widget class="QPushButton" name="pushButton_CleanRecevice">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>30</height>
+               </size>
+              </property>
+              <property name="text">
+               <string>清除接收区</string>
+              </property>
+             </widget>
+            </item>
+            <item row="8" column="0">
+             <widget class="QCheckBox" name="checkBox_HexRecevive">
+              <property name="text">
+               <string>16进制显示</string>
+              </property>
+             </widget>
+            </item>
+            <item row="9" column="0">
+             <widget class="QCheckBox" name="checkBox_time">
+              <property name="text">
+               <string>时间戳</string>
+              </property>
+             </widget>
+            </item>
+            <item row="10" column="0">
+             <spacer name="verticalSpacer">
+              <property name="orientation">
+               <enum>Qt::Vertical</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>49</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QWidget" name="widget_client" native="true">
+         <layout class="QGridLayout" name="gridLayout_12">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_ipname">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>客户端</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="comboBox_ClientIp">
+            <property name="minimumSize">
+             <size>
+              <width>355</width>
+              <height>0</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="pushButton_ClientClose">
+            <property name="maximumSize">
+             <size>
+              <width>50</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>断开</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <layout class="QGridLayout" name="gridLayout_10">
+         <item row="0" column="0" rowspan="2">
+          <widget class="QTextEdit" name="textEdit_Send"/>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton_Send">
+           <property name="minimumSize">
+            <size>
+             <width>60</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>发送</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QPushButton" name="pushButton_SendClean">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>30</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>清除发送区</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="0">
+        <layout class="QGridLayout" name="gridLayout_8">
+         <item row="0" column="0">
+          <layout class="QGridLayout" name="gridLayout_7">
+           <item row="1" column="2" colspan="2">
+            <widget class="QCheckBox" name="checkBox_SendEnd">
+             <property name="text">
+              <string>发送新行</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="checkBox_TimeSend">
+             <property name="text">
+              <string>定时发送</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="4">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>ms</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0" colspan="2">
+            <widget class="QCheckBox" name="checkBox_HexSend">
+             <property name="text">
+              <string>16进制发送</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+             <property name="tristate">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QLineEdit" name="lineEdit_IntervalTime"/>
+           </item>
+           <item row="0" column="1" colspan="2">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>周期</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item row="0" column="1">
+          <layout class="QGridLayout" name="gridLayout_6">
+           <item row="1" column="1">
+            <widget class="QLabel" name="label_SendNum">
+             <property name="text">
+              <string>发送:0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0" rowspan="4">
+            <widget class="Line" name="line_5">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLabel" name="label_ReceviceNum">
+             <property name="minimumSize">
+              <size>
+               <width>70</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>接收:0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QPushButton" name="btn_clear_cnt">
+             <property name="text">
+              <string>clear</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="Line" name="line_6">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="3" column="1">
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>262</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="Show">
+      <attribute name="title">
+       <string>Show</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_14">
        <item row="0" column="0">
-        <widget class="QGroupBox" name="groupBox">
-         <property name="title">
-          <string>Memory Access</string>
-         </property>
-         <widget class="QLineEdit" name="ll_mm_value_lineEdit">
-          <property name="geometry">
-           <rect>
-            <x>70</x>
-            <y>70</y>
-            <width>111</width>
-            <height>23</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="ll_mm_read_btn">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>100</y>
-            <width>161</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Read</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_addr">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>40</y>
-            <width>41</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>ADDR</string>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="ll_mm_write_btn">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>130</y>
-            <width>161</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Write</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_value">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>70</y>
-            <width>41</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>VALUE</string>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="ll_mm_addr_lineEdit">
-          <property name="geometry">
-           <rect>
-            <x>70</x>
-            <y>40</y>
-            <width>111</width>
-            <height>23</height>
-           </rect>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QGroupBox" name="groupBox_3">
-         <property name="title">
-          <string>SPI Access</string>
-         </property>
-         <widget class="QLineEdit" name="ll_spi_recv_lineEdit">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>140</y>
-            <width>111</width>
-            <height>23</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="ll_spi_send_btn">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>170</y>
-            <width>171</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Send</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_addr_2">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>110</y>
-            <width>41</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Send</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_value_2">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>140</y>
-            <width>51</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Recieve</string>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="ll_spi_send_lineEdit">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>110</y>
-            <width>111</width>
-            <height>23</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="ll_spi_ch_combobox">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>30</y>
-            <width>111</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="currentText">
-           <string/>
-          </property>
-          <property name="currentIndex">
-           <number>-1</number>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="ll_spi_cs_combobox">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>70</y>
-            <width>111</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="currentText">
-           <string/>
-          </property>
-          <property name="currentIndex">
-           <number>-1</number>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_addr_4">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>70</y>
-            <width>41</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>CS</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_addr_5">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>30</y>
-            <width>41</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>CH</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_31">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>200</y>
-            <width>131</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>eg. ch1cs0 send </string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_33">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>230</y>
-            <width>221</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>&quot;0,1&quot;, &quot;0x40,0&quot;, &quot;0,3&quot;, &quot;0x80,0&quot;</string>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QGroupBox" name="groupBox_4">
-         <property name="title">
-          <string>IIC Access</string>
-         </property>
-         <widget class="QLineEdit" name="ll_iic_recv_lineEdit">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>150</y>
-            <width>111</width>
-            <height>23</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="ll_iic_read_btn">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>220</y>
-            <width>171</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Read</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_addr_3">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>70</y>
-            <width>41</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>ADDR</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_value_3">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>150</y>
-            <width>51</width>
-            <height>21</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Recieve</string>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="ll_iic_addr_lineEdit">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>70</y>
-            <width>111</width>
-            <height>23</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="ll_iic_ch_combobox">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>30</y>
-            <width>111</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="currentText">
-           <string/>
-          </property>
-          <property name="currentIndex">
-           <number>-1</number>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_addr_6">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>30</y>
-            <width>41</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>CH</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_addr_7">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>105</y>
-            <width>41</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Send</string>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="ll_iic_send_lineEdit">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>110</y>
-            <width>111</width>
-            <height>23</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_30">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>190</y>
-            <width>41</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Status</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="ll_iic_status_label">
-          <property name="geometry">
-           <rect>
-            <x>90</x>
-            <y>190</y>
-            <width>41</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Busy</string>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="ll_iic_write_btn">
-          <property name="geometry">
-           <rect>
-            <x>30</x>
-            <y>260</y>
-            <width>171</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Write</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_34">
-          <property name="geometry">
-           <rect>
-            <x>0</x>
-            <y>290</y>
-            <width>251</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>eg. ch1 addr 0x74, send 0, and read</string>
-          </property>
-         </widget>
-        </widget>
-       </item>
-       <item row="0" column="3">
-        <widget class="QGroupBox" name="groupBox_6">
-         <property name="title">
-          <string>GPIO</string>
-         </property>
-         <widget class="QPushButton" name="ll_gpio_read_btn">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>160</y>
-            <width>161</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Read</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_addr_8">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>50</y>
-            <width>41</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>PIN</string>
-          </property>
-         </widget>
-         <widget class="QPushButton" name="ll_gpio_write_btn">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>200</y>
-            <width>161</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Write</string>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_value_4">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>80</y>
-            <width>41</width>
-            <height>31</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>DIR</string>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="ll_gpio_dir_combobox">
-          <property name="geometry">
-           <rect>
-            <x>70</x>
-            <y>80</y>
-            <width>111</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="currentText">
-           <string/>
-          </property>
-          <property name="currentIndex">
-           <number>-1</number>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_32">
-          <property name="geometry">
-           <rect>
-            <x>20</x>
-            <y>120</y>
-            <width>41</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>Value</string>
-          </property>
-         </widget>
-         <widget class="QComboBox" name="ll_gpio_globalno_combobox">
-          <property name="geometry">
-           <rect>
-            <x>70</x>
-            <y>50</y>
-            <width>111</width>
-            <height>27</height>
-           </rect>
-          </property>
-          <property name="currentText">
-           <string/>
-          </property>
-          <property name="currentIndex">
-           <number>-1</number>
-          </property>
-         </widget>
-         <widget class="QLineEdit" name="ll_gpio_lineEdit">
-          <property name="geometry">
-           <rect>
-            <x>70</x>
-            <y>120</y>
-            <width>111</width>
-            <height>23</height>
-           </rect>
-          </property>
-         </widget>
-         <widget class="QLabel" name="label_57">
-          <property name="geometry">
-           <rect>
-            <x>10</x>
-            <y>30</y>
-            <width>201</width>
-            <height>16</height>
-           </rect>
-          </property>
-          <property name="text">
-           <string>EMIO: PIN=EMIO+OFFSET(78)</string>
-          </property>
-         </widget>
-        </widget>
+        <widget class="QGraphicsView" name="graphicsView"/>
        </item>
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="Version">
-     <attribute name="title">
-      <string>Version</string>
-     </attribute>
-     <widget class="QGroupBox" name="groupBox_21">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>30</y>
-        <width>451</width>
-        <height>261</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>version infor</string>
-      </property>
-      <widget class="QLabel" name="hardware_ver_label">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>30</y>
-         <width>131</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>?</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="firmware_ver_label">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>70</y>
-         <width>151</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>?</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="modem_ver_label">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>120</y>
-         <width>161</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>?</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="software_ver_label">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>170</y>
-         <width>131</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>0x0000B055</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_35">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>30</y>
-         <width>131</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Hardware Version:</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_38">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>70</y>
-         <width>131</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Software Version:</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_43">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>120</y>
-         <width>131</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Modem Version:</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_36">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>170</y>
-         <width>131</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>GUI Version:</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_82">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>210</y>
-         <width>131</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Boot Region:</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="boot_region_label">
-       <property name="geometry">
-        <rect>
-         <x>260</x>
-         <y>210</y>
-         <width>141</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>?</string>
-       </property>
-      </widget>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_23">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>330</y>
-        <width>1011</width>
-        <height>291</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>upgrade</string>
-      </property>
-      <widget class="QLabel" name="label_45">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>20</y>
-         <width>111</width>
-         <height>21</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:11pt;&quot;&gt;upgrade file:&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="upgrade_file_button">
-       <property name="geometry">
-        <rect>
-         <x>690</x>
-         <y>20</y>
-         <width>111</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>select file</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="upgrade_button">
-       <property name="geometry">
-        <rect>
-         <x>830</x>
-         <y>20</y>
-         <width>121</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>upgrade-all</string>
-       </property>
-      </widget>
-      <widget class="QTextEdit" name="textEdit_upgradeFile_out_put">
-       <property name="geometry">
-        <rect>
-         <x>10</x>
-         <y>60</y>
-         <width>791</width>
-         <height>201</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="textEdit_upgradeFile">
-       <property name="geometry">
-        <rect>
-         <x>140</x>
-         <y>20</y>
-         <width>511</width>
-         <height>31</height>
-        </rect>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="upgrade_button_fpga">
-       <property name="geometry">
-        <rect>
-         <x>830</x>
-         <y>100</y>
-         <width>121</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>upgrade-fpga</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="upgrade_button_sw">
-       <property name="geometry">
-        <rect>
-         <x>830</x>
-         <y>140</y>
-         <width>121</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>upgrade-sw</string>
-       </property>
-      </widget>
-      <widget class="QPushButton" name="upgrade_file_extract_btn">
-       <property name="geometry">
-        <rect>
-         <x>830</x>
-         <y>60</y>
-         <width>121</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>extract_file</string>
-       </property>
-      </widget>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab">
-     <attribute name="title">
-      <string>debug</string>
-     </attribute>
-     <widget class="QPushButton" name="btn_send">
-      <property name="geometry">
-       <rect>
-        <x>870</x>
-        <y>520</y>
-        <width>75</width>
-        <height>23</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>send</string>
-      </property>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>30</y>
-        <width>841</width>
-        <height>271</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
-        <widget class="QLabel" name="label">
-         <property name="text">
-          <string>receive</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QTextEdit" name="textEdit"/>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>390</y>
-        <width>741</width>
-        <height>212</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
-        <widget class="QLabel" name="label_2">
-         <property name="text">
-          <string>send</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QTextEdit" name="textEdit_2"/>
-       </item>
-      </layout>
-     </widget>
-    </widget>
-    <widget class="QWidget" name="tab_3">
-     <attribute name="title">
-      <string>picture</string>
-     </attribute>
-     <widget class="QGraphicsView" name="graphicsView">
-      <property name="geometry">
-       <rect>
-        <x>50</x>
-        <y>30</y>
-        <width>941</width>
-        <height>581</height>
-       </rect>
-      </property>
-     </widget>
-    </widget>
-   </widget>
-   <widget class="QWidget" name="layoutWidget">
-    <property name="geometry">
-     <rect>
-      <x>80</x>
-      <y>20</y>
-      <width>701</width>
-      <height>61</height>
-     </rect>
-    </property>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="label_37">
-       <property name="font">
-        <font>
-         <family>黑体</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Server IP</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="ipaddr_lineEdit"/>
-     </item>
-     <item>
-      <widget class="QPushButton" name="ipaddr_connect_btn">
-       <property name="text">
-        <string>Connect</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="ipaddr_disconnect_btn">
-       <property name="text">
-        <string>Disconnect</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-  </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+   </item>
+  </layout>
  </widget>
  <resources/>
  <connections/>
- <slots>
-  <signal>print_1()</signal>
-  <slot>print()</slot>
- </slots>
 </ui>

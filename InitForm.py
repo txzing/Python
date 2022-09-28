@@ -1,9 +1,15 @@
+# _*_coding: UTF-8_*_
+
+
 import sys
-from PyQt5.QtWidgets import QWidget,QApplication,QMessageBox
-from PyQt5.QtCore import QThread, pyqtSignal,QObject,QTimer
 import time
 import threading
-import TCP_UI
+import socket
+from http import client
+from PyQt5.QtWidgets import QWidget,QApplication,QMessageBox,QComboBox
+from PyQt5.QtCore import QThread, pyqtSignal,QObject,QTimer,pyqtSlot
+from PyQt5 import QtCore,uic
+from Ui_UI import *
 from UDP import UDP_Qthread_function
 from TCP_Client import TCP_Client_Qthread_function
 from TCP_Server import TCP_Server_Qthread_function
@@ -13,14 +19,21 @@ from PyQt5.QtGui import QTextCursor,QColor
 class InitForm(QWidget):
     def __init__(self):
         super().__init__()
-        self.ui = TCP_UI.Ui_Form()
-        self.ui.setupUi(self)
-        self.setWindowTitle("网络调试助手")
+        if 1:
+            self.ui = uic.loadUi('UI.ui',self) #
+        else:
+            self.ui = Ui_Form()
+            self.ui.setupUi(self)
+
+        self.setWindowTitle("调试助手")
         print("主线线程id:",threading.current_thread().ident)
+
         self.UI_Init()
         self.UDP_Init()
         self.TCP_Client_Init()
         self.TCP_Server_Init()
+        self.ReceiveLength = 0
+        self.SendLength    = 0
         
 
     def UDP_Init(self):
@@ -33,6 +46,7 @@ class InitForm(QWidget):
         self.UDP_Qthread_function.signal_pushButton_Open.connect(self.UDP_Qthread_function.slot_pushButton_Open)
         self.UDP_Qthread_function.signal_pushButton_Open_flage.connect(self.slot_pushButton_Open_flage)
         self.UDP_Qthread_function.signal_readyRead.connect(self.slot_readyRead)
+        self.UDP_Qthread_function.signal_SendData_Num.connect(self.slot_SendData_Num)
         self.UDP_Qthread_function.signal_UDP_qthread_function_Init.emit()
 
 
@@ -46,6 +60,7 @@ class InitForm(QWidget):
         self.TCP_Client_Qthread_function.signal_SendData.connect(self.TCP_Client_Qthread_function.slot_SendData)
         self.TCP_Client_Qthread_function.signal_pushButton_Open_flage.connect(self.slot_pushButton_Open_flage)
         self.TCP_Client_Qthread_function.signal_readyRead.connect(self.slot_readyRead)
+        self.TCP_Client_Qthread_function.signal_SendData_Num.connect(self.slot_SendData_Num)
         self.TCP_Client_Qthread_function.signal_TCP_Client_qthread_function_Init.emit() 
 
 
@@ -61,27 +76,32 @@ class InitForm(QWidget):
         self.TCP_Server_Qthread_function.signal_pushButton_Open_flage.connect(self.slot_pushButton_Open_flage)
         self.TCP_Server_Qthread_function.signal_readyRead.connect(self.slot_readyRead)
         self.TCP_Server_Qthread_function.signal_NewClient.connect(self.slot_NewClient)
+        self.TCP_Server_Qthread_function.signal_SendData_Num.connect(self.slot_SendData_Num)
         self.TCP_Server_Qthread_function.signal_TCP_Server_qthread_function_Init.emit() 
 
 
     def UI_Init(self):
-        comboBox_type = {'UDP','TCP Client','TCP Server'}
-        self.ui.comboBox_type.currentTextChanged.connect(self.comboBox_type)
-        self.ui.comboBox_type.addItems(comboBox_type)
-        self.ui.lineEdit_port.setText("8888")
-        self.ui.pushButton_Open.clicked.connect(self.pushButton_Open)
-        self.ui.pushButton_Send.clicked.connect(self.pushButton_Send)
-        self.ui.pushButton_ClientClose.clicked.connect(self.pushButton_ClientClose)
+        protocol_type = {'UDP','TCP Client','TCP Server'}
+        self.ui.comboBox_type.currentTextChanged.connect(self.comboBox_type_changed)
+        self.ui.comboBox_type.addItems(protocol_type)
+        self.ui.comboBox_type.setCurrentText('UDP')
+        self.ui.lineEdit_port.setText("8080")
+
+        self.ui.pushButton_Open.clicked.connect(self.pushButton_Open_clicked)
+        self.ui.pushButton_Send.clicked.connect(self.pushButton_Send_clicked)
+        self.ui.pushButton_CleanRecevice.clicked.connect(self.pushButton_CleanRecevice_clicked)
+        self.ui.pushButton_SendClean.clicked.connect(self.pushButton_SendClean_clicked)
+        self.ui.pushButton_ClientClose.clicked.connect(self.pushButton_ClientClose_clicked)
 
         self.time_send = QTimer()
         self.time_send.timeout.connect(self.TimeOut_Send)
-        self.ui.checkBox_TimeSend.stateChanged.connect(self.checkBox_TimeSend)
-        self.ui.checkBox_HexSend.stateChanged.connect(self.checkBox_HexSend)
+        self.ui.checkBox_TimeSend.stateChanged.connect(self.checkBox_TimeSend_ischecked)
+        self.ui.checkBox_HexSend.stateChanged.connect(self.checkBox_HexSend_ischecked)
         self.ui.lineEdit_IntervalTime.setText("100")
         
         
 
-    def comboBox_type(self,str):
+    def comboBox_type_changed(self,str):
         scan_ip = self.Search_ip()
         self.ui.comboBox_ip.clear()
         self.ui.comboBox_ip.addItems(scan_ip)
@@ -94,6 +114,10 @@ class InitForm(QWidget):
             self.ui.comboBox_ClientIp.setEditable(True)
             self.ui.label_ipname.setText("远程主机")
             self.ui.pushButton_ClientClose.hide()
+            self.ui.comboBox_ClientIp.clear()
+            remote_addr = {'192.168.1.10:5555'}
+            self.ui.comboBox_ClientIp.addItems(remote_addr)
+
         elif str == 'TCP Server':
             print("选中TCP Server")
             self.ui.label_ip.setText("(2)本地主机地址")
@@ -124,7 +148,7 @@ class InitForm(QWidget):
         return scan_ip
 
 
-    def pushButton_Open(self):
+    def pushButton_Open_clicked(self):
         choose_type = self.ui.comboBox_type.currentText()
         parameter = {}
         parameter['ip']   = self.ui.comboBox_ip.currentText()
@@ -137,32 +161,45 @@ class InitForm(QWidget):
         else:
             self.TCP_Client_Qthread_function.signal_pushButton_Open.emit(parameter)
 
-    def pushButton_Send(self):
+    def pushButton_Send_clicked(self):
+
         send_buff = ''
-        if self.ui.checkBox_HexSend.checkState():
+        if self.ui.checkBox_HexSend.isChecked():
             send_list = []
             send_text = self.ui.textEdit_Send.toPlainText()
+
+            if self.ui.checkBox_SendEnd.isChecked():
+                send_text = (send_text + '\r\n')
+            else:
+                send_text = send_text
+
+            print('send_text:' + send_text)
+            
             while send_text != '':
                 try:
                     num = int(send_text[0:2],16)
-                except:
-                  #  qw.QMessageBox.warning(self,'错误信息','请正确输入16进制数据')
+                    
+                except ValueError:
+                    QMessageBox.critical(self, 'wrong data', '请输入十六进制数据，以空格分开!')
                     return
+                # print(send_list)   
+
                 send_text = send_text[2:].strip()
                 send_list.append(num)
-            input_s = bytes(send_list).decode()
-            if self.ui.checkBox_SendEnd.checkState():
-                send_buff = input_s + '\r\n'
-            else:
-                send_buff = input_s
+
+            send_buff = bytes(send_list)
+
+# 00 07 00 00 80 01 00
+
+
         else:
             if self.ui.checkBox_SendEnd.checkState():
-                send_buff = self.ui.textEdit_Send.toPlainText() + '\r\n'
+                send_buff = (self.ui.textEdit_Send.toPlainText() + '\r\n').encode('utf-8')
             else:
-                send_buff = self.ui.textEdit_Send.toPlainText()
+                send_buff = self.ui.textEdit_Send.toPlainText().encode('utf-8')
 
-        Byte_data = str.encode(send_buff)
-        #print("发送数据" + send_buff)
+        # Byte_data = str.encode(send_buff)
+        Byte_data = send_buff
 
         choose_type = self.ui.comboBox_type.currentText()
         parameter = {}
@@ -178,8 +215,19 @@ class InitForm(QWidget):
             self.TCP_Client_Qthread_function.signal_SendData.emit(parameter)
             #self.TCP_Client_Qthread_function.signal_pushButton_Open.emit(parameter)
 
+    def pushButton_CleanRecevice_clicked(self):
+        self.ReceiveLength = 0
+        self.ui.label_ReceviceNum.setText("接收:0")
+        self.ui.textEdit_receive.clear()
+        self.SendLength = 0
+        self.ui.label_SendNum.setText("接收:0")
 
-    def pushButton_ClientClose(self):
+    def pushButton_SendClean_clicked(self):
+        self.SendLength = 0
+        self.ui.label_SendNum.setText("接收:0")
+        self.ui.textEdit_Send.clear()
+
+    def pushButton_ClientClose_clicked(self):
         ip_port = self.ui.comboBox_ClientIp.currentText()
         self.TCP_Server_Qthread_function.signal_CloseClient.emit(ip_port)
 
@@ -187,7 +235,7 @@ class InitForm(QWidget):
     def TimeOut_Send(self):
         self.pushButton_Send()
 
-    def checkBox_TimeSend(self,state):
+    def checkBox_TimeSend_ischecked(self,state):
         print("勾选定时器")
         if state == 2:
             time_data = self.ui.lineEdit_IntervalTime.text()
@@ -195,7 +243,7 @@ class InitForm(QWidget):
         else:
             self.time_send.stop()
 
-    def checkBox_HexSend(self,state):
+    def checkBox_HexSend_ischecked(self,state):
         if state == 2:
             send_text = self.ui.textEdit_Send.toPlainText()
             Byte_text = str.encode(send_text)
@@ -239,6 +287,9 @@ class InitForm(QWidget):
 
     def slot_readyRead(self,data):
 
+        self.ReceiveLength = self.ReceiveLength  + len(data['buf'])
+        self.ui.label_ReceviceNum.setText("接收:" + str(self.ReceiveLength))
+
         if self.ui.checkBox_time.checkState():
             time_str  = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()) + "     "
             self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
@@ -269,12 +320,27 @@ class InitForm(QWidget):
         self.ui.textEdit_receive.insertPlainText(View_data)
         self.ui.textEdit_receive.moveCursor(QTextCursor.End)
 
+    def slot_SendData_Num(self,num):
+        self.SendLength = self.SendLength + num
+        self.ui.label_SendNum.setText("发送:" + str(self.SendLength))
 
     def slot_NewClient(self,parameter):
         self.ui.comboBox_ClientIp.clear()
         self.ui.comboBox_ClientIp.addItems(parameter)
-        
+
+    
     def closeEvent(self, event):
+        # reply = QtWidgets.QMessageBox.question(self,
+        #                                     '本程序',
+        #                                     "是否要退出程序？",
+        #                                     QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No,
+        #                                     QtWidgets.QMessageBox.No)
+        # if reply == QtWidgets.QMessageBox.Yes:
+        #     event.accept()
+        # else:
+        #     event.ignore()
+        #     return
+
         print("窗体关闭")
         self.UDP_QThread.quit()
         self.UDP_QThread.wait()
@@ -286,12 +352,14 @@ class InitForm(QWidget):
 
         self.TCP_Server_QThread.quit()
         self.TCP_Server_QThread.wait() 
-        del self.TCP_Server_Qthread_function
+        del self.TCP_Server_Qthread_function    
+          
+        try:
+            # self.ut
+            pass
+        except Exception as ret:
+            print(ret)
+        else:
+            # self.ut.udp_close()
+            pass
 
-
-if __name__ == "__main__":
-
-    app = QApplication(sys.argv)
-    w1 = InitForm()
-    w1.show()
-    sys.exit(app.exec_())
