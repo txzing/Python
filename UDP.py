@@ -46,8 +46,7 @@ class UDP_Qthread_function(QObject):
 
     def slot_readyRead(self):
         buf = bytes()
-        buf,ip,port = self.udpsocket.readDatagram(1024)
-
+        buf,ip,port = self.udpsocket.readDatagram(1449)
         data = {}
         data['ip']   = ip.toString()
         data['port'] = port

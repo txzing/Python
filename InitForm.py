@@ -1,8 +1,8 @@
 # _*_coding: UTF-8_*_
 
-
 import sys
 import time
+import struct
 import threading
 import socket
 from http import client
@@ -15,6 +15,9 @@ from TCP_Client import TCP_Client_Qthread_function
 from TCP_Server import TCP_Server_Qthread_function
 from PyQt5.QtNetwork import QNetworkInterface
 from PyQt5.QtGui import QTextCursor,QColor
+
+
+# 00 07 00 00 80 01 00
 
 class InitForm(QWidget):
     def __init__(self):
@@ -33,13 +36,12 @@ class InitForm(QWidget):
         self.TCP_Client_Init()
         self.TCP_Server_Init()
         self.ReceiveLength = 0
-        self.SendLength    = 0
-        
+        self.SendLength    = 0    
 
     def UDP_Init(self):
         self.UDP_QThread  = QThread()
         self.UDP_Qthread_function = UDP_Qthread_function()
-        self.UDP_Qthread_function.moveToThread(self.UDP_QThread)    
+        self.UDP_Qthread_function.moveToThread(self.UDP_QThread)  
         self.UDP_QThread.start()  
         self.UDP_Qthread_function.signal_UDP_qthread_function_Init.connect(self.UDP_Qthread_function.UDP_qthread_function_Init)
         self.UDP_Qthread_function.signal_SendData.connect(self.UDP_Qthread_function.slot_SendData)
@@ -88,18 +90,104 @@ class InitForm(QWidget):
         self.ui.lineEdit_port.setText("8080")
 
         self.ui.pushButton_Open.clicked.connect(self.pushButton_Open_clicked)
-        self.ui.pushButton_Send.clicked.connect(self.pushButton_Send_clicked)
+        self.ui.btn_send.clicked.connect(self.btn_send_clicked)
         self.ui.pushButton_CleanRecevice.clicked.connect(self.pushButton_CleanRecevice_clicked)
-        self.ui.pushButton_SendClean.clicked.connect(self.pushButton_SendClean_clicked)
+        self.ui.btn_send_clean.clicked.connect(self.btn_send_clean_clicked)
         self.ui.pushButton_ClientClose.clicked.connect(self.pushButton_ClientClose_clicked)
+        self.ui.btn_clear_cnt.clicked.connect(self.btn_clear_cnt_clicked)
+        self.ui.btn_pic_send_on.clicked.connect(self.btn_pic_send_on_clicked)
+        self.ui.btn_pic_send_off.clicked.connect(self.btn_pic_send_off_clicked)
 
         self.time_send = QTimer()
         self.time_send.timeout.connect(self.TimeOut_Send)
         self.ui.checkBox_TimeSend.stateChanged.connect(self.checkBox_TimeSend_ischecked)
         self.ui.checkBox_HexSend.stateChanged.connect(self.checkBox_HexSend_ischecked)
-        self.ui.lineEdit_IntervalTime.setText("100")
-        
-        
+        self.ui.lineEdit_IntervalTime.setText("100")     
+           
+
+        self.ui.btn_send.setEnabled(False)
+        self.ui.btn_pic_send_on.setEnabled(False)
+        self.ui.btn_pic_send_off.setEnabled(False)
+
+        self.setLED_0(2)
+        self.setLED_1(0)
+        self.setLED_2(1)
+
+
+    def setLED_0(self, color):
+        _translate = QtCore.QCoreApplication.translate
+        self.LED_0.setText(_translate("Form", ""))
+        min_width = "min-width: 16px;"
+        min_height = "min-height: 16px;"
+        max_width = "max-width: 16px;"
+        max_height = "max-height: 16px;"
+        border_radius = "border-radius: 8px;"
+        border = "border:1px solid black;"
+        background = "background-color:"
+
+        if(color == 0):
+            # gray
+            background += "rgb(190,190,190)"
+        elif(color == 1):
+            # red
+            background += "rgb(255,0,0)"
+        elif(color == 2):
+            # green
+            background += "rgb(0,255,0)"
+        else:
+            background += "rgb(190,190,190)"
+        SheetStyle = min_width + min_height + max_width + max_height + border_radius + border + background
+        self.ui.LED_0.setStyleSheet(SheetStyle)
+
+    def setLED_1(self, color):
+        _translate = QtCore.QCoreApplication.translate
+        self.LED_1.setText(_translate("Form", ""))
+        min_width = "min-width: 16px;"
+        min_height = "min-height: 16px;"
+        max_width = "max-width: 16px;"
+        max_height = "max-height: 16px;"
+        border_radius = "border-radius: 8px;"
+        border = "border:1px solid black;"
+        background = "background-color:"
+
+        if(color == 0):
+            # gray
+            background += "rgb(190,190,190)"
+        elif(color == 1):
+            # red
+            background += "rgb(255,0,0)"
+        elif(color == 2):
+            # green
+            background += "rgb(0,255,0)"
+        else:
+            background += "rgb(190,190,190)"
+        SheetStyle = min_width + min_height + max_width + max_height + border_radius + border + background
+        self.ui.LED_1.setStyleSheet(SheetStyle)
+
+    def setLED_2(self, color):
+        _translate = QtCore.QCoreApplication.translate
+        self.LED_2.setText(_translate("Form", ""))
+        min_width = "min-width: 16px;"
+        min_height = "min-height: 16px;"
+        max_width = "max-width: 16px;"
+        max_height = "max-height: 16px;"
+        border_radius = "border-radius: 8px;"
+        border = "border:1px solid black;"
+        background = "background-color:"
+
+        if(color == 0):
+            # gray
+            background += "rgb(190,190,190)"
+        elif(color == 1):
+            # red
+            background += "rgb(255,0,0)"
+        elif(color == 2):
+            # green
+            background += "rgb(0,255,0)"
+        else:
+            background += "rgb(190,190,190)"
+        SheetStyle = min_width + min_height + max_width + max_height + border_radius + border + background
+        self.ui.LED_2.setStyleSheet(SheetStyle)
 
     def comboBox_type_changed(self,str):
         scan_ip = self.Search_ip()
@@ -117,7 +205,7 @@ class InitForm(QWidget):
             self.ui.comboBox_ClientIp.clear()
             remote_addr = {'192.168.1.10:5555'}
             self.ui.comboBox_ClientIp.addItems(remote_addr)
-
+            
         elif str == 'TCP Server':
             print("选中TCP Server")
             self.ui.label_ip.setText("(2)本地主机地址")
@@ -161,8 +249,8 @@ class InitForm(QWidget):
         else:
             self.TCP_Client_Qthread_function.signal_pushButton_Open.emit(parameter)
 
-    def pushButton_Send_clicked(self):
 
+    def btn_send_clicked(self):
         send_buff = ''
         if self.ui.checkBox_HexSend.isChecked():
             send_list = []
@@ -188,9 +276,6 @@ class InitForm(QWidget):
                 send_list.append(num)
 
             send_buff = bytes(send_list)
-
-# 00 07 00 00 80 01 00
-
 
         else:
             if self.ui.checkBox_SendEnd.checkState():
@@ -219,12 +304,10 @@ class InitForm(QWidget):
         self.ReceiveLength = 0
         self.ui.label_ReceviceNum.setText("接收:0")
         self.ui.textEdit_receive.clear()
-        self.SendLength = 0
-        self.ui.label_SendNum.setText("接收:0")
 
-    def pushButton_SendClean_clicked(self):
+    def btn_send_clean_clicked(self):
         self.SendLength = 0
-        self.ui.label_SendNum.setText("接收:0")
+        self.ui.label_SendNum.setText("发送:0")
         self.ui.textEdit_Send.clear()
 
     def pushButton_ClientClose_clicked(self):
@@ -233,7 +316,7 @@ class InitForm(QWidget):
 
 
     def TimeOut_Send(self):
-        self.pushButton_Send()
+        self.btn_send_clicked()
 
     def checkBox_TimeSend_ischecked(self,state):
         print("勾选定时器")
@@ -277,6 +360,16 @@ class InitForm(QWidget):
             self.ui.comboBox_ip.setEnabled(False)
             self.ui.comboBox_type.setEnabled(False)
             self.ui.lineEdit_port.setEnabled(False)
+            self.ui.btn_send.setEnabled(True)
+
+            choose_type = self.ui.comboBox_type.currentText()
+            if choose_type == 'UDP':
+                self.ui.btn_pic_send_on.setEnabled(True)
+                self.ui.btn_pic_send_off.setEnabled(True)
+            else:
+                self.ui.btn_pic_send_on.setEnabled(False)
+                self.ui.btn_pic_send_off.setEnabled(False)
+            
         else:
             print('关闭')
             self.ui.pushButton_Open.setText("打开")
@@ -284,9 +377,11 @@ class InitForm(QWidget):
             self.ui.comboBox_ip.setEnabled(True)
             self.ui.comboBox_type.setEnabled(True)
             self.ui.lineEdit_port.setEnabled(True)
+            self.ui.btn_send.setEnabled(False)
+            self.ui.btn_pic_send_on.setEnabled(False)
+            self.ui.btn_pic_send_off.setEnabled(False)
 
     def slot_readyRead(self,data):
-
         self.ReceiveLength = self.ReceiveLength  + len(data['buf'])
         self.ui.label_ReceviceNum.setText("接收:" + str(self.ReceiveLength))
 
@@ -296,28 +391,29 @@ class InitForm(QWidget):
             self.ui.textEdit_receive.insertPlainText(time_str)
             self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
 
-        View_data = ''
-        Byte_data = bytes(data['buf'])
-        if self.ui.checkBox_HexRecevive.checkState():
-            for i in range(0,len(Byte_data)):
-                View_data = View_data + '{:02x}'.format(Byte_data[i]) + ' '
-        else:
-            View_data = Byte_data.decode('utf-8','ignore')
+        # View_data = ''
+        # Byte_data = bytes(data['buf'])
+        # if self.ui.checkBox_HexRecevive.checkState():
+        #     for i in range(0,len(Byte_data)):
+        #         View_data = View_data + '{:02x}'.format(Byte_data[i]) + ' '
+        # else:
+            # View_data = Byte_data.decode('utf-8','ignore')
 
         
-        choose_type = self.ui.comboBox_type.currentText()
-        if choose_type == 'UDP':
-            self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
-            self.ui.textEdit_receive.insertPlainText("[" + data['ip'] + ":"+ str(data['port']) + "]" + "\r\n" )
-            self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
-        elif choose_type == 'TCP Server':
-            self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
-            self.ui.textEdit_receive.insertPlainText("[" + data['ip'] + ":"+ str(data['port']) + "]" + "\r\n" )
-            self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
-        else:
-            pass
+        # choose_type = self.ui.comboBox_type.currentText()
 
-        self.ui.textEdit_receive.insertPlainText(View_data)
+        # if choose_type == 'UDP':
+        #     self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
+        #     self.ui.textEdit_receive.insertPlainText("send data:[" + data['ip'] + ":"+ str(data['port']) + "]" + "\r\n" )
+        #     self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
+        # elif choose_type == 'TCP Server':
+        #     self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
+        #     self.ui.textEdit_receive.insertPlainText("send data:[" + data['ip'] + ":"+ str(data['port']) + "]" + "\r\n" )
+        #     self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
+        # else:
+        #     pass
+
+        # self.ui.textEdit_receive.insertPlainText(View_data)
         self.ui.textEdit_receive.moveCursor(QTextCursor.End)
 
     def slot_SendData_Num(self,num):
@@ -327,6 +423,31 @@ class InitForm(QWidget):
     def slot_NewClient(self,parameter):
         self.ui.comboBox_ClientIp.clear()
         self.ui.comboBox_ClientIp.addItems(parameter)
+
+    def btn_clear_cnt_clicked(self):
+        self.SendLength = 0
+        self.ui.label_SendNum.setText("发送:0")
+        self.ReceiveLength = 0
+        self.ui.label_ReceviceNum.setText("接收:0")   
+
+    def btn_pic_send_on_clicked(self):
+        pic_off = [0x00,0x07,0x00,0x00,0x80,0x01,0x01]
+        data = struct.pack('B'*len(pic_off), *pic_off)
+        choose_type = self.ui.comboBox_type.currentText()
+        parameter = {}
+        parameter['ip_port']   = self.ui.comboBox_ClientIp.currentText()
+        parameter['data']      = data
+        self.UDP_Qthread_function.signal_SendData.emit(parameter)
+
+    def btn_pic_send_off_clicked(self):
+        pic_off = [0x00,0x07,0x00,0x00,0x80,0x01,0x00]
+        data = struct.pack('B'*len(pic_off), *pic_off)
+        choose_type = self.ui.comboBox_type.currentText()
+        parameter = {}
+        parameter['ip_port']   = self.ui.comboBox_ClientIp.currentText()
+        parameter['data']      = data
+        self.UDP_Qthread_function.signal_SendData.emit(parameter)
+
 
     
     def closeEvent(self, event):
@@ -355,11 +476,9 @@ class InitForm(QWidget):
         del self.TCP_Server_Qthread_function    
           
         try:
-            # self.ut
             pass
         except Exception as ret:
             print(ret)
         else:
-            # self.ut.udp_close()
             pass
 
