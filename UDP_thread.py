@@ -1,11 +1,9 @@
 import threading
-import UDP
-import queue
+import queue 
 import data_process as dp
 from PyQt5.QtGui import QImage, QPixmap, QImageReader, QTransform
 import time
 import cv2
-import terminal
 
 source_file = "./testvideo/"
 source_video_file = "./video_mp4/"

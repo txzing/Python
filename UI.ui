@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>667</width>
-    <height>603</height>
+    <width>1194</width>
+    <height>860</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidget">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="Debug">
       <attribute name="title">
@@ -369,11 +369,19 @@
       <attribute name="title">
        <string>Show</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_14">
-       <item row="0" column="0">
-        <widget class="QGraphicsView" name="graphicsView"/>
-       </item>
-      </layout>
+      <widget class="QLabel" name="picshow">
+       <property name="geometry">
+        <rect>
+         <x>550</x>
+         <y>380</y>
+         <width>54</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
      </widget>
     </widget>
    </item>

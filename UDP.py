@@ -1,10 +1,10 @@
 import sys
+import struct
 from PyQt5.QtWidgets import QWidget,QApplication
 from PyQt5.QtCore import QThread, pyqtSignal,QObject
 from time import sleep
 import threading
 from PyQt5.QtNetwork import QUdpSocket,QHostAddress
-
 
 class UDP_Qthread_function(QObject):
 
@@ -14,6 +14,7 @@ class UDP_Qthread_function(QObject):
     signal_readyRead                 = pyqtSignal(object)
     signal_SendData                  = pyqtSignal(object)
     signal_SendData_Num              = pyqtSignal(object)
+    
    
     def __init__(self,parent=None):
         super(UDP_Qthread_function,self).__init__(parent)
@@ -45,15 +46,19 @@ class UDP_Qthread_function(QObject):
 
 
     def slot_readyRead(self):
-        buf = bytes()
-        buf,ip,port = self.udpsocket.readDatagram(1449)
-        data = {}
-        data['ip']   = ip.toString()
-        data['port'] = port
-        data['buf']  = buf
-        self.signal_readyRead.emit(data)
-        #print('udp收到数据',ip.toString(),port,buf)
+            buf = bytes()
+            buf,ip,port = self.udpsocket.readDatagram(1449)
+            data = {}
+            data['ip']   = ip.toString()
+            data['port'] = port
+            data['buf']  = buf
+
+            # Byte_data=bytearray(buf).hex()
+            # print(Byte_data[0:10])
+            self.signal_readyRead.emit(data)
+            #print('udp收到数据',ip.toString(),port,buf)
 
     def UDP_qthread_function_Init(self):
         self.udpsocket = QUdpSocket()
         self.udpsocket.readyRead.connect(self.slot_readyRead)
+

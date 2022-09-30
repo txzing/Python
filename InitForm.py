@@ -1,13 +1,15 @@
 # _*_coding: UTF-8_*_
-
 import sys
 import time
 import struct
 import threading
 import socket
+import queue
 from http import client
+from tokenize import Ignore
 from PyQt5.QtWidgets import QWidget,QApplication,QMessageBox,QComboBox
 from PyQt5.QtCore import QThread, pyqtSignal,QObject,QTimer,pyqtSlot
+from PyQt5.QtGui import QImage, QPixmap, QImageReader, QTransform
 from PyQt5 import QtCore,uic
 from Ui_UI import *
 from UDP import UDP_Qthread_function
@@ -16,7 +18,73 @@ from TCP_Server import TCP_Server_Qthread_function
 from PyQt5.QtNetwork import QNetworkInterface
 from PyQt5.QtGui import QTextCursor,QColor
 
+import data_process as dp
+import cv2
 
+frame_queue     = queue.Queue()
+line_queue      = queue.Queue()
+bmp_queue       = queue.Queue(20)
+video_queue     = queue.Queue(20)
+lock            = threading.Lock()
+frame           = b''
+
+
+class picshow (threading.Thread):
+    def __init__(self, threadID, Label):
+        threading.Thread.__init__(self)
+        self.threadID = threadID
+        self.Label = Label
+        self.put_queue_flag = True          # 默认不放入队列，当save开始时候，开启
+        self.put_video_queue_flag = False  # 默认不放入队列，当save开始时候，开启
+
+    def run(self):
+        print("开始线程" + str(self.threadID))
+        while(~frame_queue.empty()):
+            start = time.time()
+            frame_bytes = frame_queue.get()
+
+            pic_data=bytearray(frame_bytes).hex()
+            # print(pic_data)
+            # print('len(frame_bytes) = %d'%len(frame_bytes))
+
+            fd = open('rgb888.ppm', "w")
+            width_out=640
+            height_out=720
+            fd.write("P3\n")
+            fd.write("%0d %0d\n" % (width_out, height_out))
+            fd.write("%0d\n" % (2**8-1))
+
+            
+            for i in range(int(len(pic_data)/2)):          
+                fd.write("%0d\n"%int(pic_data[i*2:(i*2)+2],16))
+            fd.close()
+
+            bmp = dp.RGB2BMP(frame_bytes)
+
+            print('len(bmp)=%d'%len(bmp))
+
+            pix = QPixmap()
+            load_flag = pix.loadFromData(bmp, "BMP")                # 加载bmp图像数据，返回bool型变量，是否成功
+            # 转成qimage类型，适合旋转图像
+            image = pix.toImage()
+            image = image.mirrored(False, True)
+            if(self.put_queue_flag):
+                bmp_queue.put(image)
+            
+            bmp_pic = bmp_queue.get()
+            bmp_pic.save("data.bmp")
+
+            if(self.put_video_queue_flag):
+                video_queue.put(image)
+            self.Label.setPixmap(QPixmap.fromImage(image))
+
+
+
+            end = time.time()
+            seconds = end - start
+            # fps = 1 / seconds
+            print('fps = %f'%seconds)
+        
 # 00 07 00 00 80 01 00
 
 class InitForm(QWidget):
@@ -36,7 +104,9 @@ class InitForm(QWidget):
         self.TCP_Client_Init()
         self.TCP_Server_Init()
         self.ReceiveLength = 0
-        self.SendLength    = 0    
+        self.SendLength    = 0  
+        self.cnt_index    = 1 
+
 
     def UDP_Init(self):
         self.UDP_QThread  = QThread()
@@ -112,6 +182,9 @@ class InitForm(QWidget):
         self.setLED_0(2)
         self.setLED_1(0)
         self.setLED_2(1)
+
+        self.ui.picshow.setGeometry(QtCore.QRect(250, 0, 640, 720))
+        self.ui.picshow.setObjectName("picshow")
 
 
     def setLED_0(self, color):
@@ -366,6 +439,13 @@ class InitForm(QWidget):
             if choose_type == 'UDP':
                 self.ui.btn_pic_send_on.setEnabled(True)
                 self.ui.btn_pic_send_off.setEnabled(True)
+
+                self.show_pic = picshow(threadID=2, Label=self.ui.picshow)
+                # 设置线程为守护线程，防止退出主线程时，子线程仍在运行
+                self.show_pic.setDaemon(True)
+                # 启动线程
+                self.show_pic.start()
+
             else:
                 self.ui.btn_pic_send_on.setEnabled(False)
                 self.ui.btn_pic_send_off.setEnabled(False)
@@ -384,36 +464,67 @@ class InitForm(QWidget):
     def slot_readyRead(self,data):
         self.ReceiveLength = self.ReceiveLength  + len(data['buf'])
         self.ui.label_ReceviceNum.setText("接收:" + str(self.ReceiveLength))
+        View_data = ''
+        Byte_data = bytes(data['buf'])
 
-        if self.ui.checkBox_time.checkState():
-            time_str  = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()) + "     "
-            self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
-            self.ui.textEdit_receive.insertPlainText(time_str)
-            self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
+        protocol_data=bytearray(Byte_data).hex()[0:18]
+        protocol_head = protocol_data[0:12]
+        sn_index = int(protocol_data[12:18],16)   
 
-        # View_data = ''
-        # Byte_data = bytes(data['buf'])
-        # if self.ui.checkBox_HexRecevive.checkState():
-        #     for i in range(0,len(Byte_data)):
-        #         View_data = View_data + '{:02x}'.format(Byte_data[i]) + ' '
-        # else:
-            # View_data = Byte_data.decode('utf-8','ignore')
+        # print(protocol_head)
+        # print(sn_index)
+        global frame 
+        if ( protocol_head == '05a900008101' or protocol_head == '05a900008102') :
+            if (self.cnt_index  == sn_index):
+                if(self.cnt_index == 1):
+                    frame = b''
+                    frame = frame + Byte_data[9:]                    
+                    self.cnt_index  = self.cnt_index  + 1
+                    # print(protocol_data)
 
-        
-        # choose_type = self.ui.comboBox_type.currentText()
+                elif(self.cnt_index == 960):
+                    frame = frame + Byte_data[9:]    
+                    frame_queue.put(frame)
+                    frame = b''
+                    self.cnt_index  = 1
+                else:
+                    frame = frame + Byte_data[9:]
+                    self.cnt_index  = self.cnt_index  + 1             
+            else :  
+                frame = b''
+                self.cnt_index  = 1
+                print('send error, lose data')
 
-        # if choose_type == 'UDP':
-        #     self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
-        #     self.ui.textEdit_receive.insertPlainText("send data:[" + data['ip'] + ":"+ str(data['port']) + "]" + "\r\n" )
-        #     self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
-        # elif choose_type == 'TCP Server':
-        #     self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
-        #     self.ui.textEdit_receive.insertPlainText("send data:[" + data['ip'] + ":"+ str(data['port']) + "]" + "\r\n" )
-        #     self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
-        # else:
-        #     pass
+        else :
+            # print('no pic protocol data')
+            if self.ui.checkBox_time.checkState():
+                time_str  = time.strftime('%Y-%m-%d %H:%M:%S',time.localtime()) + "     "
+                self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
+                self.ui.textEdit_receive.insertPlainText(time_str)
+                self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
 
-        # self.ui.textEdit_receive.insertPlainText(View_data)
+            choose_type = self.ui.comboBox_type.currentText()
+            if choose_type == 'UDP':
+                self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
+                self.ui.textEdit_receive.insertPlainText("receive data:[" + data['ip'] + ":"+ str(data['port']) + "]" + "\r\n" )
+                self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
+            elif choose_type == 'TCP Server':
+                self.ui.textEdit_receive.setTextColor(QColor(255,100,100))
+                self.ui.textEdit_receive.insertPlainText("receive data:[" + data['ip'] + ":"+ str(data['port']) + "]" + "\r\n" )
+                self.ui.textEdit_receive.setTextColor(QColor(0,0,0))
+            else:
+                pass
+
+            if self.ui.checkBox_HexRecevive.checkState():
+                for i in range(0,len(Byte_data)):
+                    View_data = View_data + '{:02x}'.format(Byte_data[i]) + ' '
+            else:
+                # View_data = Byte_data.decode('ascii','ignore')
+                # View_data = Byte_data.decode('GBK','ignore')
+                # View_data = Byte_data.decode('gb2312','ignore')    
+                View_data = Byte_data.decode('UTF-8','ignore')
+
+        self.ui.textEdit_receive.insertPlainText(View_data)
         self.ui.textEdit_receive.moveCursor(QTextCursor.End)
 
     def slot_SendData_Num(self,num):
@@ -481,4 +592,5 @@ class InitForm(QWidget):
             print(ret)
         else:
             pass
+
 
