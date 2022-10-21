@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="bd_e267_vfb_0_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/bd_e267_vfb_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_e267_phy_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/bd_e267_phy_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_e297_vfb_0_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/bd_e297_vfb_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_e297_phy_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/bd_e297_phy_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/system_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_axis_subset_converter_1_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axis_subset_converter_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_mipi_csi2_rx_subsyst_0_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/system_mipi_csi2_rx_subsyst_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="bd_22c6_vfb_0_0_synth_1"/>
+		<Parent Id="bd_22c6_phy_0_synth_1"/>
+	</Run>
+	<Run Id="system_mipi_csi2_rx_subsyst_2_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/system_mipi_csi2_rx_subsyst_2_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="bd_e267_vfb_0_0_synth_1"/>
+		<Parent Id="bd_e267_phy_0_synth_1"/>
+	</Run>
+	<Run Id="system_mipi_csi2_rx_subsyst_1_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/system_mipi_csi2_rx_subsyst_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="bd_e297_vfb_0_0_synth_1"/>
+		<Parent Id="bd_e297_phy_0_synth_1"/>
+	</Run>
+	<Run Id="system_axis_subset_converter_1_1_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axis_subset_converter_1_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_22c6_vfb_0_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/bd_22c6_vfb_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="bd_22c6_phy_0_synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/bd_22c6_phy_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="system_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="system_axis_subset_converter_1_0_synth_1"/>
+		<Parent Id="system_mipi_csi2_rx_subsyst_0_0_synth_1"/>
+		<Parent Id="system_mipi_csi2_rx_subsyst_2_0_synth_1"/>
+		<Parent Id="system_mipi_csi2_rx_subsyst_1_0_synth_1"/>
+		<Parent Id="system_axis_subset_converter_1_1_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/vivado_proj/vivado_proj.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="bd_e267_vfb_0_0_synth_1"/>
+		<Parent Id="bd_e267_phy_0_synth_1"/>
+		<Parent Id="bd_e297_vfb_0_0_synth_1"/>
+		<Parent Id="bd_e297_phy_0_synth_1"/>
+		<Parent Id="system_zynq_ultra_ps_e_0_0_synth_1"/>
+		<Parent Id="system_axis_subset_converter_1_0_synth_1"/>
+		<Parent Id="system_mipi_csi2_rx_subsyst_0_0_synth_1"/>
+		<Parent Id="system_mipi_csi2_rx_subsyst_2_0_synth_1"/>
+		<Parent Id="system_mipi_csi2_rx_subsyst_1_0_synth_1"/>
+		<Parent Id="system_axis_subset_converter_1_1_synth_1"/>
+		<Parent Id="bd_22c6_vfb_0_0_synth_1"/>
+		<Parent Id="bd_22c6_phy_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

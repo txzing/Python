@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="system_axis_passthrough_mon_0_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axis_passthrough_mon_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_v_tpg_0_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_v_tpg_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_AXI_LITE_REG_0_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_AXI_LITE_REG_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_axi_uartlite_0_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_rst_ps8_0_300M_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_rst_ps8_0_300M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_zynq_ultra_ps_e_0_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_zynq_ultra_ps_e_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_axi_vdma_0_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axi_vdma_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_axi_vdma_1_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axi_vdma_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="system_axi_vdma_0_0_synth_1"/>
+	</Run>
+	<Run Id="system_clk_wiz_0_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_clk_wiz_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_rst_video_clk_wiz_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_rst_video_clk_wiz_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_v_axi4s_vid_out_0_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_v_axi4s_vid_out_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_v_tc_0_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_v_tc_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_axis_switch_0_3_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axis_switch_0_3_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_v_tpg_0_6_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_v_tpg_0_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="system_v_tpg_0_0_synth_1"/>
+	</Run>
+	<Run Id="system_xbar_4_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_xbar_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_axi_vdma_3_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axi_vdma_3_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_axi_smc_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axi_smc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="system_axis_passthrough_mon_0_6_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axis_passthrough_mon_0_6_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="system_axis_passthrough_mon_0_0_synth_1"/>
+	</Run>
+	<Run Id="system_v_tpg_0_7_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_v_tpg_0_7_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="system_v_tpg_0_0_synth_1"/>
+	</Run>
+	<Run Id="system_axis_switch_0_4_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_axis_switch_0_4_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="system_axis_switch_0_3_synth_1"/>
+	</Run>
+	<Run Id="system_v_tpg_1_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_v_tpg_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado" IsOrderedIPRun="true">
+		<Parent Id="system_v_tpg_0_0_synth_1"/>
+	</Run>
+	<Run Id="system_auto_pc_0_synth_1" LaunchDir="D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/system_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

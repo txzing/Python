@@ -1,0 +1,47 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"-451,-8",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port S_AXI_LITE_0 -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
+preplace port S_AXI_LITE_1 -pg 1 -lvl 0 -x 0 -y 590 -defaultsOSRD
+preplace port video_s0_in -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace port video_s1_in -pg 1 -lvl 0 -x 0 -y 610 -defaultsOSRD
+preplace port M00_AXI -pg 1 -lvl 3 -x 740 -y 450 -defaultsOSRD
+preplace port S_AXI_LITE -pg 1 -lvl 0 -x 0 -y 140 -defaultsOSRD
+preplace port M_AXIS_MM2S -pg 1 -lvl 3 -x 740 -y 110 -defaultsOSRD
+preplace port S00_AXI -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port aresetn -pg 1 -lvl 0 -x 0 -y 220 -defaultsOSRD
+preplace port m_axi_mm2s_aclk -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace port s2mm_introut -pg 1 -lvl 3 -x 740 -y 570 -defaultsOSRD
+preplace port s2mm_introut1 -pg 1 -lvl 3 -x 740 -y 670 -defaultsOSRD
+preplace port mm2s_introut -pg 1 -lvl 3 -x 740 -y 550 -defaultsOSRD
+preplace inst axi_vdma_0 -pg 1 -lvl 1 -x 210 -y 430 -defaultsOSRD
+preplace inst axi_vdma_1 -pg 1 -lvl 1 -x 210 -y 650 -defaultsOSRD
+preplace inst axi_vdma_2 -pg 1 -lvl 1 -x 210 -y 190 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 2 -x 580 -y 450 -defaultsOSRD
+preplace inst axis_passthrough_mon_0 -pg 1 -lvl 2 -x 580 -y 110 -defaultsOSRD
+preplace netloc rst_ps8_0_300M_peripheral_aresetn 1 0 2 20 300 430
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 2 30 70 410
+preplace netloc axi_vdma_0_s2mm_introut 1 1 2 390J 570 NJ
+preplace netloc axi_vdma_1_s2mm_introut 1 1 2 NJ 670 NJ
+preplace netloc axi_vdma_3_mm2s_introut 1 1 2 NJ 220 720J
+preplace netloc S_AXI_LITE_0_1 1 0 1 NJ 370
+preplace netloc S_AXI_LITE_1_1 1 0 1 NJ 590
+preplace netloc video_s0_in_1 1 0 1 NJ 390
+preplace netloc video_s1_in_1 1 0 1 NJ 610
+preplace netloc S_AXI_LITE_2 1 0 1 NJ 140
+preplace netloc Conn1 1 2 1 NJ 450
+preplace netloc axi_vdma_0_M_AXI_S2MM 1 1 1 N 410
+preplace netloc axi_vdma_3_M_AXI_MM2S 1 1 1 400 160n
+preplace netloc axi_vdma_1_M_AXI_S2MM 1 1 1 420 430n
+preplace netloc axi_vdma_2_M_AXIS_MM2S 1 1 1 390 60n
+preplace netloc axis_passthrough_mon_0_m_axis 1 2 1 NJ 110
+preplace netloc S00_AXI_1 1 0 2 NJ 80 NJ
+levelinfo -pg 1 0 210 580 740
+pagesize -pg 1 -db -bbox -sgen -170 0 900 770
+"
+}
+0

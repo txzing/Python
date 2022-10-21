@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item value="false" key="isRegEx"/>
+		<item value="udp_qlen" key="selection"/>
+		<item value="false" key="casesensitive"/>
+		<item value="false" key="incremental"/>
+		<item value="true" key="wrap"/>
+		<item value="false" key="wholeword"/>
+		<list key="findhistory">
+			<item value="udp_qlen"/>
+			<item value="pFrames1"/>
+			<item value="pFrames0"/>
+			<item value="targetPicHeader"/>
+			<item value="WriteOneFrameEnd"/>
+			<item value="__INTPTR_TYPE__"/>
+			<item value="FRAME_BUFFER_1"/>
+			<item value="frame_length_curr"/>
+			<item value="udp_pbuf"/>
+			<item value="pcb"/>
+			<item value="DEFAULT_IP_ADDRESS"/>
+			<item value="IP4_ADDR"/>
+			<item value="addr"/>
+			<item value="target_addr"/>
+			<item value="upcb"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item value="558" key="DIALOG_WIDTH"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+		<item value="443" key="DIALOG_HEIGHT"/>
+		<item value="782" key="DIALOG_X_ORIGIN"/>
+		<item value="391" key="DIALOG_Y_ORIGIN"/>
+	</section>
+</section>

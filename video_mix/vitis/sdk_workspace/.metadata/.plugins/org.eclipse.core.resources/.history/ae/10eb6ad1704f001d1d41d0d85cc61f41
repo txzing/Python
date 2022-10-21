@@ -1,0 +1,965 @@
+/*
+ * Copyright (C) 2017 - 2019 Xilinx, Inc.
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ * 3. The name of the author may not be used to endorse or promote products
+ *    derived from this software without specific prior written permission.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE AUTHOR ``AS IS'' AND ANY EXPRESS OR IMPLIED
+ * WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF
+ * MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+ * SHALL THE AUTHOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL,
+ * EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+ * IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+ * OF SUCH DAMAGE.
+ *
+ */
+
+#include "platform_config.h"
+
+
+/*********************************************************/
+XScuGic XScuGicInstance;
+
+#define EMIO_UART_OE 80  		//连接到EMIO
+XGpioPs gpiops_inst;            //
+XGpioPs_Config *gpiops_cfg_ptr; //
+
+#if defined(__MICROBLAZE__)
+#define DDR_BASEADDR XPAR_MIG7SERIES_0_BASEADDR
+#else
+#define DDR_BASEADDR XPAR_DDR_MEM_BASEADDR
+#endif
+
+#define XUartLite_IsTransmitEmpty(BaseAddress) \
+	((XUartLite_GetStatusReg((BaseAddress)) & XUL_SR_TX_FIFO_EMPTY) == \
+		XUL_SR_TX_FIFO_EMPTY)
+
+//#define FRAME_BUFFER_SIZE0      0x2000000    //0x2000000 for max 4KW RGB888 8bpc
+#define FRAME_BUFFER_SIZE0      0x600000    //0x600000 for max 1080p RGB888 8bpc
+#define FRAME_BUFFER_BASE_ADDR  (DDR_BASEADDR + (0x20000000))
+#define FRAME_BUFFER_1          FRAME_BUFFER_BASE_ADDR
+#define FRAME_BUFFER_2          FRAME_BUFFER_BASE_ADDR + FRAME_BUFFER_SIZE0
+#define FRAME_BUFFER_3          FRAME_BUFFER_BASE_ADDR + (FRAME_BUFFER_SIZE0*2)
+
+#define FRAME_BUFFER_4          FRAME_BUFFER_BASE_ADDR + (FRAME_BUFFER_SIZE0*3)
+#define FRAME_BUFFER_5          FRAME_BUFFER_BASE_ADDR + (FRAME_BUFFER_SIZE0*4)
+#define FRAME_BUFFER_6          FRAME_BUFFER_BASE_ADDR + (FRAME_BUFFER_SIZE0*5)
+
+/*
+ * alinx
+ *
+ */
+XAxiVdma vdma_vin[2];
+
+u8 *pFrames0[3]; //array of pointers to the frame buffers
+u8 *pFrames1[3];
+static int WriteError;
+
+int wr_index[2]={0,0};
+int rd_index[2]={0,0};
+int frame_length_curr;
+
+extern unsigned char targetPicHeader[9];
+extern char sendchannel[2];
+/*
+ * Framebuffers for video data
+ */
+int WriteOneFrameEnd[2]={-1,-1};
+/* ------------------------------------------------------------ */
+/*				Procedure Definitions							*/
+/* ------------------------------------------------------------ */
+static void WriteCallBack0(void *CallbackRef, u32 Mask);
+static void WriteCallBack1(void *CallbackRef, u32 Mask);
+static void WriteErrorCallBack(void *CallbackRef, u32 Mask);
+void debug_info(void);
+
+
+XAxis_Switch AxisSwitch0;
+XAxis_Switch AxisSwitch1;
+
+XClk_Wiz ClkWizInst0;
+
+XVtc        VtcInst0;       /**< Instance of the VTC core. */
+XVtc_Config *VtcConfig0;
+
+XVtc        VtcInst1;       /**< Instance of the VTC core. */
+XVtc_Config *VtcConfig1;
+XVtc        VtcInst2;       /**< Instance of the VTC core. */
+XVtc_Config *VtcConfig2;
+
+XV_tpg tpg_inst0;
+XV_tpg_Config *tpg_config0;
+XV_tpg tpg_inst1;
+XV_tpg_Config *tpg_config1;
+XV_tpg tpg_inst2;
+XV_tpg_Config *tpg_config2;
+XV_tpg tpg_inst3;
+XV_tpg_Config *tpg_config3;
+
+XVidC_ColorFormat colorFmtIn0 = XVIDC_CSF_RGB;
+//XVidC_ColorFormat colorFmtIn0 = XVIDC_CSF_YCBCR_422;
+XVidC_ColorFormat colorFmtOut0 = XVIDC_CSF_RGB;
+XVidC_ColorFormat colorFmtIn1 = XVIDC_CSF_RGB;
+XVidC_ColorFormat colorFmtOut1 = XVIDC_CSF_RGB;
+XVidC_ColorFormat colorFmtIn2 = XVIDC_CSF_RGB;
+XVidC_ColorFormat colorFmtOut2 = XVIDC_CSF_RGB;
+XVidC_ColorFormat colorFmtIn3 = XVIDC_CSF_RGB;
+XVidC_ColorFormat colorFmtOut3 = XVIDC_CSF_RGB;
+
+u32 bckgndId0=XTPG_BKGND_COLOR_BARS;
+u32 bckgndId1=XTPG_BKGND_SOLID_BLUE;
+u32 bckgndId2=XTPG_BKGND_V_RAMP;
+u32 bckgndId3=XTPG_BKGND_CHECKER_BOARD;
+
+XVidC_VideoMode resId;
+XVidC_VideoStream StreamIn, StreamOut;
+XVidC_VideoTiming const *TimingPtr;
+
+XIicPs ps_i2c_0;
+XIicPs ps_i2c_1;
+
+/*********************************************************/
+
+
+#if LWIP_DHCP==1
+#include "lwip/dhcp.h"
+extern volatile int dhcp_timoutcntr;
+#endif
+
+extern volatile int TcpFastTmrFlag;
+extern volatile int TcpSlowTmrFlag;
+
+struct netif server_netif;
+
+
+int AxisSwitch(u16 DeviceId, XAxis_Switch * pAxisSwitch, u8 MiIndex, u8 SiIndex)
+{
+    XAxis_Switch_Config *Config;
+    int Status;
+
+    /* Initialize the AXI4-Stream Switch driver so that it's ready to
+     * use look up configuration in the config table, then
+     * initialize it.
+     */
+    Config = XAxisScr_LookupConfig(DeviceId);
+    if (NULL == Config) {
+        return XST_FAILURE;
+    }
+
+    Status = XAxisScr_CfgInitialize(pAxisSwitch, Config,
+                        Config->BaseAddress);
+    if (Status != XST_SUCCESS) {
+        xil_printf("AXI4-Stream initialization failed.\r\n");
+        return XST_FAILURE;
+    }
+
+    /* Disable register update */
+    XAxisScr_RegUpdateDisable(pAxisSwitch);
+
+    /* Disable all MI ports */
+    XAxisScr_MiPortDisableAll(pAxisSwitch);
+
+    /* Source SI[1] to MI[0] */
+    XAxisScr_MiPortEnable(pAxisSwitch, MiIndex, SiIndex);
+
+    /* Enable register update */
+    XAxisScr_RegUpdateEnable(pAxisSwitch);
+
+    /* Check for MI port enable */
+    Status = XAxisScr_IsMiPortEnabled(pAxisSwitch, MiIndex, SiIndex);
+    if (Status) {
+        //xil_printf("Switch %d: MI[%d] is sourced from SI[%d].\r\n", num, MiIndex, SiIndex);
+    }
+
+    return XST_SUCCESS;
+}
+
+void axis_switch_cfg(void)
+{
+    AxisSwitch(XPAR_CH_0_AXIS_SWITCH_0_DEVICE_ID, &AxisSwitch0, 0, 0); // tpg
+    AxisSwitch(XPAR_CH_1_AXIS_SWITCH_0_DEVICE_ID, &AxisSwitch1, 0, 0); // tpg
+
+}
+
+void clkwiz_vtc_cfg(void)
+{
+    u32 Status;
+    // dynamic config clkwiz
+    Status = XClk_Wiz_dynamic_reconfig(&ClkWizInst0, XPAR_VID_OUT_SS_CLK_WIZ_0_DEVICE_ID);
+    if (Status != XST_SUCCESS)
+    {
+      xil_printf("XClk_Wiz0 dynamic reconfig failed.\r\n");
+//      return XST_FAILURE;
+    }
+    //xil_printf("XClk_Wiz0 dynamic reconfig ok\n\r");
+
+    // vtc configuration
+    VtcConfig0 = XVtc_LookupConfig(XPAR_VID_OUT_SS_V_TC_0_DEVICE_ID);
+    Status = XVtc_CfgInitialize(&VtcInst0, VtcConfig0, VtcConfig0->BaseAddress);
+    if(Status != XST_SUCCESS)
+    {
+        xil_printf("VTC0 Initialization failed %d\r\n", Status);
+//      return(XST_FAILURE);
+    }
+    vtiming_gen_run(&VtcInst0, VIDEO_RESOLUTION_1080P, 0);
+
+
+    // vtc configuration
+    VtcConfig1 = XVtc_LookupConfig(XPAR_CH_0_V_TC_0_DEVICE_ID);
+    Status = XVtc_CfgInitialize(&VtcInst1, VtcConfig1, VtcConfig1->BaseAddress);
+    if(Status != XST_SUCCESS)
+    {
+        xil_printf("VTC1 Initialization failed %d\r\n", Status);
+//      return(XST_FAILURE);
+    }
+    vtiming_gen_run(&VtcInst1, VIDEO_RESOLUTION_640X720_60p, 0);
+
+
+    // vtc configuration
+    VtcConfig2 = XVtc_LookupConfig(XPAR_CH_1_V_TC_0_DEVICE_ID);
+    Status = XVtc_CfgInitialize(&VtcInst2, VtcConfig2, VtcConfig2->BaseAddress);
+    if(Status != XST_SUCCESS)
+    {
+        xil_printf("VTC2 Initialization failed %d\r\n", Status);
+//      return(XST_FAILURE);
+    }
+    vtiming_gen_run(&VtcInst2, VIDEO_RESOLUTION_640X720_60p, 0);
+}
+
+void tpg_config(void)
+{
+    u32 Status;
+
+    // tpg0
+    //xil_printf("TPG0 Initializing\n\r");
+
+    Status = XV_tpg_Initialize(&tpg_inst0, XPAR_CH_0_V_TPG_0_DEVICE_ID);
+    if(Status!= XST_SUCCESS)
+    {
+        xil_printf("TPG0 configuration failed\r\n");
+//      return(XST_FAILURE);
+    }
+
+    //Configure the TPG0
+    tpg_cfg(&tpg_inst0, 720, 640, colorFmtIn0, bckgndId0);
+
+    //Configure the moving box of the TPG0
+    tpg_box(&tpg_inst0, 50, 2);
+
+    //Start the TPG0
+    XV_tpg_EnableAutoRestart(&tpg_inst0);
+    XV_tpg_Start(&tpg_inst0);
+    //xil_printf("TPG0 started!\r\n");
+
+//////////////////////////////////////////////////
+    // tpg1
+    //xil_printf("TPG1 Initializing\n\r");
+
+    Status = XV_tpg_Initialize(&tpg_inst1, XPAR_CH_0_V_TPG_1_DEVICE_ID);
+    if(Status!= XST_SUCCESS)
+    {
+        xil_printf("TPG1 configuration failed\r\n");
+//      return(XST_FAILURE);
+    }
+
+    //Configure the TPG1
+    tpg_cfg(&tpg_inst1, 720, 640, colorFmtIn1, bckgndId1);
+
+    //Configure the moving box of the TPG1
+    tpg_box(&tpg_inst1, 50, 2);
+    XV_tpg_Set_boxColorR(&tpg_inst1,0xff);
+
+    //Start the TPG1
+    XV_tpg_EnableAutoRestart(&tpg_inst1);
+    XV_tpg_Start(&tpg_inst1);
+    //xil_printf("TPG1 started!\r\n");
+
+//////////////////////////////////////////////////
+    // tpg2
+    //xil_printf("TPG2 Initializing\n\r");
+
+    Status = XV_tpg_Initialize(&tpg_inst2, XPAR_CH_1_V_TPG_0_DEVICE_ID);
+    if(Status!= XST_SUCCESS)
+    {
+        xil_printf("TPG2 configuration failed\r\n");
+//      return(XST_FAILURE);
+    }
+
+    //Configure the TPG2
+    tpg_cfg(&tpg_inst2, 720, 640, colorFmtIn2, bckgndId2);
+
+    //Configure the moving box of the TPG2
+    tpg_box(&tpg_inst2, 50, 2);
+    XV_tpg_Set_boxColorR(&tpg_inst2,0xff);
+    XV_tpg_Set_boxColorG(&tpg_inst2,0xff);
+    XV_tpg_Set_boxColorB(&tpg_inst2,0xff);
+
+    //Start the TPG2
+    XV_tpg_EnableAutoRestart(&tpg_inst2);
+    XV_tpg_Start(&tpg_inst2);
+    //xil_printf("TPG2 started!\r\n");
+
+//////////////////////////////////////////////////
+	// tpg3
+	//xil_printf("TPG2 Initializing\n\r");
+
+	Status = XV_tpg_Initialize(&tpg_inst3, XPAR_CH_1_V_TPG_1_DEVICE_ID);
+	if(Status!= XST_SUCCESS)
+	{
+		xil_printf("TPG3 configuration failed\r\n");
+//      return(XST_FAILURE);
+	}
+
+	//Configure the TPG3
+	tpg_cfg(&tpg_inst3, 720, 640, colorFmtIn3, bckgndId3);
+
+	//Configure the moving box of the TPG3
+	tpg_box(&tpg_inst3, 50, 2);
+	XV_tpg_Set_boxColorR(&tpg_inst3,0xff);
+	XV_tpg_Set_boxColorG(&tpg_inst3,0xff);
+	XV_tpg_Set_boxColorB(&tpg_inst3,0xff);
+
+	//Start the TPG3
+	XV_tpg_EnableAutoRestart(&tpg_inst3);
+	XV_tpg_Start(&tpg_inst3);
+	//xil_printf("TPG3 started!\r\n");
+}
+
+void vdma_config(void)
+{
+    /* Start of VDMA Configuration */
+    u32 bytePerPixels = 3;
+//
+    int offset0 = (100*1920+100)*3; // (y*w+x)*Bpp  channel_0 write
+    u32 stride0 = 1920;
+    u32 width0 = 640;
+    u32 height0 = 720;
+
+    int offset1 = (100*1920+1000)*3; // (y*w+x)*Bpp  channel_1 write
+    u32 stride1 = 1920;
+    u32 width1 = 640;
+    u32 height1 = 720;
+
+	int offset4 = 0; // (y*w+x)*Bpp read
+	u32 stride4 = 1920;  // crop keeps write Stride
+	u32 width4 = 1920;
+	u32 height4 = 1080;
+
+
+/**************channel 0 write**************/
+	/* Configure the Write interface (S2MM)*/
+	// S2MM Control Register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_0_BASEADDR + 0x30, 0x8B);
+	//S2MM Start Address 1
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_0_BASEADDR + 0xAC, FRAME_BUFFER_1 + offset0);
+	//S2MM Start Address 2
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_0_BASEADDR + 0xB0, FRAME_BUFFER_2 + offset0);
+	//S2MM Start Address 3
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_0_BASEADDR + 0xB4, FRAME_BUFFER_3 + offset0);
+	//S2MM Frame delay / Stride register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_0_BASEADDR + 0xA8, stride0*bytePerPixels);
+	// S2MM HSIZE register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_0_BASEADDR + 0xA4, width0*bytePerPixels);
+	// S2MM VSIZE register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_0_BASEADDR + 0xA0, height0);
+
+/**************channel 1 write**************/
+	/* Configure the Write interface (S2MM)*/
+	// S2MM Control Register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_1_BASEADDR + 0x30, 0x8B);
+	//S2MM Start Address 1
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_1_BASEADDR + 0xAC, FRAME_BUFFER_1 + offset1);
+	//S2MM Start Address 2
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_1_BASEADDR + 0xB0, FRAME_BUFFER_2 + offset1);
+	//S2MM Start Address 3
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_1_BASEADDR + 0xB4, FRAME_BUFFER_3 + offset1);
+	//S2MM Frame delay / Stride register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_1_BASEADDR + 0xA8, stride1*bytePerPixels);
+	// S2MM HSIZE register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_1_BASEADDR + 0xA4, width1*bytePerPixels);
+	// S2MM VSIZE register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_1_BASEADDR + 0xA0, height1);
+
+
+	/* Configure the Read interface (MM2S)*/
+	// MM2S Control Register
+//    Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_0_BASEADDR + 0x00, 0x8B);
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_2_BASEADDR + 0x00, 0x83);//there should be no genlock as there is no S2MM
+
+	// MM2S Start Address 1
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_2_BASEADDR + 0x5C, FRAME_BUFFER_1 + offset4);
+	// MM2S Start Address 2
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_2_BASEADDR + 0x60, FRAME_BUFFER_2 + offset4);
+	// MM2S Start Address 3
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_2_BASEADDR + 0x64, FRAME_BUFFER_3 + offset4);
+	// MM2S Frame delay / Stride register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_2_BASEADDR + 0x58, stride4*bytePerPixels);
+	// MM2S HSIZE register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_2_BASEADDR + 0x54, width4*bytePerPixels);
+	// MM2S VSIZE register
+	Xil_Out32(XPAR_VDMA_SS_AXI_VDMA_2_BASEADDR + 0x50, height4);
+
+//	xil_printf("VDMA configuration OK!!!\r\n");
+}
+
+void clear_display(void)
+{
+//    Xil_DCacheDisable();
+//    UINTPTR Addr1=FRAME_BUFFER_1,Addr2=FRAME_BUFFER_2,Addr3=FRAME_BUFFER_3;
+//    UINTPTR Addr4=FRAME_BUFFER_4,Addr5=FRAME_BUFFER_5,Addr6=FRAME_BUFFER_6;
+//    int line, column;
+//	for(line=0; line < 1080; line++)
+//	{
+//		for(column=0; column < 1920*3/4; column++)
+//		{
+//			Xil_Out32(Addr1, 0xFFFFFFFF);
+//			Xil_Out32(Addr2, 0xFFFFFFFF);
+//			Xil_Out32(Addr3, 0xFFFFFFFF);
+//
+//			Addr1+=4;
+//			Addr2+=4;
+//			Addr3+=4;
+//		}
+//	}
+//	Xil_DCacheFlush();
+
+    memset(FRAME_BUFFER_BASE_ADDR,0xff,FRAME_BUFFER_SIZE0*6);//background
+    Xil_DCacheFlush();
+    xil_printf("clear Done\r\n");
+}
+
+extern uint8_t checksum(uint8_t * ptr, int16_t cnt);
+void loadconfig(config_Settings_t * config_p)
+{
+	int32_t				Status;
+	uint8_t				ReadBuffer[1+sizeof(config_Settings_t)];
+	uint8_t				checksum_v, checksum_v1;
+
+	memset(ReadBuffer, 0, 1+sizeof(config_Settings_t)); // checksum 1 byte, config_Settings_t
+
+	config_Settings_t config;
+
+	Status = EepromReadData(&ps_i2c_1, ReadBuffer, sizeof(ReadBuffer));
+
+	if (Status != XST_SUCCESS)
+	{
+		//return XST_FAILURE;
+		xil_printf("read config from eeprom failed, now set default config\r\n");
+		memcpy(&config, &default_config,sizeof(config));
+	}
+	else
+	{
+		memcpy(&checksum_v, ReadBuffer, 1); // checksum 1 byte
+		memcpy(&config, ReadBuffer + 1 , sizeof(config)); // checksum 1 byte
+
+		checksum_v1 = checksum((uint8_t *)&config, sizeof(config_Settings_t));
+
+		if(checksum_v1!=checksum_v)
+		{
+			xil_printf("read config checksum failed, now set default config\r\n");
+			memcpy(&config, &default_config,sizeof(config));
+		}
+	}
+
+	memcpy(config_p, &config, sizeof(config));
+
+	asm("nop");
+}
+
+int32_t saveconfig(config_Settings_t * config_p)
+{
+	int32_t				Status;
+	uint8_t				checksum_v;
+	uint8_t				WriteBuffer[1+sizeof(config_Settings_t)];
+
+	checksum_v = checksum((uint8_t *)config_p, sizeof(config_Settings_t));
+	memset(WriteBuffer, 0, 1+sizeof(config_Settings_t)); // checksum 1 byte, config_Settings_t
+
+	memcpy(WriteBuffer, &checksum_v, 1); // checksum 1 byte
+	memcpy(WriteBuffer+1, config_p, sizeof(config_Settings_t));
+
+	Status = EepromWriteDataContinus(&ps_i2c_1, WriteBuffer, 1+sizeof(config_Settings_t), 0);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+//		xil_printf("write config to eeprom failed\r\n");
+	}
+
+	return Status;
+}
+
+
+frame_length_curr = 0;
+int offset0 = 0; // (y*w+x)*Bpp  channel_0 write
+u32 stride0 = 640;
+u32 width0 = 640;
+u32 height0 = 720;
+
+int offset1 = 0; // (y*w+x)*Bpp  channel_1 write
+u32 stride1 = 640;
+u32 width1 = 640;
+u32 height1 = 720;
+void vdma_init(int ch)
+{
+
+	clear_display();
+
+	/* Stop vdma write process, disable vdma interrupt */
+	vdma_write_stop(&vdma_vin[ch]);
+	XAxiVdma_IntrDisable(&vdma_vin[ch], XAXIVDMA_IXR_ALL_MASK, XAXIVDMA_WRITE);
+	/*
+	 * Initial vdma write path, set call back function and register interrupt to GIC
+	 */
+	if(ch == 0)
+	{
+		vdma_write_init(XPAR_AXIVDMA_0_DEVICE_ID, &vdma_vin[ch], width0 * 3, height0, stride0 * 3,
+				(unsigned int)FRAME_BUFFER_1 + offset0, (unsigned int)FRAME_BUFFER_2 + offset0, (unsigned int)FRAME_BUFFER_3 + offset0);
+		XAxiVdma_SetCallBack(&vdma_vin[ch], XAXIVDMA_HANDLER_GENERAL,WriteCallBack0, (void *)&vdma_vin[ch], XAXIVDMA_WRITE);
+		XAxiVdma_SetCallBack(&vdma_vin[ch], XAXIVDMA_HANDLER_ERROR,WriteErrorCallBack, (void *)&vdma_vin[ch], XAXIVDMA_WRITE);
+		InterruptConnect(&XScuGicInstance,XPAR_FABRIC_VDMA_SS_AXI_VDMA_0_S2MM_INTROUT_INTR,XAxiVdma_WriteIntrHandler,(void *)&vdma_vin[ch]);
+		pFrames0[0] = FRAME_BUFFER_1 + offset0;
+		pFrames0[1] = FRAME_BUFFER_2 + offset0;
+		pFrames0[2] = FRAME_BUFFER_3 + offset0;
+	}
+	else
+	{
+		vdma_write_init(XPAR_AXIVDMA_1_DEVICE_ID, &vdma_vin[ch], width1 * 3, height1, stride1 * 3,
+				(unsigned int)FRAME_BUFFER_4 + offset1, (unsigned int)FRAME_BUFFER_5 + offset1, (unsigned int)FRAME_BUFFER_6 + offset1);
+		XAxiVdma_SetCallBack(&vdma_vin[ch], XAXIVDMA_HANDLER_GENERAL,WriteCallBack1, (void *)&vdma_vin[ch], XAXIVDMA_WRITE);
+		XAxiVdma_SetCallBack(&vdma_vin[ch], XAXIVDMA_HANDLER_ERROR,WriteErrorCallBack, (void *)&vdma_vin[ch], XAXIVDMA_WRITE);
+		InterruptConnect(&XScuGicInstance,XPAR_FABRIC_VDMA_SS_AXI_VDMA_1_S2MM_INTROUT_INTR,XAxiVdma_WriteIntrHandler,(void *)&vdma_vin[ch]);
+		pFrames1[0] = FRAME_BUFFER_4 + offset1;
+		pFrames1[1] = FRAME_BUFFER_5 + offset1;
+		pFrames1[2] = FRAME_BUFFER_6 + offset1;
+	}
+	/* Start vdma write process, enable vdma interrupt */
+	XAxiVdma_IntrEnable(&vdma_vin[ch], XAXIVDMA_IXR_ALL_MASK, XAXIVDMA_WRITE);
+	vdma_write_start(&vdma_vin[ch]);
+	frame_length_curr = 640*720*3;
+
+	xil_printf("vdma[%d] init done1 \r\n",ch);
+}
+
+
+//将uart_oe约束在emio[0]上
+void uart_out_en(void)
+{
+    //根据器件ID查找配置信息
+    gpiops_cfg_ptr = XGpioPs_LookupConfig(XPAR_XGPIOPS_0_DEVICE_ID);
+    //初始化器件驱动
+    XGpioPs_CfgInitialize(&gpiops_inst, gpiops_cfg_ptr, gpiops_cfg_ptr->BaseAddr);
+
+    //设置为输出
+    XGpioPs_SetDirectionPin(&gpiops_inst, EMIO_UART_OE, 1);
+
+    //使能输出
+    XGpioPs_SetOutputEnablePin(&gpiops_inst, EMIO_UART_OE, 1);
+
+    //设置输出电平
+    XGpioPs_WritePin(&gpiops_inst, EMIO_UART_OE, 1);
+}
+
+#define PBUF_LEN 30720
+
+int main(void)
+{
+	int index;
+	struct netif *netif;
+
+	/* the mac address of the board. this should be unique per board */
+	unsigned char mac_ethernet_address[] = {
+		0x00, 0x0a, 0x35, 0x00, 0x01, 0x02 };
+
+	netif = &server_netif;
+
+    uart_out_en();//使能串口输出
+
+	init_platform(&XScuGicInstance);
+
+	i2c_init(&ps_i2c_0, XPAR_XIICPS_0_DEVICE_ID, 200000);//sil_9136
+	i2c_init(&ps_i2c_1, XPAR_XIICPS_1_DEVICE_ID, 100000);//eeprom
+
+    memset(FRAME_BUFFER_BASE_ADDR,0xff,FRAME_BUFFER_SIZE0*6);//background
+    Xil_DCacheFlush();
+	axis_switch_cfg();
+	tpg_config();
+	clkwiz_vtc_cfg();
+
+//	vdma_config();//
+	vdma_init(0);
+	vdma_init(1);
+
+//    // for SiI9134
+//    i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x08, 0x35, STRETCH_OFF);
+//    i2c_reg8_write(&ps_i2c_0, 0x7a>>1, 0x2f, 0x00, STRETCH_OFF);
+	// for sil1136/sil9136-3 @    /参考资料/spjk视频输出接口转换
+	//                       @    /开发板资料/lattice/Embedded_Vision_DevelopmentKit/EmbeddedVisionDevelopmentKit/UserManual/HDMI-VIP-Output-Bridge-Board
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0xC7, 0x00); // HDMI configuration
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x1E, 0x00); // Power Up Transmitter
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x08, 0x60); // Input Bus/Pixel Repetition (default)
+#if defined (HDMI_OUT_1080P60)
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x00, 0x02); // Pixel Clock
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x01, 0x3A); // Pixel Clock
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x02, 0x70); // Frame Rate * 100
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x03, 0x17); // Frame Rate * 100
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x04, 0x98); // Pixels
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x05, 0x08); // Pixels
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x06, 0x65); // Lines
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x07, 0x04); // Lines
+#else
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x00, 0x04); // Pixel Clock
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x01, 0x74); // Pixel Clock
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x02, 0xB8); // Frame Rate * 100
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x03, 0x0B); // Frame Rate * 100
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x04, 0x30); // Pixels
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x05, 0x11); // Pixels
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x06, 0xCA); // Lines
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x07, 0x08); // Lines
+#endif
+	//i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x09, 0x00); //
+	//i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x0A, 0x00); //
+
+	i2c_reg8_write(&ps_i2c_0, 0x72>>1, 0x1A, 0x00); //
+
+
+	xil_printf("\r\n\r\n");
+	xil_printf("-----lwIP RAW Mode UDP Server Application-----\r\n");
+
+	/* initialize lwIP */
+	lwip_init();
+
+	/* Add network interface to the netif_list, and set it as default */
+	if (!xemac_add(netif, NULL, NULL, NULL, mac_ethernet_address,
+				PLATFORM_EMAC_BASEADDR)) {
+		xil_printf("Error adding N/W interface\r\n");
+		return -1;
+	}
+	netif_set_default(netif);
+
+	/* now enable interrupts */
+	platform_enable_interrupts();
+
+	/* specify that the network if is up */
+	netif_set_up(netif);
+
+#if (LWIP_DHCP==1)
+	/* Create a new DHCP client for this interface.
+	 * Note: you must call dhcp_fine_tmr() and dhcp_coarse_tmr() at
+	 * the predefined regular intervals after starting the client.
+	 */
+	dhcp_start(netif);
+	dhcp_timoutcntr = 24;
+	while (((netif->ip_addr.addr) == 0) && (dhcp_timoutcntr > 0))
+		xemacif_input(netif);
+
+	if (dhcp_timoutcntr <= 0) {
+		if ((netif->ip_addr.addr) == 0) {
+			xil_printf("ERROR: DHCP request timed out\r\n");
+			assign_default_ip(&(netif->ip_addr),
+					&(netif->netmask), &(netif->gw));
+		}
+	}
+
+	/* print IP address, netmask and gateway */
+#else
+	assign_default_ip(&(netif->ip_addr), &(netif->netmask), &(netif->gw));
+#endif
+	print_ip_settings(&(netif->ip_addr), &(netif->netmask), &(netif->gw));
+
+	xil_printf("\r\n");
+
+	/* print app header */
+	print_app_header();
+
+	/* start the application*/
+	start_application(PBUF_LEN);
+
+	xil_printf("\r\n");
+	xil_printf("please input cmd:\r\n");
+	xil_printf("	S/s:choose TPG , 0/1\r\n");
+	xil_printf("	C/c:clear display\r\n");
+	xil_printf("	P/p:print video information\r\n");
+	while(!XUartLite_IsTransmitEmpty(XPAR_UARTLITE_0_BASEADDR));
+
+
+	while (1)
+	{
+		debug_info();
+
+		if((WriteOneFrameEnd[0] >= 0) && (sendchannel[0]) )
+		{
+
+			targetPicHeader[5]= 0x01;
+			index = WriteOneFrameEnd[0];
+			int sn = 1;
+			int cot =0;
+			int data_num = 30720;
+			Xil_DCacheInvalidateRange((u32)pFrames0[index], frame_length_curr);
+
+//			xil_printf("pic 1 sending，index:%d\r\n",index);
+
+//			for(int t = 0;t<640*3;t++)
+//			{
+//				xil_printf("%x ",*(pFrames0[index]+t));
+//			}
+
+//			for(int t = 0;t<1440;t++)
+//			{
+//
+//				xil_printf("%d,%x \r\n",t,*(pFrames0[index]+t));
+//			}
+
+			/* Separate camera 1 frame in package */
+			for(int i=0;i<frame_length_curr;i+=data_num)
+			{
+				if((i+data_num)>frame_length_curr)
+				{
+					cot = frame_length_curr-i;
+				}
+				else
+				{
+					cot = data_num;
+				}
+//			    xil_printf("sending pic_1 sn:%d\r\n",sn);
+				sendpic((const unsigned char *)pFrames0[index]+i, cot, sn++);
+				usleep(500);
+			}
+
+//			xil_printf("end pic_1 sn:%d\r\n",sn-1);
+			WriteOneFrameEnd[0] = -1;
+//			sendchannel[0] = 0;////////////////////////////////////////////
+		}
+		/* Separate camera 2 frame in package */
+		if((WriteOneFrameEnd[1] >= 0) && (sendchannel[1]) )
+		{
+			xil_printf("pic 2 sending:\r\n");
+
+			targetPicHeader[5]= 0x02;
+			index = WriteOneFrameEnd[1];
+			int sn = 1;
+			int cot =0;
+			Xil_DCacheInvalidateRange((u32)pFrames1[index], frame_length_curr);
+			for(int i=0;i<frame_length_curr;i+=1440)
+			{
+				if((i+1440)>frame_length_curr)
+				{
+					cot = frame_length_curr-i;
+				}
+				else
+				{
+					cot = 1440;
+				}
+//				xil_printf("sending pic_2 sn:%d\r\n",sn);
+				sendpic((const unsigned char *)pFrames1[index]+i, cot, sn++);
+				usleep(2000);
+			}
+
+			xil_printf("end pic_2 sn:%d\r\n",sn-1);
+
+			WriteOneFrameEnd[1] = -1;
+			sendchannel[1] = 0;////////////////////////////////////////////
+		}
+
+
+		if (TcpFastTmrFlag) {
+			tcp_fasttmr();
+			TcpFastTmrFlag = 0;
+		}
+		if (TcpSlowTmrFlag) {
+			tcp_slowtmr();
+			TcpSlowTmrFlag = 0;
+		}
+		xemacif_input(netif);
+	}
+
+	/* never reached */
+	cleanup_platform();
+	return 0;
+}
+
+/*****************************************************************************/
+/*
+ * Call back function for write channel
+ *
+ * This callback only clears the interrupts and updates the transfer status.
+ *
+ * @param	CallbackRef is the call back reference pointer
+ * @param	Mask is the interrupt mask passed in from the driver
+ *
+ * @return	None
+ *
+ ******************************************************************************/
+static void WriteCallBack0(void *CallbackRef, u32 Mask)
+{
+	if (Mask & XAXIVDMA_IXR_FRMCNT_MASK)
+	{
+		if(WriteOneFrameEnd[0] >= 0)
+		{
+			return;
+		}
+		int hold_rd = rd_index[0];
+		if(wr_index[0]==2)
+		{
+			wr_index[0]=0;
+			rd_index[0]=2;
+		}
+		else
+		{
+			rd_index[0] = wr_index[0];
+			wr_index[0]++;
+		}
+
+//		xil_printf("intr 1\r\n");
+
+		/* Set park pointer */
+		XAxiVdma_StartParking((XAxiVdma*)CallbackRef, wr_index[0], XAXIVDMA_WRITE);//写通道停留在此区域
+		WriteOneFrameEnd[0] = hold_rd;//读出上一帧已写完
+	}
+}
+
+static void WriteCallBack1(void *CallbackRef, u32 Mask)
+{
+	if (Mask & XAXIVDMA_IXR_FRMCNT_MASK)
+	{
+		if(WriteOneFrameEnd[1] >= 0)
+		{
+			return;
+		}
+		int hold_rd = rd_index[1];
+		if(wr_index[1]==2)
+		{
+			wr_index[1]=0;
+			rd_index[1]=2;
+		}
+		else
+		{
+			rd_index[1] = wr_index[1];
+			wr_index[1]++;
+		}
+
+//		xil_printf("intr 2\r\n");
+
+		/* Set park pointer */
+		XAxiVdma_StartParking((XAxiVdma*)CallbackRef, wr_index[1], XAXIVDMA_WRITE);
+		WriteOneFrameEnd[1] = hold_rd;
+	}
+}
+
+/*****************************************************************************/
+/*
+ * Call back function for write channel error interrupt
+ *
+ * @param	CallbackRef is the call back reference pointer
+ * @param	Mask is the interrupt mask passed in from the driver
+ *
+ * @return	None
+ *
+ ******************************************************************************/
+static void WriteErrorCallBack(void *CallbackRef, u32 Mask)
+{
+
+	if (Mask & XAXIVDMA_IXR_ERROR_MASK) {
+		WriteError += 1;
+	}
+}
+
+void debug_info(void)
+{
+	while(!XUartLite_IsTransmitEmpty(XPAR_UARTLITE_0_BASEADDR));
+	XGpioPs_WritePin(&gpiops_inst, EMIO_UART_OE, 0);
+    if (!XUartLite_IsReceiveEmpty(XPAR_UARTLITE_0_BASEADDR))
+    {
+     // Read data from uart
+    	u8 Data;
+     	Data = XUartLite_RecvByte(XPAR_UARTLITE_0_BASEADDR);
+
+    	if((Data == 'S') || (Data == 's'))
+    	{
+
+			XGpioPs_WritePin(&gpiops_inst, EMIO_UART_OE, 1);
+			xil_printf("please choose input source:\r\n");
+			while(!XUartLite_IsTransmitEmpty(XPAR_UARTLITE_0_BASEADDR));
+			XGpioPs_WritePin(&gpiops_inst, EMIO_UART_OE, 0);
+
+			Data = XUartLite_RecvByte(XPAR_UARTLITE_0_BASEADDR);
+			if((Data == '0') || (Data == '0'))
+			{
+
+				XGpioPs_WritePin(&gpiops_inst, EMIO_UART_OE, 1);
+				xil_printf("choose tpg source 0:\r\n");
+				while(!XUartLite_IsTransmitEmpty(XPAR_UARTLITE_0_BASEADDR));
+
+			    AxisSwitch(XPAR_CH_0_AXIS_SWITCH_0_DEVICE_ID, &AxisSwitch0, 0, 0); // tpg
+			    AxisSwitch(XPAR_CH_1_AXIS_SWITCH_0_DEVICE_ID, &AxisSwitch1, 0, 0); // tpg
+			}
+			else if((Data == '1') || (Data == '1'))
+			{
+				XGpioPs_WritePin(&gpiops_inst, EMIO_UART_OE, 1);
+				xil_printf("choose tpg source 1:\r\n");
+				while(!XUartLite_IsTransmitEmpty(XPAR_UARTLITE_0_BASEADDR));
+
+			    AxisSwitch(XPAR_CH_0_AXIS_SWITCH_0_DEVICE_ID, &AxisSwitch0, 0, 1); // tpg
+			    AxisSwitch(XPAR_CH_1_AXIS_SWITCH_0_DEVICE_ID, &AxisSwitch1, 0, 1); // tpg
+			}
+			else
+			{
+				XGpioPs_WritePin(&gpiops_inst, EMIO_UART_OE, 1);
+				xil_printf("cmd error:\r\n");
+				while(!XUartLite_IsTransmitEmpty(XPAR_UARTLITE_0_BASEADDR));
+			}
+			//need to complete
+    	}
+
+    	else if((Data == 'C') || (Data == 'c'))
+    	{
+    	    XGpioPs_WritePin(&gpiops_inst, EMIO_UART_OE, 1);
+    	    xil_printf("clear display:\r\n");
+    	    while(!XUartLite_IsTransmitEmpty(XPAR_UARTLITE_0_BASEADDR));
+    	    clear_display();
+    	    vdma_config();
+    	}
+    	else if((Data == 'P') || (Data == 'p'))
+    	{
+    	    XGpioPs_WritePin(&gpiops_inst, EMIO_UART_OE, 1);
+    	    xil_printf("/*****************************/\r\n");
+
+            xil_printf("-ch_0 freq: %d -\r\n", AXI_LITE_REG_mReadReg(XPAR_CH_0_AXIS_PASSTHROUGH_MON_0_S00_AXI_BASEADDR, \
+            	   	    AXI_LITE_REG_S00_AXI_SLV_REG2_OFFSET));
+            xil_printf("-ch_0 res: %dx%d -\r\n", AXI_LITE_REG_mReadReg(XPAR_CH_0_AXIS_PASSTHROUGH_MON_0_S00_AXI_BASEADDR, \
+            	   	    AXI_LITE_REG_S00_AXI_SLV_REG0_OFFSET),AXI_LITE_REG_mReadReg(XPAR_CH_0_AXIS_PASSTHROUGH_MON_0_S00_AXI_BASEADDR, \
+            	   	    AXI_LITE_REG_S00_AXI_SLV_REG1_OFFSET));
+
+            xil_printf("-ch_1 freq: %d -\r\n", AXI_LITE_REG_mReadReg(XPAR_CH_1_AXIS_PASSTHROUGH_MON_0_S00_AXI_BASEADDR, \
+            	   	    AXI_LITE_REG_S00_AXI_SLV_REG2_OFFSET));
+            xil_printf("-ch_1 res: %dx%d -\r\n", AXI_LITE_REG_mReadReg(XPAR_CH_1_AXIS_PASSTHROUGH_MON_0_S00_AXI_BASEADDR, \
+            	   	    AXI_LITE_REG_S00_AXI_SLV_REG0_OFFSET),AXI_LITE_REG_mReadReg(XPAR_CH_1_AXIS_PASSTHROUGH_MON_0_S00_AXI_BASEADDR, \
+            	   	    AXI_LITE_REG_S00_AXI_SLV_REG1_OFFSET));
+
+
+            xil_printf("-vdma read freq: %d -\r\n", AXI_LITE_REG_mReadReg(XPAR_VDMA_SS_AXIS_PASSTHROUGH_MON_0_S00_AXI_BASEADDR, \
+            	   	    AXI_LITE_REG_S00_AXI_SLV_REG2_OFFSET));
+            xil_printf("-vdma read res: %dx%d -\r\n", AXI_LITE_REG_mReadReg(XPAR_VDMA_SS_AXIS_PASSTHROUGH_MON_0_S00_AXI_BASEADDR, \
+            	   	    AXI_LITE_REG_S00_AXI_SLV_REG0_OFFSET),AXI_LITE_REG_mReadReg(XPAR_VDMA_SS_AXIS_PASSTHROUGH_MON_0_S00_AXI_BASEADDR, \
+            	   	    AXI_LITE_REG_S00_AXI_SLV_REG1_OFFSET));
+            xil_printf("**********************************\r\n");
+			while(!XUartLite_IsTransmitEmpty(XPAR_UARTLITE_0_BASEADDR));
+    	}
+
+    }
+	XGpioPs_WritePin(&gpiops_inst, EMIO_UART_OE, 1);
+}
+
+
+
+

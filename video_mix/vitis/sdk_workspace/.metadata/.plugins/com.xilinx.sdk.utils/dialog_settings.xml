@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="D:\workdir\pic_lwip_udp\video_mix\vitis\xsa" key="scw_hwspec_file_selection"/>
+	<item value="D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\test_system\Debug\sd_card" key="zynq_flash_files_selection"/>
+	<item value="D:\workdir\pic_lwip_udp\video_mix\vitis\xsa" key="scw_hwspec"/>
+</section>

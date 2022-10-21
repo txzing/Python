@@ -1,0 +1,698 @@
+
+*** Running vivado
+    with args -log system_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source system_wrapper.tcl
+
+
+
+****** Vivado v2020.1 (64-bit)
+  **** SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+  **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source system_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/workdir/pic_lwip_udp/video_mix/vivado/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/Vivado/2020.1/data/ip'.
+WARNING: [IP_Flow 19-1663] Duplicate IP found for 'xilinx.com:ip:v_osd:6.0'. The one found in IP location 'd:/workdir/pic_lwip_udp/video_mix/vivado/ip_repo/ip/v_osd_v6_0' will take precedence over the same IP in the Xilinx installed IP.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is D:/home/andreas/workdir/figkey/projects/Baidu/2CG_Ima_ACQ_V2/video_mix/vivado/ip_cache 
+add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1112.477 ; gain = 0.000
+Command: synth_design -top system_wrapper -part xczu2cg-sfvc784-1-e
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xczu2cg'
+INFO: [Device 21-403] Loading part xczu2cg-sfvc784-1-e
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 22288
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1615.414 ; gain = 75.199
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'system_wrapper' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [D:/Vivado/Vivado/2020.1/scripts/rt/data/unisim_comp.v:36238]
+	Parameter DRIVE bound to: 12 - type: integer 
+	Parameter IBUF_LOW_PWR bound to: TRUE - type: string 
+	Parameter IOSTANDARD bound to: DEFAULT - type: string 
+	Parameter SLEW bound to: SLOW - type: string 
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (1#1) [D:/Vivado/Vivado/2020.1/scripts/rt/data/unisim_comp.v:36238]
+INFO: [Synth 8-6157] synthesizing module 'system' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:6384]
+INFO: [Synth 8-6157] synthesizing module 'ch_0_imp_1YUZ09U' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6157] synthesizing module 'system_axis_passthrough_mon_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axis_passthrough_mon_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axis_passthrough_mon_0_0' (2#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axis_passthrough_mon_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axis_switch_0_3' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axis_switch_0_3_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axis_switch_0_3' (3#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axis_switch_0_3_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'system_axis_switch_0_3' is unconnected for instance 'axis_switch_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:474]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'system_axis_switch_0_3' is unconnected for instance 'axis_switch_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:474]
+WARNING: [Synth 8-7071] port 'm_axis_tid' of module 'system_axis_switch_0_3' is unconnected for instance 'axis_switch_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:474]
+WARNING: [Synth 8-7071] port 'm_axis_tdest' of module 'system_axis_switch_0_3' is unconnected for instance 'axis_switch_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:474]
+WARNING: [Synth 8-7023] instance 'axis_switch_0' of module 'system_axis_switch_0_3' has 38 connections declared, but only 34 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:474]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_video_clk_wiz_1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_rst_video_clk_wiz_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_video_clk_wiz_1' (4#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_rst_video_clk_wiz_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_video_clk_wiz_1' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:509]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_video_clk_wiz_1' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:509]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_video_clk_wiz_1' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:509]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_rst_video_clk_wiz_1' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:509]
+WARNING: [Synth 8-7023] instance 'rst_video_clk_wiz' of module 'system_rst_video_clk_wiz_1' has 10 connections declared, but only 6 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:509]
+INFO: [Synth 8-6157] synthesizing module 'system_v_axi4s_vid_out_0_1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_axi4s_vid_out_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_axi4s_vid_out_0_1' (5#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_axi4s_vid_out_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'overflow' of module 'system_v_axi4s_vid_out_0_1' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:516]
+WARNING: [Synth 8-7071] port 'underflow' of module 'system_v_axi4s_vid_out_0_1' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:516]
+WARNING: [Synth 8-7071] port 'fifo_read_level' of module 'system_v_axi4s_vid_out_0_1' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:516]
+WARNING: [Synth 8-7023] instance 'v_axi4s_vid_out_0' of module 'system_v_axi4s_vid_out_0_1' has 31 connections declared, but only 28 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:516]
+INFO: [Synth 8-6157] synthesizing module 'system_v_tc_0_1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tc_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_tc_0_1' (6#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tc_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'irq' of module 'system_v_tc_0_1' is unconnected for instance 'v_tc_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:545]
+WARNING: [Synth 8-7071] port 'fsync_out' of module 'system_v_tc_0_1' is unconnected for instance 'v_tc_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:545]
+WARNING: [Synth 8-7023] instance 'v_tc_0' of module 'system_v_tc_0_1' has 32 connections declared, but only 30 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:545]
+INFO: [Synth 8-6157] synthesizing module 'system_v_tpg_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tpg_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_tpg_0_0' (7#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tpg_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'fid' of module 'system_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:576]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'system_v_tpg_0_0' is unconnected for instance 'v_tpg_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:576]
+WARNING: [Synth 8-7023] instance 'v_tpg_0' of module 'system_v_tpg_0_0' has 31 connections declared, but only 29 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:576]
+INFO: [Synth 8-6157] synthesizing module 'system_v_tpg_0_6' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tpg_0_6_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_tpg_0_6' (8#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tpg_0_6_stub.v:6]
+WARNING: [Synth 8-7071] port 'fid' of module 'system_v_tpg_0_6' is unconnected for instance 'v_tpg_1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:606]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'system_v_tpg_0_6' is unconnected for instance 'v_tpg_1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:606]
+WARNING: [Synth 8-7023] instance 'v_tpg_1' of module 'system_v_tpg_0_6' has 31 connections declared, but only 29 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:606]
+INFO: [Synth 8-6157] synthesizing module 'system_v_vid_in_axi4s_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_vid_in_axi4s_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_vid_in_axi4s_0_0' (9#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_vid_in_axi4s_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'fid' of module 'system_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:636]
+WARNING: [Synth 8-7071] port 'vtd_active_video' of module 'system_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:636]
+WARNING: [Synth 8-7071] port 'vtd_vblank' of module 'system_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:636]
+WARNING: [Synth 8-7071] port 'vtd_hblank' of module 'system_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:636]
+WARNING: [Synth 8-7071] port 'vtd_vsync' of module 'system_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:636]
+WARNING: [Synth 8-7071] port 'vtd_hsync' of module 'system_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:636]
+WARNING: [Synth 8-7071] port 'vtd_field_id' of module 'system_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:636]
+WARNING: [Synth 8-7071] port 'overflow' of module 'system_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:636]
+WARNING: [Synth 8-7071] port 'underflow' of module 'system_v_vid_in_axi4s_0_0' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:636]
+WARNING: [Synth 8-7023] instance 'v_vid_in_axi4s_0' of module 'system_v_vid_in_axi4s_0_0' has 28 connections declared, but only 19 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:636]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_3' [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconstant_0_3/synth/system_xlconstant_0_3.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (10#1) [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_3' (11#1) [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconstant_0_3/synth/system_xlconstant_0_3.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'ch_0_imp_1YUZ09U' (12#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:12]
+INFO: [Synth 8-6157] synthesizing module 'ch_1_imp_OPUAHI' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:660]
+INFO: [Synth 8-6157] synthesizing module 'system_axis_passthrough_mon_0_8' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axis_passthrough_mon_0_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axis_passthrough_mon_0_8' (13#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axis_passthrough_mon_0_8_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axis_switch_0_5' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axis_switch_0_5_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axis_switch_0_5' (14#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axis_switch_0_5_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axis_tstrb' of module 'system_axis_switch_0_5' is unconnected for instance 'axis_switch_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1120]
+WARNING: [Synth 8-7071] port 'm_axis_tkeep' of module 'system_axis_switch_0_5' is unconnected for instance 'axis_switch_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1120]
+WARNING: [Synth 8-7071] port 'm_axis_tid' of module 'system_axis_switch_0_5' is unconnected for instance 'axis_switch_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1120]
+WARNING: [Synth 8-7071] port 'm_axis_tdest' of module 'system_axis_switch_0_5' is unconnected for instance 'axis_switch_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1120]
+WARNING: [Synth 8-7023] instance 'axis_switch_0' of module 'system_axis_switch_0_5' has 38 connections declared, but only 34 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1120]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_video_clk_wiz_2' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_rst_video_clk_wiz_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_video_clk_wiz_2' (15#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_rst_video_clk_wiz_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_video_clk_wiz_2' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1155]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_video_clk_wiz_2' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1155]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_video_clk_wiz_2' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1155]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_rst_video_clk_wiz_2' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1155]
+WARNING: [Synth 8-7023] instance 'rst_video_clk_wiz' of module 'system_rst_video_clk_wiz_2' has 10 connections declared, but only 6 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1155]
+INFO: [Synth 8-6157] synthesizing module 'system_v_axi4s_vid_out_0_2' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_axi4s_vid_out_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_axi4s_vid_out_0_2' (16#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_axi4s_vid_out_0_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'locked' of module 'system_v_axi4s_vid_out_0_2' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1162]
+WARNING: [Synth 8-7071] port 'overflow' of module 'system_v_axi4s_vid_out_0_2' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1162]
+WARNING: [Synth 8-7071] port 'underflow' of module 'system_v_axi4s_vid_out_0_2' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1162]
+WARNING: [Synth 8-7071] port 'fifo_read_level' of module 'system_v_axi4s_vid_out_0_2' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1162]
+WARNING: [Synth 8-7071] port 'status' of module 'system_v_axi4s_vid_out_0_2' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1162]
+WARNING: [Synth 8-7023] instance 'v_axi4s_vid_out_0' of module 'system_v_axi4s_vid_out_0_2' has 31 connections declared, but only 26 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1162]
+INFO: [Synth 8-6157] synthesizing module 'system_v_tc_0_2' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tc_0_2_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_tc_0_2' (17#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tc_0_2_stub.v:6]
+WARNING: [Synth 8-7071] port 'irq' of module 'system_v_tc_0_2' is unconnected for instance 'v_tc_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1189]
+WARNING: [Synth 8-7071] port 'fsync_out' of module 'system_v_tc_0_2' is unconnected for instance 'v_tc_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1189]
+WARNING: [Synth 8-7023] instance 'v_tc_0' of module 'system_v_tc_0_2' has 32 connections declared, but only 30 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1189]
+INFO: [Synth 8-6157] synthesizing module 'system_v_tpg_0_8' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tpg_0_8_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_tpg_0_8' (18#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tpg_0_8_stub.v:6]
+WARNING: [Synth 8-7071] port 'fid' of module 'system_v_tpg_0_8' is unconnected for instance 'v_tpg_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1220]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'system_v_tpg_0_8' is unconnected for instance 'v_tpg_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1220]
+WARNING: [Synth 8-7023] instance 'v_tpg_0' of module 'system_v_tpg_0_8' has 31 connections declared, but only 29 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1220]
+INFO: [Synth 8-6157] synthesizing module 'system_v_tpg_1_1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tpg_1_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_tpg_1_1' (19#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tpg_1_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'fid' of module 'system_v_tpg_1_1' is unconnected for instance 'v_tpg_1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1250]
+WARNING: [Synth 8-7071] port 'interrupt' of module 'system_v_tpg_1_1' is unconnected for instance 'v_tpg_1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1250]
+WARNING: [Synth 8-7023] instance 'v_tpg_1' of module 'system_v_tpg_1_1' has 31 connections declared, but only 29 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1250]
+INFO: [Synth 8-6157] synthesizing module 'system_v_vid_in_axi4s_0_1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_vid_in_axi4s_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_vid_in_axi4s_0_1' (20#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_vid_in_axi4s_0_1_stub.v:6]
+WARNING: [Synth 8-7071] port 'fid' of module 'system_v_vid_in_axi4s_0_1' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-7071] port 'vtd_active_video' of module 'system_v_vid_in_axi4s_0_1' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-7071] port 'vtd_vblank' of module 'system_v_vid_in_axi4s_0_1' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-7071] port 'vtd_hblank' of module 'system_v_vid_in_axi4s_0_1' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-7071] port 'vtd_vsync' of module 'system_v_vid_in_axi4s_0_1' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-7071] port 'vtd_hsync' of module 'system_v_vid_in_axi4s_0_1' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-7071] port 'vtd_field_id' of module 'system_v_vid_in_axi4s_0_1' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-7071] port 'overflow' of module 'system_v_vid_in_axi4s_0_1' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-7071] port 'underflow' of module 'system_v_vid_in_axi4s_0_1' is unconnected for instance 'v_vid_in_axi4s_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1280]
+WARNING: [Synth 8-7023] instance 'v_vid_in_axi4s_0' of module 'system_v_vid_in_axi4s_0_1' has 28 connections declared, but only 19 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1280]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_4' [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconstant_0_4/synth/system_xlconstant_0_4.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_4' (21#1) [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconstant_0_4/synth/system_xlconstant_0_4.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'ch_1_imp_OPUAHI' (22#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:660]
+INFO: [Synth 8-6157] synthesizing module 'processer_ss_imp_11LX6UP' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:4139]
+INFO: [Synth 8-6157] synthesizing module 'system_AXI_LITE_REG_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_AXI_LITE_REG_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_AXI_LITE_REG_0_0' (23#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_AXI_LITE_REG_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_uartlite_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_uartlite_0_0' (24#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axi_uartlite_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_ps8_0_axi_periph_3' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:7507]
+INFO: [Synth 8-6157] synthesizing module 'i00_couplers_imp_G70J8M' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1304]
+INFO: [Synth 8-6155] done synthesizing module 'i00_couplers_imp_G70J8M' (25#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1304]
+INFO: [Synth 8-6157] synthesizing module 'i01_couplers_imp_154GLPZ' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1450]
+INFO: [Synth 8-6155] done synthesizing module 'i01_couplers_imp_154GLPZ' (26#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1450]
+INFO: [Synth 8-6157] synthesizing module 'i02_couplers_imp_1GPSAH1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1596]
+INFO: [Synth 8-6155] done synthesizing module 'i02_couplers_imp_1GPSAH1' (27#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1596]
+INFO: [Synth 8-6157] synthesizing module 'm00_couplers_imp_DV2VKW' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1742]
+INFO: [Synth 8-6155] done synthesizing module 'm00_couplers_imp_DV2VKW' (28#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1742]
+INFO: [Synth 8-6157] synthesizing module 'm01_couplers_imp_18ADT69' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1888]
+INFO: [Synth 8-6155] done synthesizing module 'm01_couplers_imp_18ADT69' (29#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:1888]
+INFO: [Synth 8-6157] synthesizing module 'm02_couplers_imp_1ELC9VN' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2013]
+INFO: [Synth 8-6155] done synthesizing module 'm02_couplers_imp_1ELC9VN' (30#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2013]
+INFO: [Synth 8-6157] synthesizing module 'm03_couplers_imp_6Q5XN6' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2145]
+INFO: [Synth 8-6155] done synthesizing module 'm03_couplers_imp_6Q5XN6' (31#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2145]
+INFO: [Synth 8-6157] synthesizing module 'm04_couplers_imp_1RR7CVB' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2277]
+INFO: [Synth 8-6155] done synthesizing module 'm04_couplers_imp_1RR7CVB' (32#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2277]
+INFO: [Synth 8-6157] synthesizing module 'm05_couplers_imp_KZZDKM' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2423]
+INFO: [Synth 8-6155] done synthesizing module 'm05_couplers_imp_KZZDKM' (33#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2423]
+INFO: [Synth 8-6157] synthesizing module 'm06_couplers_imp_RAXW1W' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2548]
+INFO: [Synth 8-6155] done synthesizing module 'm06_couplers_imp_RAXW1W' (34#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2548]
+INFO: [Synth 8-6157] synthesizing module 'm07_couplers_imp_1KMAGB9' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2680]
+INFO: [Synth 8-6155] done synthesizing module 'm07_couplers_imp_1KMAGB9' (35#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2680]
+INFO: [Synth 8-6157] synthesizing module 'm08_couplers_imp_IK77ZJ' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2812]
+INFO: [Synth 8-6155] done synthesizing module 'm08_couplers_imp_IK77ZJ' (36#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2812]
+INFO: [Synth 8-6157] synthesizing module 'm09_couplers_imp_1TMVDTQ' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2958]
+INFO: [Synth 8-6155] done synthesizing module 'm09_couplers_imp_1TMVDTQ' (37#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:2958]
+INFO: [Synth 8-6157] synthesizing module 'm10_couplers_imp_1EL2L2B' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3090]
+INFO: [Synth 8-6155] done synthesizing module 'm10_couplers_imp_1EL2L2B' (38#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3090]
+INFO: [Synth 8-6157] synthesizing module 'm11_couplers_imp_6PXNEA' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3215]
+INFO: [Synth 8-6155] done synthesizing module 'm11_couplers_imp_6PXNEA' (39#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3215]
+INFO: [Synth 8-6157] synthesizing module 'm12_couplers_imp_DUTHS0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3340]
+INFO: [Synth 8-6155] done synthesizing module 'm12_couplers_imp_DUTHS0' (40#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3340]
+INFO: [Synth 8-6157] synthesizing module 'm13_couplers_imp_18A5TXT' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3465]
+INFO: [Synth 8-6155] done synthesizing module 'm13_couplers_imp_18A5TXT' (41#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3465]
+INFO: [Synth 8-6157] synthesizing module 'm14_couplers_imp_RAOY3O' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3597]
+INFO: [Synth 8-6155] done synthesizing module 'm14_couplers_imp_RAOY3O' (42#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3597]
+INFO: [Synth 8-6157] synthesizing module 'm15_couplers_imp_1KM2WXH' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3729]
+INFO: [Synth 8-6155] done synthesizing module 'm15_couplers_imp_1KM2WXH' (43#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3729]
+INFO: [Synth 8-6157] synthesizing module 'm16_couplers_imp_1RQYT3B' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3875]
+INFO: [Synth 8-6155] done synthesizing module 'm16_couplers_imp_1RQYT3B' (44#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:3875]
+INFO: [Synth 8-6157] synthesizing module 'm17_couplers_imp_KZS8D2' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:4007]
+INFO: [Synth 8-6155] done synthesizing module 'm17_couplers_imp_KZS8D2' (45#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:4007]
+INFO: [Synth 8-6157] synthesizing module 's00_couplers_imp_1SMX9T' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:6081]
+INFO: [Synth 8-6157] synthesizing module 'system_auto_pc_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_auto_pc_0' (46#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_auto_pc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 's00_couplers_imp_1SMX9T' (47#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:6081]
+INFO: [Synth 8-6157] synthesizing module 'system_tier2_xbar_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_tier2_xbar_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_tier2_xbar_0_0' (48#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_tier2_xbar_0_0_stub.v:6]
+WARNING: [Synth 8-689] width (15) of port connection 'm_axi_arprot' does not match port width (24) of module 'system_tier2_xbar_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:10328]
+WARNING: [Synth 8-689] width (15) of port connection 'm_axi_awprot' does not match port width (24) of module 'system_tier2_xbar_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:10332]
+INFO: [Synth 8-6157] synthesizing module 'system_tier2_xbar_1_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_tier2_xbar_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_tier2_xbar_1_0' (49#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_tier2_xbar_1_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_tier2_xbar_2_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_tier2_xbar_2_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_tier2_xbar_2_0' (50#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_tier2_xbar_2_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'm_axi_awprot' of module 'system_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:10406]
+WARNING: [Synth 8-7071] port 'm_axi_arprot' of module 'system_tier2_xbar_2_0' is unconnected for instance 'tier2_xbar_2' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:10406]
+WARNING: [Synth 8-7023] instance 'tier2_xbar_2' of module 'system_tier2_xbar_2_0' has 40 connections declared, but only 38 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:10406]
+INFO: [Synth 8-6157] synthesizing module 'system_xbar_4' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_xbar_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_xbar_4' (51#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_xbar_4_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_ps8_0_axi_periph_3' (52#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:7507]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_ps8_0_300M_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_rst_ps8_0_300M_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_ps8_0_300M_0' (53#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_rst_ps8_0_300M_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_ps8_0_300M_0' is unconnected for instance 'rst_ps8_0_300M' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:5968]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_ps8_0_300M_0' is unconnected for instance 'rst_ps8_0_300M' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:5968]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_ps8_0_300M_0' is unconnected for instance 'rst_ps8_0_300M' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:5968]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_rst_ps8_0_300M_0' is unconnected for instance 'rst_ps8_0_300M' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:5968]
+WARNING: [Synth 8-7023] instance 'rst_ps8_0_300M' of module 'system_rst_ps8_0_300M_0' has 10 connections declared, but only 6 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:5968]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconcat_0_0' [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+	Parameter IN0_WIDTH bound to: 1 - type: integer 
+	Parameter IN1_WIDTH bound to: 1 - type: integer 
+	Parameter IN2_WIDTH bound to: 1 - type: integer 
+	Parameter IN3_WIDTH bound to: 1 - type: integer 
+	Parameter IN4_WIDTH bound to: 1 - type: integer 
+	Parameter IN5_WIDTH bound to: 1 - type: integer 
+	Parameter IN6_WIDTH bound to: 1 - type: integer 
+	Parameter IN7_WIDTH bound to: 1 - type: integer 
+	Parameter IN8_WIDTH bound to: 1 - type: integer 
+	Parameter IN9_WIDTH bound to: 1 - type: integer 
+	Parameter IN10_WIDTH bound to: 1 - type: integer 
+	Parameter IN11_WIDTH bound to: 1 - type: integer 
+	Parameter IN12_WIDTH bound to: 1 - type: integer 
+	Parameter IN13_WIDTH bound to: 1 - type: integer 
+	Parameter IN14_WIDTH bound to: 1 - type: integer 
+	Parameter IN15_WIDTH bound to: 1 - type: integer 
+	Parameter IN16_WIDTH bound to: 1 - type: integer 
+	Parameter IN17_WIDTH bound to: 1 - type: integer 
+	Parameter IN18_WIDTH bound to: 1 - type: integer 
+	Parameter IN19_WIDTH bound to: 1 - type: integer 
+	Parameter IN20_WIDTH bound to: 1 - type: integer 
+	Parameter IN21_WIDTH bound to: 1 - type: integer 
+	Parameter IN22_WIDTH bound to: 1 - type: integer 
+	Parameter IN23_WIDTH bound to: 1 - type: integer 
+	Parameter IN24_WIDTH bound to: 1 - type: integer 
+	Parameter IN25_WIDTH bound to: 1 - type: integer 
+	Parameter IN26_WIDTH bound to: 1 - type: integer 
+	Parameter IN27_WIDTH bound to: 1 - type: integer 
+	Parameter IN28_WIDTH bound to: 1 - type: integer 
+	Parameter IN29_WIDTH bound to: 1 - type: integer 
+	Parameter IN30_WIDTH bound to: 1 - type: integer 
+	Parameter IN31_WIDTH bound to: 1 - type: integer 
+	Parameter dout_width bound to: 4 - type: integer 
+	Parameter NUM_PORTS bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (54#1) [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconcat_0_0' (55#1) [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconcat_0_0/synth/system_xlconcat_0_0.v:58]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_0' [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/synth/system_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 184811522 - type: integer 
+	Parameter CONST_WIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (55#1) [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_0' (56#1) [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconstant_0_0/synth/system_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'system_zynq_ultra_ps_e_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_zynq_ultra_ps_e_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_zynq_ultra_ps_e_0_0' (57#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_zynq_ultra_ps_e_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'maxigp2_awuser' of module 'system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:5983]
+WARNING: [Synth 8-7071] port 'maxigp2_aruser' of module 'system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:5983]
+WARNING: [Synth 8-7071] port 'saxigp2_bid' of module 'system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:5983]
+WARNING: [Synth 8-7071] port 'saxigp2_rid' of module 'system_zynq_ultra_ps_e_0_0' is unconnected for instance 'zynq_ultra_ps_e_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:5983]
+WARNING: [Synth 8-7023] instance 'zynq_ultra_ps_e_0' of module 'system_zynq_ultra_ps_e_0_0' has 99 connections declared, but only 95 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:5983]
+INFO: [Synth 8-6155] done synthesizing module 'processer_ss_imp_11LX6UP' (58#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:4139]
+INFO: [Synth 8-6157] synthesizing module 'vdma_ss_imp_1VSE4U4' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:10488]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_smc_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_smc_0' (59#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axi_smc_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_vdma_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axi_vdma_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_vdma_0_0' (60#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axi_vdma_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's2mm_frame_ptr_out' of module 'system_axi_vdma_0_0' is unconnected for instance 'axi_vdma_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11108]
+WARNING: [Synth 8-7023] instance 'axi_vdma_0' of module 'system_axi_vdma_0_0' has 45 connections declared, but only 44 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11108]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_vdma_1_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axi_vdma_1_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_vdma_1_0' (61#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axi_vdma_1_0_stub.v:6]
+WARNING: [Synth 8-7071] port 's2mm_frame_ptr_out' of module 'system_axi_vdma_1_0' is unconnected for instance 'axi_vdma_1' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11153]
+WARNING: [Synth 8-7023] instance 'axi_vdma_1' of module 'system_axi_vdma_1_0' has 45 connections declared, but only 44 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11153]
+INFO: [Synth 8-6157] synthesizing module 'system_axi_vdma_3_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axi_vdma_3_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axi_vdma_3_0' (62#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axi_vdma_3_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mm2s_frame_ptr_out' of module 'system_axi_vdma_3_0' is unconnected for instance 'axi_vdma_2' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11198]
+WARNING: [Synth 8-7071] port 'm_axis_mm2s_tkeep' of module 'system_axi_vdma_3_0' is unconnected for instance 'axi_vdma_2' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11198]
+WARNING: [Synth 8-7023] instance 'axi_vdma_2' of module 'system_axi_vdma_3_0' has 42 connections declared, but only 40 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11198]
+INFO: [Synth 8-6157] synthesizing module 'system_axis_passthrough_mon_0_7' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axis_passthrough_mon_0_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_axis_passthrough_mon_0_7' (63#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_axis_passthrough_mon_0_7_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'vdma_ss_imp_1VSE4U4' (64#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:10488]
+INFO: [Synth 8-6157] synthesizing module 'vid_out_ss_imp_9NX4OL' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11275]
+INFO: [Synth 8-6157] synthesizing module 'system_clk_wiz_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'system_clk_wiz_0_0' (65#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_clk_wiz_0_0_stub.v:5]
+INFO: [Synth 8-6157] synthesizing module 'system_rst_video_clk_wiz_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_rst_video_clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_rst_video_clk_wiz_0' (66#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_rst_video_clk_wiz_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'mb_reset' of module 'system_rst_video_clk_wiz_0' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11515]
+WARNING: [Synth 8-7071] port 'bus_struct_reset' of module 'system_rst_video_clk_wiz_0' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11515]
+WARNING: [Synth 8-7071] port 'peripheral_reset' of module 'system_rst_video_clk_wiz_0' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11515]
+WARNING: [Synth 8-7071] port 'interconnect_aresetn' of module 'system_rst_video_clk_wiz_0' is unconnected for instance 'rst_video_clk_wiz' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11515]
+WARNING: [Synth 8-7023] instance 'rst_video_clk_wiz' of module 'system_rst_video_clk_wiz_0' has 10 connections declared, but only 6 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11515]
+INFO: [Synth 8-6157] synthesizing module 'system_v_axi4s_vid_out_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_axi4s_vid_out_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_axi4s_vid_out_0_0' (67#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_axi4s_vid_out_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'vid_vblank' of module 'system_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11522]
+WARNING: [Synth 8-7071] port 'vid_hblank' of module 'system_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11522]
+WARNING: [Synth 8-7071] port 'vid_field_id' of module 'system_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11522]
+WARNING: [Synth 8-7071] port 'locked' of module 'system_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11522]
+WARNING: [Synth 8-7071] port 'overflow' of module 'system_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11522]
+WARNING: [Synth 8-7071] port 'underflow' of module 'system_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11522]
+WARNING: [Synth 8-7071] port 'fifo_read_level' of module 'system_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11522]
+WARNING: [Synth 8-7071] port 'status' of module 'system_v_axi4s_vid_out_0_0' is unconnected for instance 'v_axi4s_vid_out_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11522]
+WARNING: [Synth 8-7023] instance 'v_axi4s_vid_out_0' of module 'system_v_axi4s_vid_out_0_0' has 31 connections declared, but only 23 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11522]
+INFO: [Synth 8-6157] synthesizing module 'system_v_tc_0_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tc_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'system_v_tc_0_0' (68#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/.Xil/Vivado-3252-TX/realtime/system_v_tc_0_0_stub.v:6]
+WARNING: [Synth 8-7071] port 'fsync_out' of module 'system_v_tc_0_0' is unconnected for instance 'v_tc_0' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11546]
+WARNING: [Synth 8-7023] instance 'v_tc_0' of module 'system_v_tc_0_0' has 32 connections declared, but only 31 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11546]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_1' [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconstant_0_1/synth/system_xlconstant_0_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_1' (69#1) [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconstant_0_1/synth/system_xlconstant_0_1.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'vid_out_ss_imp_9NX4OL' (70#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:11275]
+WARNING: [Synth 8-7071] port 'irq' of module 'vid_out_ss_imp_9NX4OL' is unconnected for instance 'vid_out_ss' [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:7452]
+WARNING: [Synth 8-7023] instance 'vid_out_ss' of module 'vid_out_ss_imp_9NX4OL' has 51 connections declared, but only 50 given [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:7452]
+INFO: [Synth 8-6157] synthesizing module 'system_xlconstant_0_2' [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconstant_0_2/synth/system_xlconstant_0_2.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 0 - type: integer 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized1' (70#1) [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'system_xlconstant_0_2' (71#1) [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xlconstant_0_2/synth/system_xlconstant_0_2.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'system' (72#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/synth/system.v:6384]
+INFO: [Synth 8-6155] done synthesizing module 'system_wrapper' (73#1) [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/hdl/system_wrapper.v:12]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1689.672 ; gain = 149.457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1707.598 ; gain = 167.383
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1707.598 ; gain = 167.383
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.101 . Memory (MB): peak = 1719.680 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 7 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axis_passthrough_mon_0_0/system_axis_passthrough_mon_0_0/system_axis_passthrough_mon_0_0_in_context.xdc] for cell 'system_i/ch_0/axis_passthrough_mon_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axis_passthrough_mon_0_0/system_axis_passthrough_mon_0_0/system_axis_passthrough_mon_0_0_in_context.xdc] for cell 'system_i/ch_0/axis_passthrough_mon_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tpg_0_0/system_v_tpg_0_0/system_v_tpg_0_0_in_context.xdc] for cell 'system_i/ch_0/v_tpg_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tpg_0_0/system_v_tpg_0_0/system_v_tpg_0_0_in_context.xdc] for cell 'system_i/ch_0/v_tpg_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_AXI_LITE_REG_0_0/system_AXI_LITE_REG_0_0/system_AXI_LITE_REG_0_0_in_context.xdc] for cell 'system_i/processer_ss/AXI_LITE_REG_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_AXI_LITE_REG_0_0/system_AXI_LITE_REG_0_0/system_AXI_LITE_REG_0_0_in_context.xdc] for cell 'system_i/processer_ss/AXI_LITE_REG_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0/system_axi_uartlite_0_0_in_context.xdc] for cell 'system_i/processer_ss/axi_uartlite_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axi_uartlite_0_0/system_axi_uartlite_0_0/system_axi_uartlite_0_0_in_context.xdc] for cell 'system_i/processer_ss/axi_uartlite_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_rst_ps8_0_300M_0/system_rst_ps8_0_300M_0/system_rst_ps8_0_300M_0_in_context.xdc] for cell 'system_i/processer_ss/rst_ps8_0_300M'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_rst_ps8_0_300M_0/system_rst_ps8_0_300M_0/system_rst_ps8_0_300M_0_in_context.xdc] for cell 'system_i/processer_ss/rst_ps8_0_300M'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'system_i/processer_ss/zynq_ultra_ps_e_0'
+WARNING: [Vivado 12-584] No ports matched ''. [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0_in_context.xdc:2]
+WARNING: [Vivado 12-584] No ports matched ''. [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0_in_context.xdc:4]
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0/system_zynq_ultra_ps_e_0_0_in_context.xdc] for cell 'system_i/processer_ss/zynq_ultra_ps_e_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0/system_axi_vdma_0_0_in_context.xdc] for cell 'system_i/vdma_ss/axi_vdma_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axi_vdma_0_0/system_axi_vdma_0_0/system_axi_vdma_0_0_in_context.xdc] for cell 'system_i/vdma_ss/axi_vdma_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0/system_axi_vdma_0_0_in_context.xdc] for cell 'system_i/vdma_ss/axi_vdma_1'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axi_vdma_1_0/system_axi_vdma_1_0/system_axi_vdma_0_0_in_context.xdc] for cell 'system_i/vdma_ss/axi_vdma_1'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0/system_clk_wiz_0_0_in_context.xdc] for cell 'system_i/vid_out_ss/clk_wiz_0'
+WARNING: [Vivado 12-584] No ports matched ''. [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0/system_clk_wiz_0_0_in_context.xdc:1]
+WARNING: [Vivado 12-584] No ports matched ''. [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0/system_clk_wiz_0_0_in_context.xdc:4]
+WARNING: [Vivado 12-584] No ports matched ''. [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0/system_clk_wiz_0_0_in_context.xdc:6]
+WARNING: [Vivado 12-584] No ports matched ''. [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0/system_clk_wiz_0_0_in_context.xdc:8]
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_clk_wiz_0_0/system_clk_wiz_0_0/system_clk_wiz_0_0_in_context.xdc] for cell 'system_i/vid_out_ss/clk_wiz_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_rst_video_clk_wiz_0/system_rst_video_clk_wiz_0/system_rst_video_clk_wiz_0_in_context.xdc] for cell 'system_i/vid_out_ss/rst_video_clk_wiz'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_rst_video_clk_wiz_0/system_rst_video_clk_wiz_0/system_rst_video_clk_wiz_0_in_context.xdc] for cell 'system_i/vid_out_ss/rst_video_clk_wiz'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_in_context.xdc] for cell 'system_i/vid_out_ss/v_axi4s_vid_out_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0/system_v_axi4s_vid_out_0_0_in_context.xdc] for cell 'system_i/vid_out_ss/v_axi4s_vid_out_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tc_0_0/system_v_tc_0_0/system_v_tc_0_0_in_context.xdc] for cell 'system_i/vid_out_ss/v_tc_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tc_0_0/system_v_tc_0_0/system_v_tc_0_0_in_context.xdc] for cell 'system_i/vid_out_ss/v_tc_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axis_switch_0_3/system_axis_switch_0_3/system_axis_switch_0_3_in_context.xdc] for cell 'system_i/ch_0/axis_switch_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axis_switch_0_3/system_axis_switch_0_3/system_axis_switch_0_3_in_context.xdc] for cell 'system_i/ch_0/axis_switch_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tpg_0_6/system_v_tpg_0_6/system_v_tpg_0_0_in_context.xdc] for cell 'system_i/ch_0/v_tpg_1'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tpg_0_6/system_v_tpg_0_6/system_v_tpg_0_0_in_context.xdc] for cell 'system_i/ch_0/v_tpg_1'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xbar_4/system_xbar_4/system_xbar_4_in_context.xdc] for cell 'system_i/processer_ss/ps8_0_axi_periph/xbar'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_xbar_4/system_xbar_4/system_xbar_4_in_context.xdc] for cell 'system_i/processer_ss/ps8_0_axi_periph/xbar'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axi_vdma_3_0/system_axi_vdma_3_0/system_axi_vdma_3_0_in_context.xdc] for cell 'system_i/vdma_ss/axi_vdma_2'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axi_vdma_3_0/system_axi_vdma_3_0/system_axi_vdma_3_0_in_context.xdc] for cell 'system_i/vdma_ss/axi_vdma_2'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axi_smc_0/system_axi_smc_0/system_axi_smc_0_in_context.xdc] for cell 'system_i/vdma_ss/axi_smc'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axi_smc_0/system_axi_smc_0/system_axi_smc_0_in_context.xdc] for cell 'system_i/vdma_ss/axi_smc'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axis_passthrough_mon_0_7/system_axis_passthrough_mon_0_7/system_axis_passthrough_mon_0_0_in_context.xdc] for cell 'system_i/vdma_ss/axis_passthrough_mon_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axis_passthrough_mon_0_7/system_axis_passthrough_mon_0_7/system_axis_passthrough_mon_0_0_in_context.xdc] for cell 'system_i/vdma_ss/axis_passthrough_mon_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_rst_video_clk_wiz_1/system_rst_video_clk_wiz_1/system_rst_video_clk_wiz_1_in_context.xdc] for cell 'system_i/ch_0/rst_video_clk_wiz'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_rst_video_clk_wiz_1/system_rst_video_clk_wiz_1/system_rst_video_clk_wiz_1_in_context.xdc] for cell 'system_i/ch_0/rst_video_clk_wiz'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_1/system_v_axi4s_vid_out_0_1/system_v_axi4s_vid_out_0_1_in_context.xdc] for cell 'system_i/ch_0/v_axi4s_vid_out_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_1/system_v_axi4s_vid_out_0_1/system_v_axi4s_vid_out_0_1_in_context.xdc] for cell 'system_i/ch_0/v_axi4s_vid_out_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tc_0_1/system_v_tc_0_1/system_v_tc_0_1_in_context.xdc] for cell 'system_i/ch_0/v_tc_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tc_0_1/system_v_tc_0_1/system_v_tc_0_1_in_context.xdc] for cell 'system_i/ch_0/v_tc_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0_in_context.xdc] for cell 'system_i/ch_0/v_vid_in_axi4s_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0/system_v_vid_in_axi4s_0_0_in_context.xdc] for cell 'system_i/ch_0/v_vid_in_axi4s_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axis_passthrough_mon_0_8/system_axis_passthrough_mon_0_8/system_axis_passthrough_mon_0_0_in_context.xdc] for cell 'system_i/ch_1/axis_passthrough_mon_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axis_passthrough_mon_0_8/system_axis_passthrough_mon_0_8/system_axis_passthrough_mon_0_0_in_context.xdc] for cell 'system_i/ch_1/axis_passthrough_mon_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tpg_0_8/system_v_tpg_0_8/system_v_tpg_0_0_in_context.xdc] for cell 'system_i/ch_1/v_tpg_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tpg_0_8/system_v_tpg_0_8/system_v_tpg_0_0_in_context.xdc] for cell 'system_i/ch_1/v_tpg_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axis_switch_0_5/system_axis_switch_0_5/system_axis_switch_0_3_in_context.xdc] for cell 'system_i/ch_1/axis_switch_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_axis_switch_0_5/system_axis_switch_0_5/system_axis_switch_0_3_in_context.xdc] for cell 'system_i/ch_1/axis_switch_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tpg_1_1/system_v_tpg_1_1/system_v_tpg_0_0_in_context.xdc] for cell 'system_i/ch_1/v_tpg_1'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tpg_1_1/system_v_tpg_1_1/system_v_tpg_0_0_in_context.xdc] for cell 'system_i/ch_1/v_tpg_1'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_rst_video_clk_wiz_2/system_rst_video_clk_wiz_2/system_rst_video_clk_wiz_1_in_context.xdc] for cell 'system_i/ch_1/rst_video_clk_wiz'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_rst_video_clk_wiz_2/system_rst_video_clk_wiz_2/system_rst_video_clk_wiz_1_in_context.xdc] for cell 'system_i/ch_1/rst_video_clk_wiz'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_2/system_v_axi4s_vid_out_0_2/system_v_axi4s_vid_out_0_1_in_context.xdc] for cell 'system_i/ch_1/v_axi4s_vid_out_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_axi4s_vid_out_0_2/system_v_axi4s_vid_out_0_2/system_v_axi4s_vid_out_0_1_in_context.xdc] for cell 'system_i/ch_1/v_axi4s_vid_out_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tc_0_2/system_v_tc_0_2/system_v_tc_0_1_in_context.xdc] for cell 'system_i/ch_1/v_tc_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_tc_0_2/system_v_tc_0_2/system_v_tc_0_1_in_context.xdc] for cell 'system_i/ch_1/v_tc_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_1/system_v_vid_in_axi4s_0_1/system_v_vid_in_axi4s_0_0_in_context.xdc] for cell 'system_i/ch_1/v_vid_in_axi4s_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_v_vid_in_axi4s_0_1/system_v_vid_in_axi4s_0_1/system_v_vid_in_axi4s_0_0_in_context.xdc] for cell 'system_i/ch_1/v_vid_in_axi4s_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_tier2_xbar_0_0/system_tier2_xbar_0_0/system_tier2_xbar_0_0_in_context.xdc] for cell 'system_i/processer_ss/ps8_0_axi_periph/tier2_xbar_0'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_tier2_xbar_0_0/system_tier2_xbar_0_0/system_tier2_xbar_0_0_in_context.xdc] for cell 'system_i/processer_ss/ps8_0_axi_periph/tier2_xbar_0'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_tier2_xbar_1_0/system_tier2_xbar_1_0/system_tier2_xbar_1_0_in_context.xdc] for cell 'system_i/processer_ss/ps8_0_axi_periph/tier2_xbar_1'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_tier2_xbar_1_0/system_tier2_xbar_1_0/system_tier2_xbar_1_0_in_context.xdc] for cell 'system_i/processer_ss/ps8_0_axi_periph/tier2_xbar_1'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_tier2_xbar_2_0/system_tier2_xbar_2_0/system_tier2_xbar_2_0_in_context.xdc] for cell 'system_i/processer_ss/ps8_0_axi_periph/tier2_xbar_2'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_tier2_xbar_2_0/system_tier2_xbar_2_0/system_tier2_xbar_2_0_in_context.xdc] for cell 'system_i/processer_ss/ps8_0_axi_periph/tier2_xbar_2'
+Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_0_in_context.xdc] for cell 'system_i/processer_ss/ps8_0_axi_periph/s00_couplers/auto_pc'
+Finished Parsing XDC File [d:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/sources_1/bd/system/ip/system_auto_pc_0/system_auto_pc_0/system_auto_pc_0_in_context.xdc] for cell 'system_i/processer_ss/ps8_0_axi_periph/s00_couplers/auto_pc'
+Parsing XDC File [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/constrs_1/imports/xdc/system.xdc]
+Finished Parsing XDC File [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/constrs_1/imports/xdc/system.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.srcs/constrs_1/imports/xdc/system.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/system_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/system_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1805.938 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 7 instances were transformed.
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 7 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1805.938 ; gain = 0.000
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'system_i/ch_0/axis_switch_0' at clock pin 'aclk' is different from the actual clock period '3.333', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'system_i/ch_1/axis_switch_0' at clock pin 'aclk' is different from the actual clock period '3.333', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'system_i/vdma_ss/axi_vdma_0' at clock pin 'm_axi_s2mm_aclk' is different from the actual clock period '3.333', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'system_i/vdma_ss/axi_vdma_1' at clock pin 'm_axi_s2mm_aclk' is different from the actual clock period '3.333', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'system_i/vdma_ss/axi_vdma_2' at clock pin 'm_axi_mm2s_aclk' is different from the actual clock period '3.333', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'system_i/vid_out_ss/clk_wiz_0' at clock pin 's_axi_aclk' is different from the actual clock period '3.333', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1805.938 ; gain = 265.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xczu2cg-sfvc784-1-e
+INFO: [Synth 8-6742] Reading net delay rules and data
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1805.938 ; gain = 265.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for system_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_0/axis_passthrough_mon_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_0/v_tpg_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/AXI_LITE_REG_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/axi_uartlite_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/rst_ps8_0_300M. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/xlconcat_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/zynq_ultra_ps_e_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/vdma_ss/axi_vdma_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/vdma_ss/axi_vdma_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/vid_out_ss/clk_wiz_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/vid_out_ss/rst_video_clk_wiz. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/vid_out_ss/v_axi4s_vid_out_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/vid_out_ss/v_tc_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/vid_out_ss/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_0/axis_switch_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_0/v_tpg_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/ps8_0_axi_periph/xbar. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/ps8_0_axi_periph. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/vdma_ss/axi_vdma_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/vdma_ss/axi_smc. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/vdma_ss/axis_passthrough_mon_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_0/rst_video_clk_wiz. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_0/v_axi4s_vid_out_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_0/v_tc_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_0/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_0/v_vid_in_axi4s_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_1/axis_passthrough_mon_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_1/v_tpg_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_1/axis_switch_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_1/v_tpg_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_1/rst_video_clk_wiz. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_1/v_axi4s_vid_out_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_1/v_tc_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_1/xlconstant_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/ch_1/v_vid_in_axi4s_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/ps8_0_axi_periph/tier2_xbar_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/ps8_0_axi_periph/tier2_xbar_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/ps8_0_axi_periph/tier2_xbar_2. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for system_i/processer_ss/ps8_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1805.938 ; gain = 265.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1805.938 ; gain = 265.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:72)
+BRAMs: 300 (col length: RAMB18 72 RAMB36 36)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1805.938 ; gain = 265.723
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2397.809 ; gain = 857.594
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2398.543 ; gain = 858.328
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 2419.535 ; gain = 879.320
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2423.297 ; gain = 883.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2423.297 ; gain = 883.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2423.297 ; gain = 883.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2423.297 ; gain = 883.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2423.297 ; gain = 883.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2423.297 ; gain = 883.082
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |system_axis_passthrough_mon_0_0 |         1|
+|2     |system_axis_switch_0_3          |         1|
+|3     |system_rst_video_clk_wiz_1      |         1|
+|4     |system_v_axi4s_vid_out_0_1      |         1|
+|5     |system_v_tc_0_1                 |         1|
+|6     |system_v_tpg_0_0                |         1|
+|7     |system_v_tpg_0_6                |         1|
+|8     |system_v_vid_in_axi4s_0_0       |         1|
+|9     |system_axis_passthrough_mon_0_8 |         1|
+|10    |system_axis_switch_0_5          |         1|
+|11    |system_rst_video_clk_wiz_2      |         1|
+|12    |system_v_axi4s_vid_out_0_2      |         1|
+|13    |system_v_tc_0_2                 |         1|
+|14    |system_v_tpg_0_8                |         1|
+|15    |system_v_tpg_1_1                |         1|
+|16    |system_v_vid_in_axi4s_0_1       |         1|
+|17    |system_tier2_xbar_0_0           |         1|
+|18    |system_tier2_xbar_1_0           |         1|
+|19    |system_tier2_xbar_2_0           |         1|
+|20    |system_xbar_4                   |         1|
+|21    |system_auto_pc_0                |         1|
+|22    |system_AXI_LITE_REG_0_0         |         1|
+|23    |system_axi_uartlite_0_0         |         1|
+|24    |system_rst_ps8_0_300M_0         |         1|
+|25    |system_zynq_ultra_ps_e_0_0      |         1|
+|26    |system_axi_smc_0                |         1|
+|27    |system_axi_vdma_0_0             |         1|
+|28    |system_axi_vdma_1_0             |         1|
+|29    |system_axi_vdma_3_0             |         1|
+|30    |system_axis_passthrough_mon_0_7 |         1|
+|31    |system_clk_wiz_0_0              |         1|
+|32    |system_rst_video_clk_wiz_0      |         1|
+|33    |system_v_axi4s_vid_out_0_0      |         1|
+|34    |system_v_tc_0_0                 |         1|
++------+--------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |system_AXI_LITE_REG_0         |     1|
+|2     |system_auto_pc                |     1|
+|3     |system_axi_smc                |     1|
+|4     |system_axi_uartlite_0         |     1|
+|5     |system_axi_vdma_0             |     1|
+|6     |system_axi_vdma_1             |     1|
+|7     |system_axi_vdma_3             |     1|
+|8     |system_axis_passthrough_mon_0 |     3|
+|11    |system_axis_switch_0          |     2|
+|13    |system_clk_wiz_0              |     1|
+|14    |system_rst_ps8_0_300M         |     1|
+|15    |system_rst_video_clk_wiz      |     3|
+|18    |system_tier2_xbar_0           |     1|
+|19    |system_tier2_xbar_1           |     1|
+|20    |system_tier2_xbar_2           |     1|
+|21    |system_v_axi4s_vid_out_0      |     3|
+|24    |system_v_tc_0                 |     3|
+|27    |system_v_tpg_0                |     3|
+|30    |system_v_tpg_1                |     1|
+|31    |system_v_vid_in_axi4s_0       |     2|
+|33    |system_xbar                   |     1|
+|34    |system_zynq_ultra_ps_e_0      |     1|
+|35    |IBUF                          |     1|
+|36    |IOBUF                         |     7|
+|37    |OBUF                          |    30|
++------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2423.297 ; gain = 883.082
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 2423.297 ; gain = 784.742
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 2423.297 ; gain = 883.082
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.063 . Memory (MB): peak = 2432.340 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 2465.047 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 8 instances were transformed.
+  IBUF => IBUF (IBUFCTRL, INBUF): 1 instance 
+  IOBUF => IOBUF (IBUFCTRL, INBUF, OBUFT): 7 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+171 Infos, 122 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:30 ; elapsed = 00:00:33 . Memory (MB): peak = 2465.047 ; gain = 1352.570
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/workdir/pic_lwip_udp/video_mix/vivado/vivado_proj/vivado_proj.runs/synth_1/system_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file system_wrapper_utilization_synth.rpt -pb system_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 21 15:53:43 2022...

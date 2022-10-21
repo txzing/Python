@@ -1,0 +1,43 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.770026",
+   "Default View_TopLeft":"-158,-17",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r4  2019-12-20 bk=1.5203 VDI=41 GEI=36 GUI=JA:9.0 TLS
+#  -string -flagsOSRD
+preplace port M00_AXIS -pg 1 -lvl 5 -x 1270 -y 280 -defaultsOSRD
+preplace port S00_AXI -pg 1 -lvl 0 -x 0 -y 250 -defaultsOSRD
+preplace port S_AXI_CTRL -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace port csi_rx_1 -pg 1 -lvl 0 -x 0 -y 310 -defaultsOSRD
+preplace port csirxss_s_axi -pg 1 -lvl 0 -x 0 -y 330 -defaultsOSRD
+preplace port s_axi_CTRL1 -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
+preplace port aclk -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace port aresetn -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
+preplace port clkoutphy_in -pg 1 -lvl 0 -x 0 -y 410 -defaultsOSRD
+preplace port dphy_clk_200M -pg 1 -lvl 0 -x 0 -y 390 -defaultsOSRD
+preplace port pll_lock_in -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
+preplace inst axis_passthrough_mon_3 -pg 1 -lvl 4 -x 1120 -y 280 -defaultsOSRD
+preplace inst axis_subset_converter_3 -pg 1 -lvl 2 -x 500 -y 170 -defaultsOSRD
+preplace inst axis_switch_3 -pg 1 -lvl 3 -x 840 -y 110 -defaultsOSRD
+preplace inst mipi_csi2_rx_subsyst_3 -pg 1 -lvl 1 -x 170 -y 390 -defaultsOSRD
+preplace inst v_tpg_3 -pg 1 -lvl 2 -x 500 -y 560 -defaultsOSRD
+preplace netloc mipi_csi2_rx_subsyst_0_clkoutphy_out 1 0 1 NJ 410
+preplace netloc mipi_csi2_rx_subsyst_0_pll_lock_out 1 0 1 NJ 430
+preplace netloc rst_ps8_0_300M_peripheral_aresetn 1 0 4 20 540 330 260 700 260 980
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 4 30 550 320 270 690 270 990
+preplace netloc zynq_ultra_ps_e_0_pl_clk1 1 0 1 NJ 390
+preplace netloc ps8_0_axi_periph_M13_AXI 1 0 1 NJ 330
+preplace netloc ps8_0_axi_periph_M19_AXI 1 0 2 NJ 530 NJ
+preplace netloc v_tpg_1_m_axis_video 1 2 1 680 70n
+preplace netloc axis_passthrough_mon_1_m_axis 1 4 1 N 280
+preplace netloc axis_subset_converter_1_M_AXIS 1 2 1 670 50n
+preplace netloc axis_switch_1_M00_AXIS 1 3 1 980 110n
+preplace netloc mipi_csi2_rx_subsyst_1_video_out 1 1 1 310 150n
+preplace netloc mipi_phy_if_0_2 1 0 1 NJ 310
+preplace netloc ps8_0_axi_periph_M03_AXI 1 0 4 NJ 250 NJ 250 NJ 250 NJ
+preplace netloc ps8_0_axi_periph_M08_AXI 1 0 3 NJ 90 NJ 90 NJ
+levelinfo -pg 1 0 170 500 840 1120 1270
+pagesize -pg 1 -db -bbox -sgen -160 -10 1390 650
+"
+}
+0

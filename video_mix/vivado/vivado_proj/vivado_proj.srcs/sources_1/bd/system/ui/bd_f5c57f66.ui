@@ -1,0 +1,50 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.602956",
+   "Default View_TopLeft":"-143,-35",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port M00_AXIS -pg 1 -lvl 7 -x 1780 -y 210 -defaultsOSRD
+preplace port S00_AXI -pg 1 -lvl 0 -x 0 -y 180 -defaultsOSRD
+preplace port s_axi_CTRL -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port S_AXI_CTRL1 -pg 1 -lvl 0 -x 0 -y 280 -defaultsOSRD
+preplace port s_axi_CTRL2 -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
+preplace port ctrl -pg 1 -lvl 0 -x 0 -y 510 -defaultsOSRD
+preplace port aclk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port aresetn -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port vid_io_out_clk -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
+preplace port dcm_locked -pg 1 -lvl 0 -x 0 -y 670 -defaultsOSRD
+preplace inst axis_passthrough_mon_0 -pg 1 -lvl 6 -x 1640 -y 210 -defaultsOSRD
+preplace inst v_tpg_0 -pg 1 -lvl 2 -x 360 -y 90 -defaultsOSRD
+preplace inst axis_switch_0 -pg 1 -lvl 3 -x 730 -y 300 -defaultsOSRD
+preplace inst v_tpg_1 -pg 1 -lvl 2 -x 360 -y 370 -defaultsOSRD
+preplace inst rst_video_clk_wiz -pg 1 -lvl 2 -x 360 -y 630 -defaultsOSRD
+preplace inst v_axi4s_vid_out_0 -pg 1 -lvl 4 -x 1050 -y 380 -defaultsOSRD
+preplace inst v_tc_0 -pg 1 -lvl 3 -x 730 -y 590 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 100 -y 590 -defaultsOSRD
+preplace inst v_vid_in_axi4s_0 -pg 1 -lvl 5 -x 1370 -y 390 -defaultsOSRD
+preplace netloc zynq_ultra_ps_e_0_pl_clk0 1 0 6 NJ 80 190 190 570 160 900 230 1240 230 1510
+preplace netloc rst_video_clk_wiz_peripheral_aresetn 1 2 1 580 630n
+preplace netloc xlconstant_0_dout 1 1 4 180 730 550 170 870 220 1210
+preplace netloc Net 1 0 5 NJ 530 190 530 580 420 880 240 1220
+preplace netloc v_axi4s_vid_out_0_vtg_ce 1 2 3 590 150 NJ 150 1200
+preplace netloc aresetn_1 1 0 6 NJ 100 180 270 530 430 900 520 1230 260 1520
+preplace netloc dcm_locked_1 1 0 2 NJ 670 NJ
+preplace netloc s_axi_CTRL2_1 1 0 2 NJ 340 NJ
+preplace netloc axis_passthrough_mon_0_m_axis 1 6 1 N 210
+preplace netloc v_tpg_0_m_axis_video 1 2 1 560 70n
+preplace netloc v_tpg_1_m_axis_video 1 2 1 540 260n
+preplace netloc S_AXI_CTRL1_1 1 0 3 NJ 280 NJ 280 NJ
+preplace netloc ps8_0_axi_periph_M20_AXI 1 0 2 NJ 60 NJ
+preplace netloc ps8_0_axi_periph_M04_AXI 1 0 6 NJ 180 NJ 180 NJ 180 NJ 180 NJ 180 NJ
+preplace netloc v_vid_in_axi4s_0_video_out 1 5 1 1500 160n
+preplace netloc v_axi4s_vid_out_0_vid_io_out 1 4 1 N 320
+preplace netloc ctrl_1 1 0 3 NJ 510 NJ 510 NJ
+preplace netloc axis_switch_0_M00_AXIS 1 3 1 N 300
+preplace netloc v_tc_0_vtiming_out 1 3 1 890 320n
+levelinfo -pg 1 0 100 360 730 1050 1370 1640 1780
+pagesize -pg 1 -db -bbox -sgen -150 0 1900 740
+"
+}
+0

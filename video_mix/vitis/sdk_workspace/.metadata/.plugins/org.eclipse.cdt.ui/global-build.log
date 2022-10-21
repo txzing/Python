@@ -1,0 +1,5 @@
+Nothing to build in platform 'system_wrapper'
+
+15:04:08 **** Incremental Build of configuration Debug for project test ****
+make all 
+make: Nothing to be done for 'all'.

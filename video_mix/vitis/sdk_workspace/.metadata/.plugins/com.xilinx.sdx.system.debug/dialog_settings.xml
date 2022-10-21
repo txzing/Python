@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item value="test" key="programflash.hwplatform"/>
+	<item value="false" key="test-blankCheck"/>
+	<item value="" key="test_system-offSet"/>
+	<item value="true" key="test_system-verifyFlash"/>
+	<item value="false" key="test-verifyFlash"/>
+	<item value="qspi-x4-single" key="test-flashType"/>
+	<item value="qspi-x4-single" key="test_system-flashType"/>
+	<item value="D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\test_system\Debug\sd_card\BOOT.BIN" key="test-imgFile"/>
+	<item value="true" key="test_system-blankCheck"/>
+	<item value="D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf" key="test_system-fsblFile"/>
+	<item value="D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\test_system\Debug\sd_card\BOOT.BIN" key="test_system-imgFile"/>
+	<item value="Local" key="test_system-target"/>
+	<item value="Auto Detect" key="test-device"/>
+	<item value="Local" key="test-target"/>
+	<item value="D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf" key="test-fsblFile"/>
+	<item value="" key="test-offSet"/>
+	<item value="Auto Detect" key="test_system-device"/>
+</section>
