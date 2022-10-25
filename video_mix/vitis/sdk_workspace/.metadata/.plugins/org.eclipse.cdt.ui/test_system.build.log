@@ -1,10 +1,10 @@
-14:59:26 **** Incremental Build of configuration Debug for project test_system ****
+11:02:36 **** Build of configuration Debug for project test_system ****
 make all 
 Generating bif file for the system project
-generate_system_bif.bat 49874 D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/system_wrapper.xpfm domain_psu_cortexa53_0 D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test_system/Debug/system.bif
+generate_system_bif.bat 57828 D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/system_wrapper.xpfm domain_psu_cortexa53_0 D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test_system/Debug/system.bif
 sdcard_gen --xpfm D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/system_wrapper.xpfm --sys_config system_wrapper --bif D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test_system/Debug/system.bif --bitstream D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit --elf D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf,psu_cortexa53_0
 creating BOOT.BIN using D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit
 Running D:/Vivado/Vitis/2020.1/bin/bootgen -arch zynqmp -image D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 
-14:59:31 Build Finished (took 5s.661ms)
+11:02:43 Build Finished (took 6s.317ms)
 

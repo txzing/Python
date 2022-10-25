@@ -57,7 +57,8 @@ extern struct netif server_netif;
 static struct udp_pcb *pcb = NULL;
 struct pbuf *pbuf_to_be_sent;
 ip_addr_t target_addr;
-char sendchannel[2] = {0,0};
+char send_video_channel[2] = {0,0};
+char send_pic_channel[2] = {0,0};
 unsigned char targetPicHeader[9]={0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00};
 
 void print_app_header(void)
@@ -360,30 +361,52 @@ void recv_callback(void *arg, struct udp_pcb *upcb, struct pbuf *p,const ip_addr
 	{
     	if( receivebuf[6] == 0x00)  //Turn off the image display of the host computer
     	{
-			sendchannel[0] = 0;
-			sendchannel[1] = 0;
+			send_video_channel[0] = 0;
+			send_video_channel[1] = 0;
 			xil_printf("close all video source\r\n");
     	}
-    	else
+    	else if( receivebuf[6] == 0x01)  //send one picture
+    	{
+    		if(receivebuf[5] == 0x01)
+			{
+    			send_pic_channel[0] = 1;
+    			send_pic_channel[1] = 0;
+			}
+			else if(receivebuf[5] == 0x02)
+			{
+				send_pic_channel[0] = 0;
+				send_pic_channel[1] = 1;
+			}
+			else if(receivebuf[5] == 0x03)
+			{
+				send_pic_channel[0] = 1;
+				send_pic_channel[1] = 1;
+			}
+			else
+			{
+				xil_printf("video source cmd error\r\n");
+			}
+    	}
+    	else if(receivebuf[6] == 0x02)  //send video
 		{
 			if(receivebuf[5] == 0x01)
 			{
-				sendchannel[0] = 1;
-				sendchannel[1] = 0;
+				send_video_channel[0] = 1;
+				send_video_channel[1] = 0;
 				xil_printf("only choose first video source\r\n");
 				vdma_init(0);
 			}
 			else if(receivebuf[5] == 0x02)
 			{
-				sendchannel[0] = 0;
-				sendchannel[1] = 1;
+				send_video_channel[0] = 0;
+				send_video_channel[1] = 1;
 				xil_printf("only choose second video source\r\n");
 				vdma_init(1);
 			}
 			else if(receivebuf[5] == 0x03)
 			{
-				sendchannel[0] = 1;
-				sendchannel[1] = 1;
+				send_video_channel[0] = 1;
+				send_video_channel[1] = 1;
 				xil_printf("choose first and second video source\r\n");
 				vdma_init(0);
 				vdma_init(1);
@@ -393,7 +416,10 @@ void recv_callback(void *arg, struct udp_pcb *upcb, struct pbuf *p,const ip_addr
 				xil_printf("video source cmd error\r\n");
 			}
 		}
-
+		else
+		{
+			xil_printf("video source cmd error\r\n");
+		}
 	}
     else
     {

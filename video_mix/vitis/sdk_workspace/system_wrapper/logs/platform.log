@@ -36126,3 +36126,1285 @@ D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl
 D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
 
 TRACE::2022-10-19.14:58:27::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:12:52::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:12:52::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:12:52::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:12:54::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:12:54::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:12:54::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:12:54::SCWPlatform::Do not have an existing db opened. 
+TRACE::2022-10-25.10:13:03::SCWPlatform::Opened new HwDB with name system_wrapper
+TRACE::2022-10-25.10:13:03::SCWReader::Active system found as  system_wrapper
+TRACE::2022-10-25.10:13:03::SCWReader::Handling sysconfig system_wrapper
+TRACE::2022-10-25.10:13:03::SCWDomain::checking for install qemu data   : 
+TRACE::2022-10-25.10:13:03::SCWDomain:: Using the QEMU Data from install at  : D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/
+TRACE::2022-10-25.10:13:03::SCWDomain:: Using the QEMU args  from install at  : D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/qemu_args.txt
+TRACE::2022-10-25.10:13:03::SCWDomain:: Using the PMUQEMU args from install at  : D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/pmu_args.txt
+TRACE::2022-10-25.10:13:03::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:03::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:03::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:03::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:03::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:03::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:03::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:03::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:03::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:03::SCWReader::Boot application domain added for zynqmp_fsbl
+TRACE::2022-10-25.10:13:03::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:03::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:03::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:03::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:03::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:03::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:03::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:03::SCWMssOS::DEBUG:  swdes dump  
+TRACE::2022-10-25.10:13:03::SCWMssOS::No sw design opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:03::SCWMssOS::mss exists loading the mss file  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Opened the sw design from mss  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Adding the swdes entry D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss with des name system
+TRACE::2022-10-25.10:13:04::SCWMssOS::updating the scw layer about changes
+TRACE::2022-10-25.10:13:04::SCWMssOS::Opened the sw design.  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS:: library already available in sw design:  xilffs:4.3
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS:: library already available in sw design:  xilsecure:4.2
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS:: library already available in sw design:  xilpm:3.1
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Saving the mss changes D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-10-25.10:13:04::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-10-25.10:13:04::SCWMssOS::Commit changes completed.
+TRACE::2022-10-25.10:13:04::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2022-10-25.10:13:04::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWReader::No isolation master present  
+TRACE::2022-10-25.10:13:04::SCWDomain::checking for install qemu data   : 
+TRACE::2022-10-25.10:13:04::SCWDomain:: Using the QEMU Data from install at  : D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/
+TRACE::2022-10-25.10:13:04::SCWDomain:: Using the QEMU args  from install at  : D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/qemu_args.txt
+TRACE::2022-10-25.10:13:04::SCWDomain:: Using the PMUQEMU args from install at  : D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/pmu_args.txt
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWReader::Boot application domain added for zynqmp_pmufw
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::No sw design opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::mss exists loading the mss file  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Opened the sw design from mss  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Adding the swdes entry D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss with des name system_0
+TRACE::2022-10-25.10:13:04::SCWMssOS::updating the scw layer about changes
+TRACE::2022-10-25.10:13:04::SCWMssOS::Opened the sw design.  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS:: library already available in sw design:  xilfpga:5.2
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS:: library already available in sw design:  xilsecure:4.2
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS:: library already available in sw design:  xilskey:6.9
+TRACE::2022-10-25.10:13:04::SCWMssOS::Saving the mss changes D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-10-25.10:13:04::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-10-25.10:13:04::SCWMssOS::Commit changes completed.
+TRACE::2022-10-25.10:13:04::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2022-10-25.10:13:04::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWReader::No isolation master present  
+TRACE::2022-10-25.10:13:04::SCWDomain::checking for install qemu data   : 
+TRACE::2022-10-25.10:13:04::SCWDomain:: Using the QEMU Data from install at  : D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/
+TRACE::2022-10-25.10:13:04::SCWDomain:: Using the QEMU args  from install at  : D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/qemu_args.txt
+TRACE::2022-10-25.10:13:04::SCWDomain:: Using the PMUQEMU args from install at  : D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/pmu_args.txt
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::No sw design opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::mss exists loading the mss file  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Opened the sw design from mss  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Adding the swdes entry D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss with des name system_1
+TRACE::2022-10-25.10:13:04::SCWMssOS::updating the scw layer about changes
+TRACE::2022-10-25.10:13:04::SCWMssOS::Opened the sw design.  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS:: library already available in sw design:  lwip211:1.2
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Saving the mss changes D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-10-25.10:13:04::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-10-25.10:13:04::SCWMssOS::Commit changes completed.
+TRACE::2022-10-25.10:13:04::SCWReader::Adding prebuilt librarypaths as   
+TRACE::2022-10-25.10:13:04::SCWReader::Adding prebuilt incpaths  as   
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWReader::No isolation master present  
+LOG::2022-10-25.10:13:04::SCWPlatform::Started generating the artifacts platform system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Sanity checking of platform is completed
+LOG::2022-10-25.10:13:04::SCWPlatform::Started generating the artifacts for system configuration system_wrapper
+LOG::2022-10-25.10:13:04::SCWSystem::Checking the domain zynqmp_fsbl
+LOG::2022-10-25.10:13:04::SCWSystem::Doing application build for :  zynqmp_fsbl
+TRACE::2022-10-25.10:13:04::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2022-10-25.10:13:04::SCWDomain::Building the domain as part of full build :  zynqmp_fsbl
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:04::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:04::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:04::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:04::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:04::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:04::SCWBDomain::Completed writing the mss file at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp
+TRACE::2022-10-25.10:13:04::SCWBDomain::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2022-10-25.10:13:04::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2022-10-25.10:13:04::SCWBDomain::System Command Ran  D:&  cd  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl & make 
+TRACE::2022-10-25.10:13:05::SCWBDomain::make: Nothing to be done for 'all'.
+
+LOG::2022-10-25.10:13:05::SCWSystem::Checking the domain zynqmp_pmufw
+LOG::2022-10-25.10:13:05::SCWSystem::Doing application build for :  zynqmp_pmufw
+TRACE::2022-10-25.10:13:05::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2022-10-25.10:13:05::SCWDomain::Building the domain as part of full build :  zynqmp_pmufw
+TRACE::2022-10-25.10:13:05::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:05::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:05::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:05::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:05::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:05::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:05::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:05::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:05::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:05::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:05::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:05::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:05::SCWBDomain::Completed writing the mss file at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp
+TRACE::2022-10-25.10:13:05::SCWBDomain::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2022-10-25.10:13:05::SCWBDomain::Not a forced makefile updation, No changes are present. 
+TRACE::2022-10-25.10:13:05::SCWBDomain::System Command Ran  D:&  cd  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw & make 
+TRACE::2022-10-25.10:13:06::SCWBDomain::make: Nothing to be done for 'all'.
+
+LOG::2022-10-25.10:13:06::SCWSystem::Checking the domain domain_psu_cortexa53_0
+LOG::2022-10-25.10:13:06::SCWSystem::Not a boot domain 
+LOG::2022-10-25.10:13:06::SCWSystem::Started Processing the domain domain_psu_cortexa53_0
+TRACE::2022-10-25.10:13:06::SCWDomain::Generating domain artifcats
+TRACE::2022-10-25.10:13:06::SCWMssOS::Generating standalone artifcats
+TRACE::2022-10-25.10:13:06::SCWMssOS::Copying the qemu file from  D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/qemu_args.txt To D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/qemu/
+TRACE::2022-10-25.10:13:07::SCWMssOS::Copying the qemu file from  D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/qemu_args.txt To D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/qemu/
+TRACE::2022-10-25.10:13:07::SCWMssOS::Copying the qemu file from  D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/qemu_args.txt To D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/qemu/
+TRACE::2022-10-25.10:13:07::SCWMssOS::Copying the qemu file from  D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/qemu_args.txt To D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/qemu/
+TRACE::2022-10-25.10:13:07::SCWMssOS:: Copying the user libraries. 
+TRACE::2022-10-25.10:13:07::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:07::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:07::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:07::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:07::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:07::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:07::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:07::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:07::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:07::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:07::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:07::SCWMssOS::Completed writing the mss file at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp
+TRACE::2022-10-25.10:13:07::SCWMssOS::Mss edits present, copying mssfile into export location D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:07::SCWMssOS::bsp generated is upto date with the mss file. Skipping bsp generation.
+TRACE::2022-10-25.10:13:07::SCWMssOS::BSP is already built. skipping the bsp build ... 
+TRACE::2022-10-25.10:13:07::SCWDomain::Building the domain as part of full build :  domain_psu_cortexa53_0
+TRACE::2022-10-25.10:13:07::SCWMssOS::doing bsp build ... 
+TRACE::2022-10-25.10:13:07::SCWMssOS::System Command Ran  D: & cd  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp & make 
+TRACE::2022-10-25.10:13:07::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/axipmon_v6_8/src"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::make -C psu_cortexa53_0/libsrc/axipmon_v6_8/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2022-10-25.10:13:07::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/axis_passthrough_monitor_v1_0/src"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::make -C psu_cortexa53_0/libsrc/axis_passthrough_monitor_v1_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEM
+TRACE::2022-10-25.10:13:07::SCWMssOS::BLER=aarch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/axis_switch_v1_3/src"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::make -C psu_cortexa53_0/libsrc/axis_switch_v1_3/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-
+TRACE::2022-10-25.10:13:07::SCWMssOS::none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/axivdma_v6_7/src"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::make -C psu_cortexa53_0/libsrc/axivdma_v6_7/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2022-10-25.10:13:07::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/AXI_LITE_REG_v1_0/src"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::make -C psu_cortexa53_0/libsrc/AXI_LITE_REG_v1_0/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64
+TRACE::2022-10-25.10:13:07::SCWMssOS::-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/clk_wiz_v1_3/src"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::make -C psu_cortexa53_0/libsrc/clk_wiz_v1_3/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2022-10-25.10:13:07::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/clockps_v1_2/src"
+
+TRACE::2022-10-25.10:13:07::SCWMssOS::make -C psu_cortexa53_0/libsrc/clockps_v1_2/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2022-10-25.10:13:07::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_7/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarc
+TRACE::2022-10-25.10:13:08::SCWMssOS::h64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_7/src"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_7/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch6
+TRACE::2022-10-25.10:13:08::SCWMssOS::4-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/csudma_v1_6/src"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::make -C psu_cortexa53_0/libsrc/csudma_v1_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2022-10-25.10:13:08::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/ddrcpsu_v1_2/src"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_2/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2022-10-25.10:13:08::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/emacps_v3_11/src"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::make -C psu_cortexa53_0/libsrc/emacps_v3_11/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2022-10-25.10:13:08::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::make -C psu_cortexa53_0/libsrc/gpiops_v3_7/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2022-10-25.10:13:08::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/iicps_v3_11/src"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::make -C psu_cortexa53_0/libsrc/iicps_v3_11/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2022-10-25.10:13:08::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/ipipsu_v2_6/src"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::make -C psu_cortexa53_0/libsrc/ipipsu_v2_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2022-10-25.10:13:08::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/lwip211_v1_2/src"
+
+TRACE::2022-10-25.10:13:08::SCWMssOS::make -C psu_cortexa53_0/libsrc/lwip211_v1_2/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2022-10-25.10:13:08::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:10::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/qspipsu_v1_11/src"
+
+TRACE::2022-10-25.10:13:10::SCWMssOS::make -C psu_cortexa53_0/libsrc/qspipsu_v1_11/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+TRACE::2022-10-25.10:13:10::SCWMssOS::e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:10::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/resetps_v1_3/src"
+
+TRACE::2022-10-25.10:13:10::SCWMssOS::make -C psu_cortexa53_0/libsrc/resetps_v1_3/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2022-10-25.10:13:10::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:11::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/rtcpsu_v1_9/src"
+
+TRACE::2022-10-25.10:13:11::SCWMssOS::make -C psu_cortexa53_0/libsrc/rtcpsu_v1_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2022-10-25.10:13:11::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:11::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/scugic_v4_2/src"
+
+TRACE::2022-10-25.10:13:11::SCWMssOS::make -C psu_cortexa53_0/libsrc/scugic_v4_2/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2022-10-25.10:13:11::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:11::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/standalone_v7_2/src"
+
+TRACE::2022-10-25.10:13:11::SCWMssOS::make -C psu_cortexa53_0/libsrc/standalone_v7_2/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+TRACE::2022-10-25.10:13:11::SCWMssOS::one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/sysmonpsu_v2_6/src"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_6/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+TRACE::2022-10-25.10:13:12::SCWMssOS::ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/ttcps_v3_11/src"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::make -C psu_cortexa53_0/libsrc/ttcps_v3_11/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2022-10-25.10:13:12::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/uartlite_v3_4/src"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::make -C psu_cortexa53_0/libsrc/uartlite_v3_4/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+TRACE::2022-10-25.10:13:12::SCWMssOS::e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/uartps_v3_9/src"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::make -C psu_cortexa53_0/libsrc/uartps_v3_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2022-10-25.10:13:12::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/video_common_v4_9/src"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::make -C psu_cortexa53_0/libsrc/video_common_v4_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64
+TRACE::2022-10-25.10:13:12::SCWMssOS::-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/vtc_v8_2/src"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::make -C psu_cortexa53_0/libsrc/vtc_v8_2/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2022-10-25.10:13:12::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/v_tpg_v8_2/src"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::make -C psu_cortexa53_0/libsrc/v_tpg_v8_2/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2022-10-25.10:13:12::SCWMssOS::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::"Running Make include in psu_cortexa53_0/libsrc/zdma_v1_9/src"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::make -C psu_cortexa53_0/libsrc/zdma_v1_9/src -s include  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2022-10-25.10:13:12::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/axipmon_v6_8/src"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::make -C psu_cortexa53_0/libsrc/axipmon_v6_8/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2022-10-25.10:13:12::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:12::SCWMssOS::"Compiling axipmon"
+
+TRACE::2022-10-25.10:13:15::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/axis_passthrough_monitor_v1_0/src"
+
+TRACE::2022-10-25.10:13:15::SCWMssOS::make -C psu_cortexa53_0/libsrc/axis_passthrough_monitor_v1_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLE
+TRACE::2022-10-25.10:13:15::SCWMssOS::R=aarch64-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:15::SCWMssOS::"Compiling AXI_LITE_REG..."
+
+TRACE::2022-10-25.10:13:16::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/axis_switch_v1_3/src"
+
+TRACE::2022-10-25.10:13:16::SCWMssOS::make -C psu_cortexa53_0/libsrc/axis_switch_v1_3/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-non
+TRACE::2022-10-25.10:13:16::SCWMssOS::e-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:16::SCWMssOS::"Compiling axis_switch"
+
+TRACE::2022-10-25.10:13:16::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/axivdma_v6_7/src"
+
+TRACE::2022-10-25.10:13:16::SCWMssOS::make -C psu_cortexa53_0/libsrc/axivdma_v6_7/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2022-10-25.10:13:16::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:16::SCWMssOS::"Compiling axivdma"
+
+TRACE::2022-10-25.10:13:17::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/AXI_LITE_REG_v1_0/src"
+
+TRACE::2022-10-25.10:13:17::SCWMssOS::make -C psu_cortexa53_0/libsrc/AXI_LITE_REG_v1_0/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+TRACE::2022-10-25.10:13:17::SCWMssOS::ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:17::SCWMssOS::"Compiling AXI_LITE_REG..."
+
+TRACE::2022-10-25.10:13:17::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/clk_wiz_v1_3/src"
+
+TRACE::2022-10-25.10:13:17::SCWMssOS::make -C psu_cortexa53_0/libsrc/clk_wiz_v1_3/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2022-10-25.10:13:17::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:17::SCWMssOS::"Compiling Clkocking Wizard"
+
+TRACE::2022-10-25.10:13:18::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/clockps_v1_2/src"
+
+TRACE::2022-10-25.10:13:18::SCWMssOS::make -C psu_cortexa53_0/libsrc/clockps_v1_2/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2022-10-25.10:13:18::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:18::SCWMssOS::"Compiling clockps"
+
+TRACE::2022-10-25.10:13:19::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/coresightps_dcc_v1_7/src"
+
+TRACE::2022-10-25.10:13:19::SCWMssOS::make -C psu_cortexa53_0/libsrc/coresightps_dcc_v1_7/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64
+TRACE::2022-10-25.10:13:19::SCWMssOS::-none-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:19::SCWMssOS::"Compiling coresightps_dcc"
+
+TRACE::2022-10-25.10:13:19::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/cpu_cortexa53_v1_7/src"
+
+TRACE::2022-10-25.10:13:19::SCWMssOS::make -C psu_cortexa53_0/libsrc/cpu_cortexa53_v1_7/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-n
+TRACE::2022-10-25.10:13:19::SCWMssOS::one-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:19::SCWMssOS::"Compiling cpu_cortexa53"
+
+TRACE::2022-10-25.10:13:19::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/csudma_v1_6/src"
+
+TRACE::2022-10-25.10:13:19::SCWMssOS::make -C psu_cortexa53_0/libsrc/csudma_v1_6/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2022-10-25.10:13:19::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:20::SCWMssOS::"Compiling csudma"
+
+TRACE::2022-10-25.10:13:20::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/ddrcpsu_v1_2/src"
+
+TRACE::2022-10-25.10:13:20::SCWMssOS::make -C psu_cortexa53_0/libsrc/ddrcpsu_v1_2/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2022-10-25.10:13:20::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:20::SCWMssOS::"Compiling ddrcpsu"
+
+TRACE::2022-10-25.10:13:20::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/emacps_v3_11/src"
+
+TRACE::2022-10-25.10:13:20::SCWMssOS::make -C psu_cortexa53_0/libsrc/emacps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2022-10-25.10:13:20::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:20::SCWMssOS::"Compiling emacps"
+
+TRACE::2022-10-25.10:13:21::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/gpiops_v3_7/src"
+
+TRACE::2022-10-25.10:13:21::SCWMssOS::make -C psu_cortexa53_0/libsrc/gpiops_v3_7/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2022-10-25.10:13:21::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:21::SCWMssOS::"Compiling gpiops"
+
+TRACE::2022-10-25.10:13:22::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/iicps_v3_11/src"
+
+TRACE::2022-10-25.10:13:22::SCWMssOS::make -C psu_cortexa53_0/libsrc/iicps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2022-10-25.10:13:22::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:22::SCWMssOS::"Compiling iicps"
+
+TRACE::2022-10-25.10:13:23::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/ipipsu_v2_6/src"
+
+TRACE::2022-10-25.10:13:23::SCWMssOS::make -C psu_cortexa53_0/libsrc/ipipsu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2022-10-25.10:13:23::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:23::SCWMssOS::"Compiling ipipsu"
+
+TRACE::2022-10-25.10:13:24::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/lwip211_v1_2/src"
+
+TRACE::2022-10-25.10:13:24::SCWMssOS::make -C psu_cortexa53_0/libsrc/lwip211_v1_2/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2022-10-25.10:13:24::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:24::SCWMssOS::"Compiling lwip src and adapter files"
+
+TRACE::2022-10-25.10:13:24::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/qspipsu_v1_11/src"
+
+TRACE::2022-10-25.10:13:24::SCWMssOS::make -C psu_cortexa53_0/libsrc/qspipsu_v1_11/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2022-10-25.10:13:24::SCWMssOS::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:24::SCWMssOS::"Compiling qspipsu"
+
+TRACE::2022-10-25.10:13:25::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/resetps_v1_3/src"
+
+TRACE::2022-10-25.10:13:25::SCWMssOS::make -C psu_cortexa53_0/libsrc/resetps_v1_3/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-el
+TRACE::2022-10-25.10:13:25::SCWMssOS::f-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:25::SCWMssOS::"Compiling resetps"
+
+TRACE::2022-10-25.10:13:26::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/rtcpsu_v1_9/src"
+
+TRACE::2022-10-25.10:13:26::SCWMssOS::make -C psu_cortexa53_0/libsrc/rtcpsu_v1_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2022-10-25.10:13:26::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:26::SCWMssOS::"Compiling rtcpsu"
+
+TRACE::2022-10-25.10:13:26::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/scugic_v4_2/src"
+
+TRACE::2022-10-25.10:13:26::SCWMssOS::make -C psu_cortexa53_0/libsrc/scugic_v4_2/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2022-10-25.10:13:26::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:26::SCWMssOS::"Compiling scugic"
+
+TRACE::2022-10-25.10:13:27::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/standalone_v7_2/src"
+
+TRACE::2022-10-25.10:13:27::SCWMssOS::make -C psu_cortexa53_0/libsrc/standalone_v7_2/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none
+TRACE::2022-10-25.10:13:27::SCWMssOS::-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:27::SCWMssOS::"Compiling standalone ARMv8 64 bit"
+
+TRACE::2022-10-25.10:13:30::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/sysmonpsu_v2_6/src"
+
+TRACE::2022-10-25.10:13:30::SCWMssOS::make -C psu_cortexa53_0/libsrc/sysmonpsu_v2_6/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-
+TRACE::2022-10-25.10:13:30::SCWMssOS::elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:30::SCWMssOS::"Compiling sysmonpsu"
+
+TRACE::2022-10-25.10:13:31::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/ttcps_v3_11/src"
+
+TRACE::2022-10-25.10:13:31::SCWMssOS::make -C psu_cortexa53_0/libsrc/ttcps_v3_11/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2022-10-25.10:13:31::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:31::SCWMssOS::"Compiling ttcps"
+
+TRACE::2022-10-25.10:13:32::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/uartlite_v3_4/src"
+
+TRACE::2022-10-25.10:13:32::SCWMssOS::make -C psu_cortexa53_0/libsrc/uartlite_v3_4/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-e
+TRACE::2022-10-25.10:13:32::SCWMssOS::lf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:32::SCWMssOS::"Compiling uartlite"
+
+TRACE::2022-10-25.10:13:33::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/uartps_v3_9/src"
+
+TRACE::2022-10-25.10:13:33::SCWMssOS::make -C psu_cortexa53_0/libsrc/uartps_v3_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf
+TRACE::2022-10-25.10:13:33::SCWMssOS::-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:33::SCWMssOS::"Compiling uartps"
+
+TRACE::2022-10-25.10:13:33::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/video_common_v4_9/src"
+
+TRACE::2022-10-25.10:13:33::SCWMssOS::make -C psu_cortexa53_0/libsrc/video_common_v4_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-no
+TRACE::2022-10-25.10:13:33::SCWMssOS::ne-elf-as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:33::SCWMssOS::"Compiling video_common"
+
+TRACE::2022-10-25.10:13:34::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/vtc_v8_2/src"
+
+TRACE::2022-10-25.10:13:34::SCWMssOS::make -C psu_cortexa53_0/libsrc/vtc_v8_2/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-as
+TRACE::2022-10-25.10:13:34::SCWMssOS::" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:34::SCWMssOS::"Compiling video timing controller"
+
+TRACE::2022-10-25.10:13:35::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/v_tpg_v8_2/src"
+
+TRACE::2022-10-25.10:13:35::SCWMssOS::make -C psu_cortexa53_0/libsrc/v_tpg_v8_2/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-
+TRACE::2022-10-25.10:13:35::SCWMssOS::as" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:35::SCWMssOS::"Compiling v_tpg"
+
+TRACE::2022-10-25.10:13:35::SCWMssOS::"Running Make libs in psu_cortexa53_0/libsrc/zdma_v1_9/src"
+
+TRACE::2022-10-25.10:13:36::SCWMssOS::make -C psu_cortexa53_0/libsrc/zdma_v1_9/src -s libs  "SHELL=CMD" "COMPILER=aarch64-none-elf-gcc" "ASSEMBLER=aarch64-none-elf-a
+TRACE::2022-10-25.10:13:36::SCWMssOS::s" "ARCHIVER=aarch64-none-elf-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g -Wall -Wextra"
+
+TRACE::2022-10-25.10:13:36::SCWMssOS::"Compiling zdma"
+
+TRACE::2022-10-25.10:13:36::SCWMssOS::'Finished building libraries'
+
+TRACE::2022-10-25.10:13:36::SCWMssOS::Copying to export directory.
+TRACE::2022-10-25.10:13:37::SCWMssOS:: Checking if to create the Supporting Applications
+TRACE::2022-10-25.10:13:37::SCWMssOS:: No Linux domain exists, trying to generate FSBL 
+LOG::2022-10-25.10:13:37::SCWSystem::Completed Processing the domain domain_psu_cortexa53_0
+LOG::2022-10-25.10:13:37::SCWSystem::Completed Processing the sysconfig system_wrapper
+LOG::2022-10-25.10:13:37::SCWPlatform::Completed generating the artifacts for system configuration system_wrapper
+TRACE::2022-10-25.10:13:37::SCWPlatform::Started preparing the platform 
+TRACE::2022-10-25.10:13:37::SCWSystem::Writing the bif file for system config system_wrapper
+TRACE::2022-10-25.10:13:37::SCWSystem::dir created 
+TRACE::2022-10-25.10:13:37::SCWSystem::Writing the bif 
+TRACE::2022-10-25.10:13:37::SCWPlatform::Started writing the spfm file 
+TRACE::2022-10-25.10:13:37::SCWPlatform::Started writing the xpfm file 
+TRACE::2022-10-25.10:13:37::SCWPlatform::Completed generating the platform
+TRACE::2022-10-25.10:13:37::SCWMssOS::Saving the mss changes D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:37::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-10-25.10:13:37::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-10-25.10:13:37::SCWMssOS::Commit changes completed.
+TRACE::2022-10-25.10:13:37::SCWMssOS::Saving the mss changes D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:37::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-10-25.10:13:37::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-10-25.10:13:37::SCWMssOS::Commit changes completed.
+TRACE::2022-10-25.10:13:37::SCWMssOS::Saving the mss changes D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:37::SCWMssOS::Found a swdesign opened with the mssfile.
+TRACE::2022-10-25.10:13:37::SCWMssOS::Completed writemss as part of save.
+TRACE::2022-10-25.10:13:37::SCWMssOS::Commit changes completed.
+TRACE::2022-10-25.10:13:37::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:37::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:37::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:37::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:37::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:37::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:37::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss
+TRACE::2022-10-25.10:13:37::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:37::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:37::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:37::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:37::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:37::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:37::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss
+TRACE::2022-10-25.10:13:37::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:37::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:37::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:37::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:37::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:37::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:37::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:37::SCWWriter::formatted JSON is {
+	"platformName":	"system_wrapper",
+	"sprVersion":	"2.0",
+	"mode":	"gui",
+	"dsaType":	"Fixed",
+	"platformDesc":	"system_wrapper",
+	"platHandOff":	"D:/workdir/pic_lwip_udp/video_mix/vitis/xsa/system_wrapper.xsa",
+	"platIntHandOff":	"<platformDir>/hw/system_wrapper.xsa",
+	"deviceType":	"zynqMP",
+	"platIsPrebuiltAutogen":	"false",
+	"platIsNoBootBsp":	"false",
+	"hasFsblMakeHasChanges":	"false",
+	"hasPmufwMakeHasChanges":	"false",
+	"fsblExtraCompilerFlags":	"-MMD -MP      -Wall -fmessage-length=0 -DARMA53_64 -Os -flto -ffat-lto-objects  ",
+	"pmufwExtraCompilerFlags":	"-MMD -MP      -mlittle-endian -mxl-barrel-shift -mxl-pattern-compare -mcpu=v9.2 -mxl-soft-mul -Os -flto -ffat-lto-objects  ",
+	"platPreBuiltFlag":	false,
+	"platformSamplesDir":	"",
+	"platActiveSys":	"system_wrapper",
+	"systems":	[{
+			"systemName":	"system_wrapper",
+			"systemDesc":	"system_wrapper",
+			"sysIsBootAutoGen":	"true",
+			"systemDispName":	"system_wrapper",
+			"sysActiveDom":	"domain_psu_cortexa53_0",
+			"sysDefaultDom":	"domain_psu_cortexa53_0",
+			"domains":	[{
+					"domainName":	"zynqmp_fsbl",
+					"domainDispName":	"zynqmp_fsbl",
+					"domainDesc":	"FSBL Application BSP - Auto Generated.",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"a720b4b8d126272b5c32b22711b6fd70",
+					"compatibleApp":	"zynqmp_fsbl",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilffs:4.3", "xilsecure:4.2", "xilpm:3.1"],
+					"libOptions":	{
+						"xilffs":	{
+							"read_only":	"true",
+							"use_mkfs":	"false",
+							"libOptionNames":	["read_only", "use_mkfs"]
+						},
+						"libsContainingOptions":	["xilffs"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"zynqmp_pmufw",
+					"domainDispName":	"zynqmp_pmufw",
+					"domainDesc":	"PMUFW Application BSP - Auto Generated.",
+					"processors":	"psu_pmu_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"debugEnable":	"",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"1c60983607c66ce2853f6a03db62a84b",
+					"compatibleApp":	"zynqmp_pmufw",
+					"domType":	"bootDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["xilfpga:5.2", "xilsecure:4.2", "xilskey:6.9"],
+					"libOptions":	{
+						"libsContainingOptions":	[]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}, {
+					"domainName":	"domain_psu_cortexa53_0",
+					"domainDispName":	"domain_psu_cortexa53_0",
+					"domainDesc":	"domain_psu_cortexa53_0",
+					"processors":	"psu_cortexa53_0",
+					"os":	"standalone",
+					"sdxOs":	"standalone",
+					"qemuArgs":	"D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/qemu_args.txt",
+					"qemuData":	"D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/",
+					"pmuQemuArgs":	"D:/Vivado/Vitis/2020.1/data/emulation/platforms/zynqmp/qemu/pmu_args.txt",
+					"debugEnable":	"False",
+					"domRuntimes":	["cpp"],
+					"swRepo":	"",
+					"mssOsVer":	"7.2",
+					"mssFile":	"",
+					"md5Digest":	"204d40cd233f148afacbff38d66f1f5a",
+					"compatibleApp":	"",
+					"domType":	"mssDomain",
+					"arch":	"64-bit",
+					"appSettings":	{
+						"appCompilerFlags":	"",
+						"appLinkerFlags":	""
+					},
+					"addedLibs":	["lwip211:1.2"],
+					"libOptions":	{
+						"lwip211":	{
+							"dhcp_does_arp_check":	"true",
+							"lwip_dhcp":	"true",
+							"mem_size":	"520000000",
+							"memp_n_pbuf":	"4096",
+							"n_rx_descriptors":	"512",
+							"pbuf_pool_bufsize":	"61449",
+							"pbuf_pool_size":	"4096",
+							"libOptionNames":	["dhcp_does_arp_check", "lwip_dhcp", "mem_size", "memp_n_pbuf", "n_rx_descriptors", "pbuf_pool_bufsize", "pbuf_pool_size"]
+						},
+						"standalone":	{
+							"stdin":	"processer_ss_axi_uartlite_0",
+							"stdout":	"processer_ss_axi_uartlite_0",
+							"libOptionNames":	["stdin", "stdout"]
+						},
+						"libsContainingOptions":	["lwip211", "standalone"]
+					},
+					"prebuiltLibs":	{
+						"prebuiltIncPath":	[],
+						"prebuiltLibPath":	[]
+					},
+					"isolation":	{
+					}
+				}]
+		}]
+}
+KEYINFO::2022-10-25.10:13:37::SCWPlatform::updated the xpfm file.
+TRACE::2022-10-25.10:13:37::SCWPlatform::Trying to open the hw design at D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA given D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA absoulate path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform::DSA directory D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw
+TRACE::2022-10-25.10:13:37::SCWPlatform:: Platform Path D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/hw/system_wrapper.xsa
+TRACE::2022-10-25.10:13:37::SCWPlatform:: Unique name xilinx:::0.0
+TRACE::2022-10-25.10:13:37::SCWPlatform::Trying to set the existing hwdb with name system_wrapper
+TRACE::2022-10-25.10:13:37::SCWPlatform::Opened existing hwdb system_wrapper
+TRACE::2022-10-25.10:13:37::SCWPlatform::Found the Hw Db part of the input DSA
+TRACE::2022-10-25.10:13:37::SCWMssOS::Checking the sw design at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss
+TRACE::2022-10-25.10:13:37::SCWMssOS::DEBUG:  swdes dump  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss|system_1||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_fsbl/zynqmp_fsbl_bsp/system.mss|system||
+D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/zynqmp_pmufw/zynqmp_pmufw_bsp/system.mss|system_0||
+
+TRACE::2022-10-25.10:13:37::SCWMssOS::Sw design exists and opened at  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/psu_cortexa53_0/domain_psu_cortexa53_0/bsp/system.mss

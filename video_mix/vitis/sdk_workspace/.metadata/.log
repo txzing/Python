@@ -1,1898 +1,989 @@
-!SESSION 2022-10-19 09:56:45.600 -----------------------------------------------
+!SESSION 2022-10-25 09:45:43.792 -----------------------------------------------
 eclipse.buildId=2020.1
 java.version=9.0.4
 java.vendor=Oracle Corporation
 BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
 Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
-This is a continuation of log file D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\.metadata\.bak_5.log
-Created Time: 2022-10-19 14:59:02.429
+This is a continuation of log file D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\.metadata\.bak_0.log
+Created Time: 2022-10-25 10:36:39.941
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:02.430
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.941
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_DEBUG_ENABLED], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.944
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_DEBUG_ENABLED], Result: [null, 1]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.944
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.947
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.947
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.949
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.950
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.951
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.951
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_FREQ], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.953
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_FREQ], Result: [null, 180000000]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.953
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_CPU_CLK_FREQ_HZ], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.954
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_pmu_0 C_CPU_CLK_FREQ_HZ], Result: [null, ]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.989
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_cortexa53_0], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.991
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_cortexa53_0], Result: [null, ch_0_axis_passthrough_mon_0 ch_0_axis_switch_0 ch_0_v_tc_0 ch_0_v_tpg_0 ch_0_v_tpg_1 ch_1_axis_passthrough_mon_0 ch_1_axis_switch_0 ch_1_v_tc_0 ch_1_v_tpg_0 ch_1_v_tpg_1 processer_ss_AXI_LITE_REG_0 processer_ss_axi_uartlite_0 psu_acpu_gic psu_adma_0 psu_adma_1 psu_adma_2 psu_adma_3 psu_adma_4 psu_adma_5 psu_adma_6 psu_adma_7 psu_afi_0 psu_afi_1 psu_afi_2 psu_afi_3 psu_afi_4 psu_afi_5 psu_afi_6 psu_ams psu_apm_0 psu_apm_1 psu_apm_2 psu_apm_5 psu_apu psu_cci_gpv psu_cci_reg psu_coresight_0 psu_crf_apb psu_crl_apb psu_csu_0 psu_csudma psu_ctrl_ipi psu_ddr_0 psu_ddr_phy psu_ddr_qos_ctrl psu_ddr_xmpu0_cfg psu_ddr_xmpu1_cfg psu_ddr_xmpu2_cfg psu_ddr_xmpu3_cfg psu_ddr_xmpu4_cfg psu_ddr_xmpu5_cfg psu_ddrc_0 psu_efuse psu_ethernet_3 psu_fpd_gpv psu_fpd_slcr psu_fpd_slcr_secure psu_fpd_xmpu_cfg psu_fpd_xmpu_sink psu_gdma_0 psu_gdma_1 psu_gdma_2 psu_gdma_3 psu_gdma_4 psu_gdma_5 psu_gdma_6 psu_gdma_7 psu_gpio_0 psu_i2c_0 psu_i2c_1 psu_iou_scntr psu_iou_scntrs psu_iousecure_slcr psu_iouslcr_0 psu_ipi_0 psu_lpd_slcr psu_lpd_slcr_secure psu_lpd_xppu psu_lpd_xppu_sink psu_mbistjtag psu_message_buffers psu_ocm psu_ocm_ram_0 psu_ocm_xmpu_cfg psu_pmu_global_0 psu_qspi_0 psu_qspi_linear_0 psu_r5_0_atcm_global psu_r5_0_btcm_global psu_r5_1_atcm_global psu_r5_1_btcm_global psu_r5_tcm_ram_global psu_rcpu_gic psu_rpu psu_rsa psu_rtc psu_serdes psu_siou psu_smmu_gpv psu_smmu_reg psu_ttc_0 psu_ttc_1 psu_ttc_2 psu_ttc_3 psu_uart_0 vdma_ss_axi_vdma_0 vdma_ss_axi_vdma_1 vdma_ss_axi_vdma_2 vdma_ss_axis_passthrough_mon_0 vid_out_ss_clk_wiz_0 vid_out_ss_v_tc_0]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.992
+!MESSAGE XSCT Command: [::hsi::utils::get_apm_connection_info -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.995
+!MESSAGE XSCT command with result: [::hsi::utils::get_apm_connection_info -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Result: [null, {"psu_apm_5": "SLOT_0_AXI",
+"psu_apm_0": "SLOT_0_AXI SLOT_1_AXI SLOT_2_AXI SLOT_3_AXI SLOT_4_AXI SLOT_5_AXI",
+"psu_apm_2": "SLOT_0_AXI",
+"psu_apm_1": "SLOT_0_AXI",
+}]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.996
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_0 C_S_AXI_BASEADDR], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.998
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_0 C_S_AXI_BASEADDR], Result: [null, 0xFD0B0000]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:39.998
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_0 C_ENABLE_PROFILE], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.001
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_0 C_ENABLE_PROFILE], Result: [null, 0]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.001
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_0 C_ENABLE_ADVANCED], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.003
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_0 C_ENABLE_ADVANCED], Result: [null, 1]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.003
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_0 C_NUM_OF_COUNTERS], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.005
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_0 C_NUM_OF_COUNTERS], Result: [null, 10]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.005
+!MESSAGE XSCT Command: [::hsi::utils::get_apm_connection_info -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.008
+!MESSAGE XSCT command with result: [::hsi::utils::get_apm_connection_info -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Result: [null, {"psu_apm_5": "SLOT_0_AXI",
+"psu_apm_0": "SLOT_0_AXI SLOT_1_AXI SLOT_2_AXI SLOT_3_AXI SLOT_4_AXI SLOT_5_AXI",
+"psu_apm_2": "SLOT_0_AXI",
+"psu_apm_1": "SLOT_0_AXI",
+}]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.009
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_1 C_S_AXI_BASEADDR], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.011
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_1 C_S_AXI_BASEADDR], Result: [null, 0xFFA00000]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.011
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_1 C_ENABLE_PROFILE], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.012
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_1 C_ENABLE_PROFILE], Result: [null, 0]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.013
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_1 C_ENABLE_ADVANCED], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.014
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_1 C_ENABLE_ADVANCED], Result: [null, 1]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.014
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_1 C_NUM_OF_COUNTERS], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.016
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_1 C_NUM_OF_COUNTERS], Result: [null, 3]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.016
+!MESSAGE XSCT Command: [::hsi::utils::get_apm_connection_info -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.019
+!MESSAGE XSCT command with result: [::hsi::utils::get_apm_connection_info -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Result: [null, {"psu_apm_5": "SLOT_0_AXI",
+"psu_apm_0": "SLOT_0_AXI SLOT_1_AXI SLOT_2_AXI SLOT_3_AXI SLOT_4_AXI SLOT_5_AXI",
+"psu_apm_2": "SLOT_0_AXI",
+"psu_apm_1": "SLOT_0_AXI",
+}]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.020
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_2 C_S_AXI_BASEADDR], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.021
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_2 C_S_AXI_BASEADDR], Result: [null, 0xFFA10000]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.022
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_2 C_ENABLE_PROFILE], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.023
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_2 C_ENABLE_PROFILE], Result: [null, 0]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.024
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_2 C_ENABLE_ADVANCED], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.026
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_2 C_ENABLE_ADVANCED], Result: [null, 1]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.026
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_2 C_NUM_OF_COUNTERS], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.028
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_2 C_NUM_OF_COUNTERS], Result: [null, 3]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.029
+!MESSAGE XSCT Command: [::hsi::utils::get_apm_connection_info -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.031
+!MESSAGE XSCT command with result: [::hsi::utils::get_apm_connection_info -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Result: [null, {"psu_apm_5": "SLOT_0_AXI",
+"psu_apm_0": "SLOT_0_AXI SLOT_1_AXI SLOT_2_AXI SLOT_3_AXI SLOT_4_AXI SLOT_5_AXI",
+"psu_apm_2": "SLOT_0_AXI",
+"psu_apm_1": "SLOT_0_AXI",
+}]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.032
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_5 C_S_AXI_BASEADDR], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.033
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_5 C_S_AXI_BASEADDR], Result: [null, 0xFD490000]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.034
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_5 C_ENABLE_PROFILE], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.036
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_5 C_ENABLE_PROFILE], Result: [null, 0]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.036
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_5 C_ENABLE_ADVANCED], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.037
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_5 C_ENABLE_ADVANCED], Result: [null, 1]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.038
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_5 C_NUM_OF_COUNTERS], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.039
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa psu_apm_5 C_NUM_OF_COUNTERS], Result: [null, 3]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.040
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa processer_ss_zynq_ultra_ps_e_0 PSU__CRF_APB__DBG_TSTMP_CTRL__ACT_FREQMHZ], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.042
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa processer_ss_zynq_ultra_ps_e_0 PSU__CRF_APB__DBG_TSTMP_CTRL__ACT_FREQMHZ], Result: [null, 250.000000]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:40.043
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY org.eclipse.tcf 4 0 2022-10-25 10:36:42.392
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:42.447
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:42.456
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:42.611
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Xilinx cable Port_#0005.Hub_#0001 (initializing: loading firmware closed)]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:42.636
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:42.640
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Xilinx cable Port_#0005.Hub_#0001 (initializing: loading firmware closed)]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:42.641
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx cable Port_#0005.Hub_#0001 (initializing: loading firmware closed)" && level==1}], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:45.657
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx cable Port_#0005.Hub_#0001 (initializing: loading firmware closed)" && level==1}], Result: [null, ]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:48.663
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Xilinx cable Port_#0005.Hub_#0001 (initializing: loading firmware closed)" && level==1}], Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:36:51.682
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Xilinx cable Port_#0005.Hub_#0001 (initializing: loading firmware closed)" && level==1}], Result: [null, ]. Thread: Worker-20: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.418
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.419
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.420
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.425
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2  Platform Cable USB 00000000000000]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.426
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.430
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2  Platform Cable USB 00000000000000]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.430
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.444
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.488
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.495
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2  Platform Cable USB 00000000000000]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.495
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.509
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.639
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.644
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2  Platform Cable USB 00000000000000]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.645
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.661
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.662
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.666
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2  Platform Cable USB 00000000000000]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.666
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.679
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.680
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.684
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2  Platform Cable USB 00000000000000]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.684
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.696
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.697
+!MESSAGE XSCT Command: [version -server], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.701
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.701
+!MESSAGE XSCT Command: [version], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.701
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
+SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.702
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.706
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2  Platform Cable USB 00000000000000]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.707
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.718
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.718
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.730
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.730
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.732
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 6000000]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.732
+!MESSAGE XSCT Command: [source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.748
+!MESSAGE XSCT command with result: [source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.749
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.756
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:30.756
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:32.063
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:32.064
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:35.070
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:35.100
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:35.105
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:35.106
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:35.118
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:35.123
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-5ba00477-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:35.154
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-5ba00477-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:35.155
 !MESSAGE XSCT Command: [fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.710
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:44.562
 !MESSAGE XSCT command with result: [fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit], Result: [null, ]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.726
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:44.577
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.737
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:44.587
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.737
-!MESSAGE XSCT Command: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:44.588
+!MESSAGE XSCT Command: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.778
-!MESSAGE XSCT command with result: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, system_wrapper_3]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.411
+!MESSAGE XSCT command with result: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, system_wrapper_0]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.779
-!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.411
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.793
-!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.421
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.794
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.422
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.798
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.425
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.799
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.425
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.811
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.436
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.811
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.436
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.819
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.443
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.820
-!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.443
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.826
-!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.469
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.827
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.470
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.835
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.479
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.836
-!MESSAGE XSCT Command: [rst -processor], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.479
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.854
-!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.495
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:11.854
-!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:45.496
+!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.109
-!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:49.976
+!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.110
-!MESSAGE XSCT Command: [set bp_59_16_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:49.977
+!MESSAGE XSCT Command: [set bp_38_49_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.198
-!MESSAGE XSCT command with result: [set bp_59_16_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 61]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:50.203
+!MESSAGE XSCT command with result: [set bp_38_49_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 0]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.199
-!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:50.203
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.335
-!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:51.247
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.336
-!MESSAGE XSCT Command: [bpremove $bp_59_16_fsbl_bp], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:51.248
+!MESSAGE XSCT Command: [bpremove $bp_38_49_fsbl_bp], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.388
-!MESSAGE XSCT command with result: [bpremove $bp_59_16_fsbl_bp], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:51.304
+!MESSAGE XSCT command with result: [bpremove $bp_38_49_fsbl_bp], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.388
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:51.305
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.395
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:51.311
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.396
-!MESSAGE XSCT Command: [rst -processor], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:51.312
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.418
-!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:51.335
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:16.418
-!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:51.336
+!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:22.917
-!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:58.124
+!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:22.918
-!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:58.125
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:22.971
-!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:58.164
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:23.011
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:58.297
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:23.022
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:58.308
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:23.023
-!MESSAGE XSCT Command: [con], Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:58.309
+!MESSAGE XSCT Command: [con], Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:23.057
-!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-181: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 10:38:58.347
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-17: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:25.553
-!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Thread: Worker-186: Build Project
+!ENTRY org.eclipse.tcf 4 0 2022-10-25 10:39:26.258
+!MESSAGE Invalid peerAdded event
+!STACK 0
+java.lang.Error
+	at org.eclipse.tcf.internal.services.remote.LocatorProxy$1.event(LocatorProxy.java:64)
+	at org.eclipse.tcf.core.AbstractChannel.handleInput(AbstractChannel.java:1182)
+	at org.eclipse.tcf.core.AbstractChannel$1$1.run(AbstractChannel.java:371)
+	at org.eclipse.tcf.EventQueue.run(EventQueue.java:96)
+	at java.base/java.lang.Thread.run(Unknown Source)
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:25.561
-!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-186: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:35.668
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Thread: Worker-23: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:25.562
-!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-186: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:35.681
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-23: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:25.566
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:35.681
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-23: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:35.686
 !MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
 "osname": "standalone",
 "osver": "7.2",
-}]. Thread: Worker-186: Build Project
+}]. Thread: Worker-23: Build Project
 
-!ENTRY com.xilinx.sdk.utils 1 0 2022-10-19 14:59:25.567
+!ENTRY com.xilinx.sdk.utils 1 0 2022-10-25 11:02:35.686
 !MESSAGE Generating MD5 hash for file: D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\system_wrapper\export\system_wrapper\sw\system_wrapper\domain_psu_cortexa53_0\system.mss ...
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:25.569
-!MESSAGE XSCT Command: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-186: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:35.689
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-23: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:25.571
-!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-186: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:35.690
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-23: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:34.829
-!MESSAGE XSCT Command: [disconnect tcfchan#83], Thread: Thread-6692
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:48.673
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Thread: Worker-25: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:34.839
-!MESSAGE XSCT command with result: [disconnect tcfchan#83], Result: [null, ]. Thread: Thread-6692
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:48.679
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-25: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.850
-!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-182: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:48.679
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-25: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.860
-!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#85]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.860
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.868
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.868
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.872
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.872
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.885
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.888
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.892
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.892
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.904
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.932
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.937
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.937
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.950
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.950
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.955
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.955
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.966
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.967
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.971
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.971
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.982
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.983
-!MESSAGE XSCT Command: [version -server], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.983
-!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.984
-!MESSAGE XSCT Command: [version], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.984
-!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
-SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.985
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.989
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:35.989
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:36.002
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:36.002
-!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:36.015
-!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:36.015
-!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:36.016
-!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 6000000]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:36.017
-!MESSAGE XSCT Command: [source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:36.019
-!MESSAGE XSCT command with result: [source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:36.019
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:36.030
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:36.031
-!MESSAGE XSCT Command: [rst -system], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:37.013
-!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:37.014
-!MESSAGE XSCT Command: [after 3000], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:40.025
-!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:40.035
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:40.039
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:40.040
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:40.052
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:40.052
-!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-14711093-0"}], Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:40.077
-!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-14711093-0"}], Result: [null, ]. Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:40.078
-!MESSAGE XSCT Command: [fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit], Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.356
-!MESSAGE XSCT command with result: [fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit], Result: [null, ]. Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.367
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.375
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.376
-!MESSAGE XSCT Command: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.415
-!MESSAGE XSCT command with result: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, system_wrapper_3]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.416
-!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.426
-!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.427
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.430
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.431
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.445
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.445
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.453
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.454
-!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.460
-!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.461
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.470
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.470
-!MESSAGE XSCT Command: [rst -processor], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.496
-!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:49.498
-!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.727
-!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.728
-!MESSAGE XSCT Command: [set bp_59_53_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.820
-!MESSAGE XSCT command with result: [set bp_59_53_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 62]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.820
-!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.933
-!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.933
-!MESSAGE XSCT Command: [bpremove $bp_59_53_fsbl_bp], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.939
-!MESSAGE XSCT command with result: [bpremove $bp_59_53_fsbl_bp], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.940
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.946
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.947
-!MESSAGE XSCT Command: [rst -processor], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.968
-!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 14:59:53.969
-!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:00:00.473
-!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:00:00.474
-!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:00:00.508
-!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:00:00.576
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:00:00.588
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:00:00.589
-!MESSAGE XSCT Command: [con], Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:00:00.639
-!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-182: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:54.917
-!MESSAGE XSCT Command: [disconnect tcfchan#85], Thread: Thread-6753
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:54.932
-!MESSAGE XSCT command with result: [disconnect tcfchan#85], Result: [null, ]. Thread: Thread-6753
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.925
-!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.928
-!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#86]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.929
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.936
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.936
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.942
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.942
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.955
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.958
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.961
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.962
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:55.973
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.002
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.006
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.007
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.020
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.021
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.025
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.025
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.037
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.037
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.040
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.041
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.053
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.053
-!MESSAGE XSCT Command: [version -server], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.054
-!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.054
-!MESSAGE XSCT Command: [version], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.055
-!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
-SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.055
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.060
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.060
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.073
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.073
-!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.085
-!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.085
-!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.086
-!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 6000000]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.088
-!MESSAGE XSCT Command: [source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.089
-!MESSAGE XSCT command with result: [source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.090
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.101
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:56.101
-!MESSAGE XSCT Command: [rst -system], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:57.339
-!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:02:57.340
-!MESSAGE XSCT Command: [after 3000], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:00.358
-!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:00.371
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:00.376
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:00.377
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:00.391
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:00.391
-!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-14711093-0"}], Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:00.419
-!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-14711093-0"}], Result: [null, ]. Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:00.419
-!MESSAGE XSCT Command: [fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit], Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.704
-!MESSAGE XSCT command with result: [fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit], Result: [null, ]. Thread: ModalContext
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.713
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.742
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.743
-!MESSAGE XSCT Command: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.785
-!MESSAGE XSCT command with result: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, system_wrapper_3]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.785
-!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.786
-!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.788
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.792
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.793
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.806
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.806
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.820
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.820
-!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.828
-!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.828
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.838
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.839
-!MESSAGE XSCT Command: [rst -processor], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.866
-!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:09.869
-!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.217
-!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.218
-!MESSAGE XSCT Command: [set bp_3_14_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.323
-!MESSAGE XSCT command with result: [set bp_3_14_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 63]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.323
-!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.434
-!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.435
-!MESSAGE XSCT Command: [bpremove $bp_3_14_fsbl_bp], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.440
-!MESSAGE XSCT command with result: [bpremove $bp_3_14_fsbl_bp], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.441
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.448
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.448
-!MESSAGE XSCT Command: [rst -processor], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.483
-!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:14.483
-!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:21.038
-!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:21.039
-!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:21.080
-!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:21.146
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:21.158
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:21.159
-!MESSAGE XSCT Command: [con], Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:03:21.195
-!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-188: Launching Debugger_test-Default
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:04.698
-!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Thread: Worker-205: Build Project
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:04.708
-!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-205: Build Project
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:04.708
-!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-205: Build Project
-
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:04.711
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:48.681
 !MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
 "osname": "standalone",
 "osver": "7.2",
-}]. Thread: Worker-205: Build Project
+}]. Thread: Worker-25: Build Project
 
-!ENTRY com.xilinx.sdk.utils 1 0 2022-10-19 15:04:04.712
+!ENTRY com.xilinx.sdk.utils 1 0 2022-10-25 11:02:48.681
 !MESSAGE Generating MD5 hash for file: D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\system_wrapper\export\system_wrapper\sw\system_wrapper\domain_psu_cortexa53_0\system.mss ...
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:04.714
-!MESSAGE XSCT Command: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-205: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:48.683
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-25: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:04.717
-!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-205: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:48.685
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-25: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:08.512
-!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Thread: Worker-205: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:52.774
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Thread: Worker-14: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:08.520
-!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-205: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:52.781
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-14: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:08.521
-!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-205: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:52.782
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-14: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:08.524
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:52.785
 !MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
 "osname": "standalone",
 "osver": "7.2",
-}]. Thread: Worker-205: Build Project
+}]. Thread: Worker-14: Build Project
 
-!ENTRY com.xilinx.sdk.utils 1 0 2022-10-19 15:04:08.525
+!ENTRY com.xilinx.sdk.utils 1 0 2022-10-25 11:02:52.785
 !MESSAGE Generating MD5 hash for file: D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\system_wrapper\export\system_wrapper\sw\system_wrapper\domain_psu_cortexa53_0\system.mss ...
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:08.526
-!MESSAGE XSCT Command: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-205: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:52.787
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-14: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:08.528
-!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-205: Build Project
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:52.789
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-14: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:14.340
-!MESSAGE XSCT Command: [disconnect tcfchan#86], Thread: Thread-6824
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:56.977
+!MESSAGE XSCT Command: [disconnect tcfchan#2], Thread: Thread-408
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:14.344
-!MESSAGE XSCT command with result: [disconnect tcfchan#86], Result: [null, ]. Thread: Thread-6824
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:57.011
+!MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-408
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.348
-!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.025
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.351
-!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#87]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.036
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#4]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.352
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.036
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.378
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.045
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.378
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.046
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.383
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.050
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.383
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.050
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.395
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.064
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.398
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.066
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.402
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.072
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.402
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.073
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.414
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.084
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.439
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.109
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.443
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.114
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.444
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.114
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.457
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.127
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.458
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.127
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.462
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.132
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.462
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.132
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.475
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.145
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.475
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.145
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.478
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.150
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.479
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.150
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.491
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.163
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.491
-!MESSAGE XSCT Command: [version -server], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.163
+!MESSAGE XSCT Command: [version -server], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.492
-!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.173
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.1]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.492
-!MESSAGE XSCT Command: [version], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.173
+!MESSAGE XSCT Command: [version], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.493
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.174
 !MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.1
 SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
-Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-202: Launching Debugger_test-Default
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.493
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.174
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.497
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.180
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.497
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.180
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.510
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.193
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.511
-!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.193
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.523
-!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.206
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Platform Cable USB 00000000000000" && level == 0}], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.524
-!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.207
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.524
-!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 6000000]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.208
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 6000000]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.526
-!MESSAGE XSCT Command: [source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.211
+!MESSAGE XSCT Command: [source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.527
-!MESSAGE XSCT command with result: [source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.213
+!MESSAGE XSCT command with result: [source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.528
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.214
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.539
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.227
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:15.540
-!MESSAGE XSCT Command: [rst -system], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:58.228
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:16.530
-!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:59.241
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:16.531
-!MESSAGE XSCT Command: [after 3000], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:02:59.241
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:19.543
-!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:02.259
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:19.552
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:02.267
 !MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:19.556
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: ModalContext
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:02.272
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:19.557
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:02.272
 !MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:19.569
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: ModalContext
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:02.284
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:19.570
-!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-14711093-0"}], Thread: ModalContext
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:02.285
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-5ba00477-0"}], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:19.595
-!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-14711093-0"}], Result: [null, ]. Thread: ModalContext
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:02.307
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-5ba00477-0"}], Result: [null, ]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:19.595
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:02.308
 !MESSAGE XSCT Command: [fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit], Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.875
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.667
 !MESSAGE XSCT command with result: [fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit], Result: [null, ]. Thread: ModalContext
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.883
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.682
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.893
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.691
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.893
-!MESSAGE XSCT Command: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.692
+!MESSAGE XSCT Command: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.943
-!MESSAGE XSCT command with result: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, system_wrapper_3]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.748
+!MESSAGE XSCT command with result: [loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs], Result: [null, system_wrapper_0]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.944
-!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.749
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.945
-!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.751
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.946
-!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.752
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.953
-!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Platform Cable USB 00000000000000]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.757
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.954
-!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.757
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.970
-!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      2  xczu2 (idcode 14711093 irlen 12 fpga)
-     3  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.770
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==1}], Result: [null,      3  xczu2 (idcode 14711093 irlen 12 fpga)
+     4  arm_dap (idcode 5ba00477 irlen 4)]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.971
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.771
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.979
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.778
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.979
-!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.778
+!MESSAGE XSCT Command: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.988
-!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.787
+!MESSAGE XSCT command with result: [set mode [expr [mrd -value 0xFF5E0200] & 0xf]], Result: [null, 0]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.989
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.787
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.997
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.795
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:28.998
-!MESSAGE XSCT Command: [rst -processor], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.795
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:29.028
-!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.814
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:29.030
-!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:11.815
+!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:33.405
-!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:16.350
+!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:33.406
-!MESSAGE XSCT Command: [set bp_4_33_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:16.350
+!MESSAGE XSCT Command: [set bp_3_16_fsbl_bp [bpadd -addr &XFsbl_Exit]], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:33.503
-!MESSAGE XSCT command with result: [set bp_4_33_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 64]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:16.437
+!MESSAGE XSCT command with result: [set bp_3_16_fsbl_bp [bpadd -addr &XFsbl_Exit]], Result: [null, 1]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:33.504
-!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:16.438
+!MESSAGE XSCT Command: [con -block -timeout 60], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:34.543
-!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:17.501
+!MESSAGE XSCT command with result: [con -block -timeout 60], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:34.544
-!MESSAGE XSCT Command: [bpremove $bp_4_33_fsbl_bp], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:17.502
+!MESSAGE XSCT Command: [bpremove $bp_3_16_fsbl_bp], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:34.597
-!MESSAGE XSCT command with result: [bpremove $bp_4_33_fsbl_bp], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:17.556
+!MESSAGE XSCT command with result: [bpremove $bp_3_16_fsbl_bp], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:34.598
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:17.557
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:34.605
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:17.565
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:34.607
-!MESSAGE XSCT Command: [rst -processor], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:17.565
+!MESSAGE XSCT Command: [rst -processor], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:34.630
-!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:17.594
+!MESSAGE XSCT command with result: [rst -processor], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:34.630
-!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:17.594
+!MESSAGE XSCT Command: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:41.133
-!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:24.473
+!MESSAGE XSCT command with result: [dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:41.134
-!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:24.474
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:41.172
-!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:24.476
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:41.242
-!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:24.531
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A53*#0"}], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:41.255
-!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:24.558
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A53*#0"}], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:41.256
-!MESSAGE XSCT Command: [con], Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:24.559
+!MESSAGE XSCT Command: [con], Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 15:04:41.295
-!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-202: Launching Debugger_test-Default
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:03:24.596
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-25: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 18:10:40.812
-!MESSAGE XSCT Command: [disconnect tcfchan#87], Thread: Thread-6886
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:20.292
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Thread: Worker-23: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-19 18:10:40.818
-!MESSAGE XSCT command with result: [disconnect tcfchan#87], Result: [null, ]. Thread: Thread-6886
-!SESSION 2022-10-20 17:28:37.969 -----------------------------------------------
-eclipse.buildId=2020.1
-java.version=9.0.4
-java.vendor=Oracle Corporation
-BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=zh_CN
-Command-line arguments:  -os win32 -ws win32 -arch x86_64
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:20.301
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-23: Build Project
 
-!ENTRY org.eclipse.ui 4 4 2022-10-20 17:29:00.982
-!MESSAGE Plug-in 'org.eclipse.ui.editors' contributed an invalid Menu Extension (Path: 'navigate' is invalid): org.eclipse.ui.edit.text.gotoLastEditPosition
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:20.301
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-23: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:21.632
-!MESSAGE XSCT Command: [plnx-install-path  ; ::scw::scw_mode gui], Thread: Thread-8
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:20.305
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-23: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:21.633
-!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-16
+!ENTRY com.xilinx.sdk.utils 1 0 2022-10-25 11:06:20.306
+!MESSAGE Generating MD5 hash for file: D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\system_wrapper\export\system_wrapper\sw\system_wrapper\domain_psu_cortexa53_0\system.mss ...
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:21.652
-!MESSAGE XSCT command with result: [plnx-install-path  ; ::scw::scw_mode gui], Result: [null, ]. Thread: Thread-8
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:20.308
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-23: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:21.653
-!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-16
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:20.311
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-23: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:21.654
-!MESSAGE XSCT Command: [setws D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace], Thread: Thread-16
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:23.827
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Thread: Worker-29: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:21.656
-!MESSAGE XSCT command with result: [setws D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace], Result: [null, ]. Thread: Thread-16
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:23.833
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-29: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:29.531
-!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-1: Initializing s/w repositories
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:23.833
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-29: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:38.651
-!MESSAGE XSCT Command: [::hsi::utils::openhw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:23.837
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-29: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:41.786
-!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-1: Initializing s/w repositories
+!ENTRY com.xilinx.sdk.utils 1 0 2022-10-25 11:06:23.838
+!MESSAGE Generating MD5 hash for file: D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\system_wrapper\export\system_wrapper\sw\system_wrapper\domain_psu_cortexa53_0\system.mss ...
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:41.787
-!MESSAGE XSCT Command: [set query_var1 $::env(RDI_DATADIR)], Thread: Worker-1: Initializing s/w repositories
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:23.840
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-29: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:48.105
-!MESSAGE XSCT command with result: [::hsi::utils::openhw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Result: [null, ]. Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:23.842
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-29: Build Project
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:48.105
-!MESSAGE XSCT command with result: [set query_var1 $::env(RDI_DATADIR)], Result: [null, D:/Vivado/Vitis/2020.1/data]. Thread: Worker-1: Initializing s/w repositories
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:26.104
+!MESSAGE XSCT Command: [disconnect tcfchan#4], Thread: Thread-484
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:48.106
-!MESSAGE XSCT Command: [::hsi::utils::get_design_properties -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:26.107
+!MESSAGE XSCT command with result: [disconnect tcfchan#4], Result: [null, ]. Thread: Thread-484
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:48.123
-!MESSAGE XSCT command with result: [::hsi::utils::get_design_properties -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Result: [null, {"device": "xczu2cg",
-"family": "zynquplus",
-"timestamp": "Wed Sep 21 15:52:40 2022",
-"vivado_version": "2020.1",
-"part": "xczu2cg-sfvc784-1-e",
-}]. Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:27.115
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-29: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:48.141
-!MESSAGE XSCT Command: [::hsi::utils::get_all_periphs -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:27.133
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#5]. Thread: Worker-29: Launching Debugger_test-Default
 
-!ENTRY com.xilinx.sdk.utils 0 0 2022-10-20 17:29:48.170
-!MESSAGE XSCT command with result: [::hsi::utils::get_all_periphs -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa], Result: [null, {"ch_0_axis_passthrough_mon_0": {"hier_name": "ch_0_axis_passthrough_mon_0",
-"type": "axis_passthrough_monitor",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_0_axis_switch_0": {"hier_name": "ch_0_axis_switch_0",
-"type": "axis_switch",
-"version": "1.1",
-"ip_type": "PERIPHERAL",
-},
-"ch_0_rst_video_clk_wiz": {"hier_name": "ch_0_rst_video_clk_wiz",
-"type": "proc_sys_reset",
-"version": "5.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_0_v_axi4s_vid_out_0": {"hier_name": "ch_0_v_axi4s_vid_out_0",
-"type": "v_axi4s_vid_out",
-"version": "4.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_0_v_tc_0": {"hier_name": "ch_0_v_tc_0",
-"type": "v_tc",
-"version": "6.2",
-"ip_type": "PERIPHERAL",
-},
-"ch_0_v_tpg_0": {"hier_name": "ch_0_v_tpg_0",
-"type": "v_tpg",
-"version": "8.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_0_v_tpg_1": {"hier_name": "ch_0_v_tpg_1",
-"type": "v_tpg",
-"version": "8.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_0_v_vid_in_axi4s_0": {"hier_name": "ch_0_v_vid_in_axi4s_0",
-"type": "v_vid_in_axi4s",
-"version": "4.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_0_xlconstant_0": {"hier_name": "ch_0_xlconstant_0",
-"type": "xlconstant",
-"version": "1.1",
-"ip_type": "PERIPHERAL",
-},
-"ch_1_axis_passthrough_mon_0": {"hier_name": "ch_1_axis_passthrough_mon_0",
-"type": "axis_passthrough_monitor",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_1_axis_switch_0": {"hier_name": "ch_1_axis_switch_0",
-"type": "axis_switch",
-"version": "1.1",
-"ip_type": "PERIPHERAL",
-},
-"ch_1_rst_video_clk_wiz": {"hier_name": "ch_1_rst_video_clk_wiz",
-"type": "proc_sys_reset",
-"version": "5.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_1_v_axi4s_vid_out_0": {"hier_name": "ch_1_v_axi4s_vid_out_0",
-"type": "v_axi4s_vid_out",
-"version": "4.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_1_v_tc_0": {"hier_name": "ch_1_v_tc_0",
-"type": "v_tc",
-"version": "6.2",
-"ip_type": "PERIPHERAL",
-},
-"ch_1_v_tpg_0": {"hier_name": "ch_1_v_tpg_0",
-"type": "v_tpg",
-"version": "8.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_1_v_tpg_1": {"hier_name": "ch_1_v_tpg_1",
-"type": "v_tpg",
-"version": "8.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_1_v_vid_in_axi4s_0": {"hier_name": "ch_1_v_vid_in_axi4s_0",
-"type": "v_vid_in_axi4s",
-"version": "4.0",
-"ip_type": "PERIPHERAL",
-},
-"ch_1_xlconstant_0": {"hier_name": "ch_1_xlconstant_0",
-"type": "xlconstant",
-"version": "1.1",
-"ip_type": "PERIPHERAL",
-},
-"processer_ss_AXI_LITE_REG_0": {"hier_name": "processer_ss_AXI_LITE_REG_0",
-"type": "AXI_LITE_REG",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"processer_ss_axi_uartlite_0": {"hier_name": "processer_ss_axi_uartlite_0",
-"type": "axi_uartlite",
-"version": "2.0",
-"ip_type": "PERIPHERAL",
-},
-"processer_ss_ps8_0_axi_periph": {"hier_name": "processer_ss_ps8_0_axi_periph",
-"type": "axi_interconnect",
-"version": "2.1",
-"ip_type": "BUS",
-},
-"processer_ss_rst_ps8_0_300M": {"hier_name": "processer_ss_rst_ps8_0_300M",
-"type": "proc_sys_reset",
-"version": "5.0",
-"ip_type": "PERIPHERAL",
-},
-"processer_ss_xlconcat_0": {"hier_name": "processer_ss_xlconcat_0",
-"type": "xlconcat",
-"version": "2.1",
-"ip_type": "PERIPHERAL",
-},
-"processer_ss_xlconstant_0": {"hier_name": "processer_ss_xlconstant_0",
-"type": "xlconstant",
-"version": "1.1",
-"ip_type": "PERIPHERAL",
-},
-"processer_ss_zynq_ultra_ps_e_0": {"hier_name": "processer_ss_zynq_ultra_ps_e_0",
-"type": "zynq_ultra_ps_e",
-"version": "3.3",
-"ip_type": "",
-},
-"vdma_ss_axi_smc": {"hier_name": "vdma_ss_axi_smc",
-"type": "smartconnect",
-"version": "1.0",
-"ip_type": "BUS",
-},
-"vdma_ss_axi_vdma_0": {"hier_name": "vdma_ss_axi_vdma_0",
-"type": "axi_vdma",
-"version": "6.3",
-"ip_type": "PERIPHERAL",
-},
-"vdma_ss_axi_vdma_1": {"hier_name": "vdma_ss_axi_vdma_1",
-"type": "axi_vdma",
-"version": "6.3",
-"ip_type": "PERIPHERAL",
-},
-"vdma_ss_axi_vdma_2": {"hier_name": "vdma_ss_axi_vdma_2",
-"type": "axi_vdma",
-"version": "6.3",
-"ip_type": "PERIPHERAL",
-},
-"vdma_ss_axis_passthrough_mon_0": {"hier_name": "vdma_ss_axis_passthrough_mon_0",
-"type": "axis_passthrough_monitor",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"vid_out_ss_clk_wiz_0": {"hier_name": "vid_out_ss_clk_wiz_0",
-"type": "clk_wiz",
-"version": "6.0",
-"ip_type": "PERIPHERAL",
-},
-"vid_out_ss_rst_video_clk_wiz": {"hier_name": "vid_out_ss_rst_video_clk_wiz",
-"type": "proc_sys_reset",
-"version": "5.0",
-"ip_type": "PERIPHERAL",
-},
-"vid_out_ss_v_axi4s_vid_out_0": {"hier_name": "vid_out_ss_v_axi4s_vid_out_0",
-"type": "v_axi4s_vid_out",
-"version": "4.0",
-"ip_type": "PERIPHERAL",
-},
-"vid_out_ss_v_tc_0": {"hier_name": "vid_out_ss_v_tc_0",
-"type": "v_tc",
-"version": "6.2",
-"ip_type": "PERIPHERAL",
-},
-"vid_out_ss_xlconstant_0": {"hier_name": "vid_out_ss_xlconstant_0",
-"type": "xlconstant",
-"version": "1.1",
-"ip_type": "PERIPHERAL",
-},
-"xlconstant_0": {"hier_name": "xlconstant_0",
-"type": "xlconstant",
-"version": "1.1",
-"ip_type": "PERIPHERAL",
-},
-"psu_axi_interconnect_0": {"hier_name": "psu_axi_interconnect_0",
-"type": "psu_axi_interconnect",
-"version": "1.0",
-"ip_type": "BUS",
-},
-"psu_coresight_0": {"hier_name": "psu_coresight_0",
-"type": "psu_coresight_0",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_acpu_gic": {"hier_name": "psu_acpu_gic",
-"type": "psu_acpu_gic",
-"version": "1.0",
-"ip_type": "INTERRUPT_CNTLR",
-},
-"psu_rcpu_gic": {"hier_name": "psu_rcpu_gic",
-"type": "psu_rcpu_gic",
-"version": "1.0",
-"ip_type": "INTERRUPT_CNTLR",
-},
-"psu_r5_tcm_ram_global": {"hier_name": "psu_r5_tcm_ram_global",
-"type": "psu_r5_tcm_ram",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_tcm_ram_0": {"hier_name": "psu_r5_tcm_ram_0",
-"type": "psu_r5_tcm_ram",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ocm_ram_0": {"hier_name": "psu_ocm_ram_0",
-"type": "psu_ocm_ram_0",
-"version": "1.0",
-"ip_type": "MEMORY_CNTLR",
-},
-"psu_ocm": {"hier_name": "psu_ocm",
-"type": "psu_ocm",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_1_btcm": {"hier_name": "psu_r5_1_btcm",
-"type": "psu_r5_1_btcm",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_1_btcm_global": {"hier_name": "psu_r5_1_btcm_global",
-"type": "psu_r5_1_btcm_global",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_1_atcm": {"hier_name": "psu_r5_1_atcm",
-"type": "psu_r5_1_atcm",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_1_atcm_global": {"hier_name": "psu_r5_1_atcm_global",
-"type": "psu_r5_1_atcm_global",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_0_btcm_lockstep": {"hier_name": "psu_r5_0_btcm_lockstep",
-"type": "psu_r5_0_btcm_lockstep",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_0_btcm": {"hier_name": "psu_r5_0_btcm",
-"type": "psu_r5_0_btcm",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_0_btcm_global": {"hier_name": "psu_r5_0_btcm_global",
-"type": "psu_r5_0_btcm_global",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_0_atcm_lockstep": {"hier_name": "psu_r5_0_atcm_lockstep",
-"type": "psu_r5_0_atcm_lockstep",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_0_atcm": {"hier_name": "psu_r5_0_atcm",
-"type": "psu_r5_0_atcm",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_0_atcm_global": {"hier_name": "psu_r5_0_atcm_global",
-"type": "psu_r5_0_atcm_global",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_bbram_0": {"hier_name": "psu_bbram_0",
-"type": "psu_bbram_0",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_pmu_ram": {"hier_name": "psu_pmu_ram",
-"type": "psu_pmu_ram",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_pmu_iomodule": {"hier_name": "psu_pmu_iomodule",
-"type": "psu_pmu_iomodule",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_pmu_global_0": {"hier_name": "psu_pmu_global_0",
-"type": "psu_pmu_global_0",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_mbistjtag": {"hier_name": "psu_mbistjtag",
-"type": "psu_mbistjtag",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_rsa": {"hier_name": "psu_rsa",
-"type": "psu_rsa",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_efuse": {"hier_name": "psu_efuse",
-"type": "psu_efuse",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_csu_0": {"hier_name": "psu_csu_0",
-"type": "psu_csu",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_csudma": {"hier_name": "psu_csudma",
-"type": "psu_csudma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_smmu_gpv": {"hier_name": "psu_smmu_gpv",
-"type": "psu_smmu_gpv",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_fpd_gpv": {"hier_name": "psu_fpd_gpv",
-"type": "psu_fpd_gpv",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_cci_gpv": {"hier_name": "psu_cci_gpv",
-"type": "psu_cci_gpv",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_fpd_slcr_secure": {"hier_name": "psu_fpd_slcr_secure",
-"type": "psu_fpd_slcr_secure",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_fpd_slcr": {"hier_name": "psu_fpd_slcr",
-"type": "psu_fpd_slcr",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_smmu_reg": {"hier_name": "psu_smmu_reg",
-"type": "psu_smmu_reg",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_cci_reg": {"hier_name": "psu_cci_reg",
-"type": "psu_cci_reg",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_fpd_xmpu_cfg": {"hier_name": "psu_fpd_xmpu_cfg",
-"type": "psu_fpd_xmpu_cfg",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_apu": {"hier_name": "psu_apu",
-"type": "psu_apu",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_gdma_7": {"hier_name": "psu_gdma_7",
-"type": "psu_gdma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_gdma_6": {"hier_name": "psu_gdma_6",
-"type": "psu_gdma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_gdma_5": {"hier_name": "psu_gdma_5",
-"type": "psu_gdma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_gdma_4": {"hier_name": "psu_gdma_4",
-"type": "psu_gdma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_gdma_3": {"hier_name": "psu_gdma_3",
-"type": "psu_gdma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_gdma_2": {"hier_name": "psu_gdma_2",
-"type": "psu_gdma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_gdma_1": {"hier_name": "psu_gdma_1",
-"type": "psu_gdma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_gdma_0": {"hier_name": "psu_gdma_0",
-"type": "psu_gdma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_fpd_xmpu_sink": {"hier_name": "psu_fpd_xmpu_sink",
-"type": "psu_fpd_xmpu_sink",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_apm_5": {"hier_name": "psu_apm_5",
-"type": "psu_apm",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_serdes": {"hier_name": "psu_serdes",
-"type": "psu_serdes",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_siou": {"hier_name": "psu_siou",
-"type": "psu_siou",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_afi_5": {"hier_name": "psu_afi_5",
-"type": "psu_afi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_afi_4": {"hier_name": "psu_afi_4",
-"type": "psu_afi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_afi_3": {"hier_name": "psu_afi_3",
-"type": "psu_afi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_afi_2": {"hier_name": "psu_afi_2",
-"type": "psu_afi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_afi_1": {"hier_name": "psu_afi_1",
-"type": "psu_afi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_afi_0": {"hier_name": "psu_afi_0",
-"type": "psu_afi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_crf_apb": {"hier_name": "psu_crf_apb",
-"type": "psu_crf_apb",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_sata": {"hier_name": "psu_sata",
-"type": "psu_sata",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_apm_0": {"hier_name": "psu_apm_0",
-"type": "psu_apm",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ddr_qos_ctrl": {"hier_name": "psu_ddr_qos_ctrl",
-"type": "psu_ddr_qos_ctrl",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ddr_phy": {"hier_name": "psu_ddr_phy",
-"type": "psu_ddr_phy",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ddr_xmpu5_cfg": {"hier_name": "psu_ddr_xmpu5_cfg",
-"type": "psu_ddr_xmpu5_cfg",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ddr_xmpu4_cfg": {"hier_name": "psu_ddr_xmpu4_cfg",
-"type": "psu_ddr_xmpu4_cfg",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ddr_xmpu3_cfg": {"hier_name": "psu_ddr_xmpu3_cfg",
-"type": "psu_ddr_xmpu3_cfg",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ddr_xmpu2_cfg": {"hier_name": "psu_ddr_xmpu2_cfg",
-"type": "psu_ddr_xmpu2_cfg",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ddr_xmpu1_cfg": {"hier_name": "psu_ddr_xmpu1_cfg",
-"type": "psu_ddr_xmpu1_cfg",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ddr_xmpu0_cfg": {"hier_name": "psu_ddr_xmpu0_cfg",
-"type": "psu_ddr_xmpu0_cfg",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_adma_7": {"hier_name": "psu_adma_7",
-"type": "psu_adma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_adma_6": {"hier_name": "psu_adma_6",
-"type": "psu_adma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_adma_5": {"hier_name": "psu_adma_5",
-"type": "psu_adma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_adma_4": {"hier_name": "psu_adma_4",
-"type": "psu_adma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_adma_3": {"hier_name": "psu_adma_3",
-"type": "psu_adma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_adma_2": {"hier_name": "psu_adma_2",
-"type": "psu_adma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_adma_1": {"hier_name": "psu_adma_1",
-"type": "psu_adma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_adma_0": {"hier_name": "psu_adma_0",
-"type": "psu_adma",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ocm_xmpu_cfg": {"hier_name": "psu_ocm_xmpu_cfg",
-"type": "psu_ocm_xmpu_cfg",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_rtc": {"hier_name": "psu_rtc",
-"type": "psu_rtc",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ams": {"hier_name": "psu_ams",
-"type": "psu_ams",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_apm_2": {"hier_name": "psu_apm_2",
-"type": "psu_apm",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_apm_1": {"hier_name": "psu_apm_1",
-"type": "psu_apm",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_lpd_xppu_sink": {"hier_name": "psu_lpd_xppu_sink",
-"type": "psu_lpd_xppu_sink",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_afi_6": {"hier_name": "psu_afi_6",
-"type": "psu_afi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_rpu": {"hier_name": "psu_rpu",
-"type": "psu_rpu",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_lpd_xppu": {"hier_name": "psu_lpd_xppu",
-"type": "psu_lpd_xppu",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_crl_apb": {"hier_name": "psu_crl_apb",
-"type": "psu_crl_apb",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_lpd_slcr_secure": {"hier_name": "psu_lpd_slcr_secure",
-"type": "psu_lpd_slcr_secure",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_lpd_slcr": {"hier_name": "psu_lpd_slcr",
-"type": "psu_lpd_slcr",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ipi_0": {"hier_name": "psu_ipi_0",
-"type": "psu_ipi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ipi_1": {"hier_name": "psu_ipi_1",
-"type": "psu_ipi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ipi_2": {"hier_name": "psu_ipi_2",
-"type": "psu_ipi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ipi_3": {"hier_name": "psu_ipi_3",
-"type": "psu_ipi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ipi_4": {"hier_name": "psu_ipi_4",
-"type": "psu_ipi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ipi_5": {"hier_name": "psu_ipi_5",
-"type": "psu_ipi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ipi_6": {"hier_name": "psu_ipi_6",
-"type": "psu_ipi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ctrl_ipi": {"hier_name": "psu_ctrl_ipi",
-"type": "PERIPHERAL",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_message_buffers": {"hier_name": "psu_message_buffers",
-"type": "PERIPHERAL",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_iou_s": {"hier_name": "psu_iou_s",
-"type": "psu_iou_s",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_iou_scntrs": {"hier_name": "psu_iou_scntrs",
-"type": "psu_iou_scntrs",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_iou_scntr": {"hier_name": "psu_iou_scntr",
-"type": "psu_iou_scntr",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_iousecure_slcr": {"hier_name": "psu_iousecure_slcr",
-"type": "psu_iousecure_slcr",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_iouslcr_0": {"hier_name": "psu_iouslcr_0",
-"type": "psu_iouslcr",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_r5_ddr_0": {"hier_name": "psu_r5_ddr_0",
-"type": "psu_ddr",
-"version": "1.0",
-"ip_type": "MEMORY_CNTLR",
-},
-"psu_ddr_0": {"hier_name": "psu_ddr_0",
-"type": "psu_ddr",
-"version": "1.0",
-"ip_type": "MEMORY_CNTLR",
-},
-"psu_ddrc_0": {"hier_name": "psu_ddrc_0",
-"type": "psu_ddrc",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ttc_3": {"hier_name": "psu_ttc_3",
-"type": "psu_ttc",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ttc_2": {"hier_name": "psu_ttc_2",
-"type": "psu_ttc",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ttc_1": {"hier_name": "psu_ttc_1",
-"type": "psu_ttc",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ttc_0": {"hier_name": "psu_ttc_0",
-"type": "psu_ttc",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_qspi_0": {"hier_name": "psu_qspi_0",
-"type": "psu_qspi",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_ethernet_3": {"hier_name": "psu_ethernet_3",
-"type": "psu_ethernet",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_gpio_0": {"hier_name": "psu_gpio_0",
-"type": "psu_gpio",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_i2c_1": {"hier_name": "psu_i2c_1",
-"type": "psu_i2c",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_i2c_0": {"hier_name": "psu_i2c_0",
-"type": "psu_i2c",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_uart_0": {"hier_name": "psu_uart_0",
-"type": "psu_uart",
-"version": "1.0",
-"ip_type": "PERIPHERAL",
-},
-"psu_qspi_linear_0": {"hier_name": "psu_qspi_linear_0",
-"type": "psu_qspi_linear",
-"version": "1.0",
-"ip_type": "MEMORY_CNTLR",
-},
-"psu_cortexa53_0": {"hier_name": "psu_cortexa53_0",
-"type": "psu_cortexa53",
-"version": "1.0",
-"ip_type": "PROCESSOR",
-},
-"psu_cortexa53_1": {"hier_name": "psu_cortexa53_1",
-"type": "psu_cortexa53",
-"version": "1.0",
-"ip_type": "PROCESSOR",
-},
-"psu_cortexr5_0": {"hier_name": "psu_cortexr5_0",
-"type": "psu_cortexr5",
-"version": "1.0",
-"ip_type": "PROCESSOR",
-},
-"psu_cortexr5_1": {"hier_name": "psu_cortexr5_1",
-"type": "psu_cortexr5",
-"version": "1.0",
-"ip_type": "PROCESSOR",
-},
-"psu_pmu_0": {"hier_name": "psu_pmu_0",
-"type": "psu_pmu",
-"version": "9.2",
-"ip_type": "PROCESSOR",
-},
-}]. Thread: main
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:27.134
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:27.145
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000 (error board power off)]. Thread: Worker-29: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:27.145
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-29: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:27.150
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   2* Platform Cable USB 00000000000000 (error board power off)]. Thread: Worker-29: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:27.150
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000 (error board power off)" && level==1}], Thread: Worker-29: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:30.165
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000 (error board power off)" && level==1}], Result: [null, ]. Thread: Worker-29: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:33.171
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000 (error board power off)" && level==1}], Thread: Worker-29: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:36.186
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000 (error board power off)" && level==1}], Result: [null, ]. Thread: Worker-29: Launching Debugger_test-Default
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:57.679
+!MESSAGE XSCT Command: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Thread: Worker-19: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:57.685
+!MESSAGE XSCT command with result: [ ::hsi::utils::set_current_hw_sw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss ], Result: [null, ]. Thread: Worker-19: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:57.686
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-19: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:57.690
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_sw_details -json D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, {"procname": "psu_cortexa53_0",
+"osname": "standalone",
+"osver": "7.2",
+}]. Thread: Worker-19: Build Project
+
+!ENTRY com.xilinx.sdk.utils 1 0 2022-10-25 11:06:57.690
+!MESSAGE Generating MD5 hash for file: D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\system_wrapper\export\system_wrapper\sw\system_wrapper\domain_psu_cortexa53_0\system.mss ...
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:57.691
+!MESSAGE XSCT Command: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Thread: Worker-19: Build Project
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-10-25 11:06:57.694
+!MESSAGE XSCT command with result: [::hsi::utils::closesw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/domain_psu_cortexa53_0/system.mss], Result: [null, ]. Thread: Worker-19: Build Project

@@ -1,4 +1,5 @@
 # _*_coding: UTF-8_*_
+from multiprocessing.connection import wait
 import sys
 import time
 import struct
@@ -42,8 +43,8 @@ class picshow (threading.Thread):
     def run(self):
         print("开始线程" + str(self.threadID))
         while(~frame_queue.empty()):
-            start = 0.0
-            start = time.time()
+            # start = 0.0
+            # start = time.time()
             frame_bytes = frame_queue.get()
 
             # pic_data=bytearray(frame_bytes).hex()
@@ -92,10 +93,10 @@ class picshow (threading.Thread):
             #     video_queue.put(image)
             # self.Label.setPixmap(QPixmap.fromImage(image))
 
-            end = time.time()
-            seconds = end - start
-            fps = 1 / seconds
-            print('fps = %f'%fps)
+            # end = time.time()
+            # seconds = end - start
+            # fps = 1 / seconds
+            # print('fps = %f'%fps)
         
 # 00 07 00 00 80 01 00
 
@@ -179,7 +180,8 @@ class InitForm(QWidget):
         self.ui.pushButton_ClientClose.clicked.connect(self.pushButton_ClientClose_clicked)
         self.ui.btn_clear_cnt.clicked.connect(self.btn_clear_cnt_clicked)
         self.ui.btn_pic_send_on.clicked.connect(self.btn_pic_send_on_clicked)
-        self.ui.btn_pic_send_off.clicked.connect(self.btn_pic_send_off_clicked)
+        self.ui.btn_video_send_on.clicked.connect(self.btn_video_send_on_clicked)
+        self.ui.btn_video_send_off.clicked.connect(self.btn_video_send_off_clicked)
 
         self.time_send = QTimer()
         self.time_send.timeout.connect(self.TimeOut_Send)
@@ -190,7 +192,8 @@ class InitForm(QWidget):
 
         self.ui.btn_send.setEnabled(False)
         self.ui.btn_pic_send_on.setEnabled(False)
-        self.ui.btn_pic_send_off.setEnabled(False)
+        self.ui.btn_video_send_on.setEnabled(False)
+        self.ui.btn_video_send_off.setEnabled(False)
 
         self.setLED_0(2)
         self.setLED_1(0)
@@ -451,7 +454,8 @@ class InitForm(QWidget):
             choose_type = self.ui.comboBox_type.currentText()
             if choose_type == 'UDP':
                 self.ui.btn_pic_send_on.setEnabled(True)
-                self.ui.btn_pic_send_off.setEnabled(True)
+                self.ui.btn_video_send_on.setEnabled(True)
+                self.ui.btn_video_send_off.setEnabled(True)
 
                 self.show_pic = picshow(threadID=2, Label=self.ui.picshow)
                 # 设置线程为守护线程，防止退出主线程时，子线程仍在运行
@@ -461,7 +465,8 @@ class InitForm(QWidget):
 
             else:
                 self.ui.btn_pic_send_on.setEnabled(False)
-                self.ui.btn_pic_send_off.setEnabled(False)
+                self.ui.btn_video_send_on.setEnabled(False)
+                self.ui.btn_video_send_off.setEnabled(False)
             
         else:
             print('关闭')
@@ -472,7 +477,8 @@ class InitForm(QWidget):
             self.ui.lineEdit_port.setEnabled(True)
             self.ui.btn_send.setEnabled(False)
             self.ui.btn_pic_send_on.setEnabled(False)
-            self.ui.btn_pic_send_off.setEnabled(False)
+            self.ui.btn_video_send_on.setEnabled(False)
+            self.ui.btn_video_send_off.setEnabled(False)
 
     def slot_readyRead(self,data):
         View_data = ''
@@ -499,14 +505,12 @@ class InitForm(QWidget):
                     self.setLED_0(1)
                     frame = frame + Byte_data[9:]    
                     frame_queue.put(frame)
-                    frame = b''
                     self.cnt_index  = 1
                 else:
                     frame = frame + Byte_data[9:]
                     self.cnt_index  = self.cnt_index  + 1             
             else :
                 print("cnt_index:%d != sn_index:%d"%(self.cnt_index,sn_index))
-                frame = b''
                 self.cnt_index  = 1
                 # print('send error, lose data')
 
@@ -559,18 +563,29 @@ class InitForm(QWidget):
         self.ui.label_ReceviceNum.setText("接收:0")   
 
     def btn_pic_send_on_clicked(self):
-        pic_off = [0x00,0x07,0x00,0x00,0x80,0x01,0x01]
-        data = struct.pack('B'*len(pic_off), *pic_off)
-        choose_type = self.ui.comboBox_type.currentText()
+        video_off = [0x00,0x07,0x00,0x00,0x80,0x01,0x00]
+        data = struct.pack('B'*len(video_off), *video_off)
+        parameter = {}
+        parameter['ip_port']   = self.ui.comboBox_ClientIp.currentText()
+        parameter['data']      = data
+        self.UDP_Qthread_function.signal_SendData.emit(parameter)
+        time.sleep(1)
+        pic_on = [0x00,0x07,0x00,0x00,0x80,0x01,0x01] #通道1
+        data = struct.pack('B'*len(pic_on), *pic_on)
+        parameter['data']      = data
+        self.UDP_Qthread_function.signal_SendData.emit(parameter)
+
+    def btn_video_send_on_clicked(self):
+        video_on = [0x00,0x07,0x00,0x00,0x80,0x01,0x02]
+        data = struct.pack('B'*len(video_on), *video_on)
         parameter = {}
         parameter['ip_port']   = self.ui.comboBox_ClientIp.currentText()
         parameter['data']      = data
         self.UDP_Qthread_function.signal_SendData.emit(parameter)
 
-    def btn_pic_send_off_clicked(self):
-        pic_off = [0x00,0x07,0x00,0x00,0x80,0x01,0x00]
-        data = struct.pack('B'*len(pic_off), *pic_off)
-        choose_type = self.ui.comboBox_type.currentText()
+    def btn_video_send_off_clicked(self):
+        video_off = [0x00,0x07,0x00,0x00,0x80,0x01,0x00]
+        data = struct.pack('B'*len(video_off), *video_off)
         parameter = {}
         parameter['ip_port']   = self.ui.comboBox_ClientIp.currentText()
         parameter['data']      = data

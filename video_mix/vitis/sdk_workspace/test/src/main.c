@@ -72,7 +72,8 @@ int rd_index[2]={0,0};
 int frame_length_curr;
 
 extern unsigned char targetPicHeader[9];
-extern char sendchannel[2];
+extern char send_video_channel[2];
+extern char send_pic_channel[2];
 /*
  * Framebuffers for video data
  */
@@ -697,7 +698,7 @@ int main(void)
 	{
 		debug_info();
 
-		if((WriteOneFrameEnd[0] >= 0) && (sendchannel[0]) )
+		if((WriteOneFrameEnd[0] >= 0) && (send_video_channel[0]) || send_pic_channel[0])
 		{
 
 			targetPicHeader[5]= 0x01;
@@ -706,19 +707,6 @@ int main(void)
 			int cot =0;
 			int data_num = PBUF_LEN;
 			Xil_DCacheInvalidateRange((u32)pFrames0[index], frame_length_curr);
-
-//			xil_printf("pic 1 sending£¬index:%d\r\n",index);
-
-//			for(int t = 0;t<640*3;t++)
-//			{
-//				xil_printf("%x ",*(pFrames0[index]+t));
-//			}
-
-//			for(int t = 0;t<1440;t++)
-//			{
-//
-//				xil_printf("%d,%x \r\n",t,*(pFrames0[index]+t));
-//			}
 
 			/* Separate camera 1 frame in package */
 			for(int i=0;i<frame_length_curr;i+=data_num)
@@ -734,42 +722,42 @@ int main(void)
 				}
 //			    xil_printf("sending pic_1 sn:%d\r\n",sn);
 				sendpic((const unsigned char *)pFrames0[index]+i, cot, sn++);
-//				usleep(100);
+//				usleep(10);
 			}
 
 //			xil_printf("end pic_1 sn:%d\r\n",sn-1);
 			WriteOneFrameEnd[0] = -1;
-//			sendchannel[0] = 0;////////////////////////////////////////////
+			send_pic_channel[0] = 0;////////////////////////////////////////////
 		}
 		/* Separate camera 2 frame in package */
-		if((WriteOneFrameEnd[1] >= 0) && (sendchannel[1]) )
+		if((WriteOneFrameEnd[1] >= 0) && (send_video_channel[1]) || send_pic_channel[1])
 		{
-			xil_printf("pic 2 sending:\r\n");
 
 			targetPicHeader[5]= 0x02;
 			index = WriteOneFrameEnd[1];
 			int sn = 1;
 			int cot =0;
+			int data_num = PBUF_LEN;
 			Xil_DCacheInvalidateRange((u32)pFrames1[index], frame_length_curr);
-			for(int i=0;i<frame_length_curr;i+=1440)
+			for(int i=0;i<frame_length_curr;i+=data_num)
 			{
-				if((i+1440)>frame_length_curr)
+				if((i+data_num)>frame_length_curr)
 				{
 					cot = frame_length_curr-i;
 				}
 				else
 				{
-					cot = 1440;
+					cot = data_num;
 				}
 //				xil_printf("sending pic_2 sn:%d\r\n",sn);
 				sendpic((const unsigned char *)pFrames1[index]+i, cot, sn++);
-				usleep(2000);
+//				usleep(10);
 			}
 
-			xil_printf("end pic_2 sn:%d\r\n",sn-1);
+//			xil_printf("end pic_2 sn:%d\r\n",sn-1);
 
 			WriteOneFrameEnd[1] = -1;
-			sendchannel[1] = 0;////////////////////////////////////////////
+			send_pic_channel[1] = 0;////////////////////////////////////////////
 		}
 
 

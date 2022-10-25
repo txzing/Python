@@ -1467,3 +1467,18 @@ TRACE::2022-10-19.14:59:27::SCWBifWriter:: Command Ran  D:/Vivado/Vitis/2020.1/g
 TRACE::2022-10-19.14:59:27::SCWBifWriter::FSBL processor, command ran D:/Vivado/Vitis/2020.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-readelf -A  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf
 TRACE::2022-10-19.14:59:27::SCWBifWriter::FSBL target processor is a53-0
 TRACE::2022-10-19.14:59:27::SCWBifWriter::Boot processor is :a53-0
+TRACE::2022-10-25.11:02:38::SCWBifWriter::Found the complete platform D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/system_wrapper.xpfm
+TRACE::2022-10-25.11:02:38::SCWBifWriter::hardware databse : system_wrapper_0
+TRACE::2022-10-25.11:02:38::SCWBifWriter::bitstream found in the design
+TRACE::2022-10-25.11:02:38::SCWBifWriter::Found a baremetal domain, proc: psu_cortexa53_0
+TRACE::2022-10-25.11:02:38::SCWBifWriter::proc type : 
+TRACE::2022-10-25.11:02:38::SCWBifWriter::proc[0] : psu_cortexa53_0
+TRACE::2022-10-25.11:02:38::SCWBifWriter::Device type is : zynqMP
+TRACE::2022-10-25.11:02:38::SCWBifWriter::Writing BIF to file : D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test_system/Debug/system.bif
+TRACE::2022-10-25.11:02:38::SCWBifWriter::Writing the ZynqMP baremetal bif 
+TRACE::2022-10-25.11:02:38::SCWBifWriter::System Command Ran  D:/Vivado/Vitis/2020.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-readelf -A  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf
+TRACE::2022-10-25.11:02:38::SCWBifWriter:: Removed readelf log file successfully
+TRACE::2022-10-25.11:02:38::SCWBifWriter:: Command Ran  D:/Vivado/Vitis/2020.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-readelf -A  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf
+TRACE::2022-10-25.11:02:38::SCWBifWriter::FSBL processor, command ran D:/Vivado/Vitis/2020.1/gnu/aarch64/nt/aarch64-none/bin/aarch64-none-elf-readelf -A  D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf
+TRACE::2022-10-25.11:02:38::SCWBifWriter::FSBL target processor is a53-0
+TRACE::2022-10-25.11:02:38::SCWBifWriter::Boot processor is :a53-0

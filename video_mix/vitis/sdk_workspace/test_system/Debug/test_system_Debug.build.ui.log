@@ -1,10 +1,10 @@
-2022-10-19T14:59:26.160830300255-14:59:26 **** Incremental Build of configuration Debug for project test_system ****
+2022-10-25T11:02:36.822108300255-11:02:36 **** Build of configuration Debug for project test_system ****
 000-make all 
 000-Generating bif file for the system project
-000-generate_system_bif.bat 49874 D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/system_wrapper.xpfm domain_psu_cortexa53_0 D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test_system/Debug/system.bif
+000-generate_system_bif.bat 57828 D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/system_wrapper.xpfm domain_psu_cortexa53_0 D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test_system/Debug/system.bif
 000-sdcard_gen --xpfm D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/system_wrapper.xpfm --sys_config system_wrapper --bif D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test_system/Debug/system.bif --bitstream D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit --elf D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf,psu_cortexa53_0
 000-creating BOOT.BIN using D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit
 000-Running D:/Vivado/Vitis/2020.1/bin/bootgen -arch zynqmp -image D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
 00255-
-14:59:31 Build Finished (took 5s.661ms)
+11:02:43 Build Finished (took 6s.317ms)
 
