@@ -1,0 +1,1128 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Dec 26 10:01:15 2022
+# Process ID: 17712
+# Current directory: C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17208 C:\Users\txzing\Desktop\1_FPGA_Design\MPSoC_XCZU4EV_FPGA\XCZU4EV\23_ov5640_udp_pc\ov5640_udp_pc.xpr
+# Log file: C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/vivado.log
+# Journal file: C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.xpr
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.PRIM_SOURCE {Single_ended_clock_capable_pin} CONFIG.PRIM_IN_FREQ {50} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.MMCM_CLKFBOUT_MULT_F {24.000} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.CLKOUT1_JITTER {139.127} CONFIG.CLKOUT1_PHASE_ERROR {154.678}] [get_ips clk_wiz_0]
+generate_target all [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 8
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files -ipstatic_source_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/modelsim} {questa=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/questa} {riviera=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/riviera} {activehdl=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property part xc7z020clg400-2 [current_project]
+reset_run clk_wiz_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+upgrade_ip -srcset clk_wiz_0 -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_wiz_0] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+upgrade_ip -srcset clk_wiz -vlnv xilinx.com:ip:clk_wiz:6.0 [get_ips  clk_wiz] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips clk_wiz] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1
+upgrade_ip -vlnv xilinx.com:ip:fifo_generator:13.2 [get_ips  async_fifo_1024x32b] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips async_fifo_1024x32b] -no_script -sync -force -quiet
+generate_target all [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/async_fifo_1024x32b/async_fifo_1024x32b.xci]
+catch { config_ip_cache -export [get_ips -all async_fifo_1024x32b] }
+export_ip_user_files -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/async_fifo_1024x32b/async_fifo_1024x32b.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/async_fifo_1024x32b/async_fifo_1024x32b.xci]
+launch_runs async_fifo_1024x32b_synth_1 -jobs 8
+wait_on_run async_fifo_1024x32b_synth_1
+export_simulation -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/async_fifo_1024x32b/async_fifo_1024x32b.xci] -directory C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files -ipstatic_source_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/modelsim} {questa=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/questa} {riviera=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/riviera} {activehdl=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+set_property -dict [list CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200} CONFIG.MMCM_CLKOUT1_DIVIDE {5} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT2_JITTER {114.829} CONFIG.CLKOUT2_PHASE_ERROR {98.575}] [get_ips clk_wiz]
+generate_target all [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz] }
+export_ip_user_files -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_synth_1
+launch_runs clk_wiz_synth_1 -jobs 8
+wait_on_run clk_wiz_synth_1
+export_simulation -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci] -directory C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files -ipstatic_source_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/modelsim} {questa=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/questa} {riviera=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/riviera} {activehdl=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.PRIM_IN_FREQ {125} CONFIG.CLKOUT2_USED {false} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {125} CONFIG.CLKOUT1_REQUESTED_PHASE {90} CONFIG.CLKIN1_JITTER_PS {80.0} CONFIG.MMCM_CLKFBOUT_MULT_F {8.000} CONFIG.MMCM_CLKIN1_PERIOD {8.000} CONFIG.MMCM_CLKOUT0_DIVIDE_F {8.000} CONFIG.MMCM_CLKOUT0_PHASE {90.000} CONFIG.MMCM_CLKOUT1_DIVIDE {1} CONFIG.NUM_OUT_CLKS {1} CONFIG.CLKOUT1_JITTER {119.348} CONFIG.CLKOUT1_PHASE_ERROR {96.948} CONFIG.CLKOUT2_JITTER {109.241} CONFIG.CLKOUT2_PHASE_ERROR {96.948}] [get_ips clk_wiz]
+generate_target all [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz] }
+export_ip_user_files -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_synth_1
+launch_runs clk_wiz_synth_1 -jobs 8
+wait_on_run clk_wiz_synth_1
+export_simulation -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci] -directory C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files -ipstatic_source_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/modelsim} {questa=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/questa} {riviera=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/riviera} {activehdl=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+set_property -dict [list CONFIG.PRIM_IN_FREQ {50} CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200} CONFIG.CLKIN1_JITTER_PS {200.0} CONFIG.MMCM_CLKFBOUT_MULT_F {20.000} CONFIG.MMCM_CLKIN1_PERIOD {20.000} CONFIG.MMCM_CLKIN2_PERIOD {10.0} CONFIG.MMCM_CLKOUT1_DIVIDE {5} CONFIG.NUM_OUT_CLKS {2} CONFIG.CLKOUT1_JITTER {162.035} CONFIG.CLKOUT1_PHASE_ERROR {164.985} CONFIG.CLKOUT2_JITTER {142.107} CONFIG.CLKOUT2_PHASE_ERROR {164.985}] [get_ips clk_wiz_0]
+generate_target all [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+reset_run clk_wiz_0_synth_1
+launch_runs clk_wiz_0_synth_1 -jobs 8
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files -ipstatic_source_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/modelsim} {questa=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/questa} {riviera=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/riviera} {activehdl=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_target all [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset clk_wiz_0] C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+update_compile_order -fileset sources_1
+reset_target all [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci]
+export_ip_user_files -of_objects  [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci] -sync -no_script -force -quiet
+delete_ip_run [get_files -of_objects [get_fileset clk_wiz] C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz] }
+export_ip_user_files -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci]
+export_simulation -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci] -directory C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files -ipstatic_source_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/modelsim} {questa=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/questa} {riviera=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/riviera} {activehdl=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_run synth_1 -name synth_1
+set_property mark_debug true [get_nets [list {u_eth_top/u_udp/u_udp_rx/cur_state[0]} {u_eth_top/u_udp/u_udp_rx/cur_state[1]} {u_eth_top/u_udp/u_udp_rx/cur_state[2]} {u_eth_top/u_udp/u_udp_rx/cur_state[3]} {u_eth_top/u_udp/u_udp_rx/cur_state[4]} {u_eth_top/u_udp/u_udp_rx/cur_state[5]} {u_eth_top/u_udp/u_udp_rx/cur_state[6]}]]
+set_property mark_debug true [get_nets [list {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[4]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[11]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[12]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[15]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[30]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[3]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[10]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[13]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[24]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[26]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[28]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[2]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[5]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[14]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[27]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[29]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[0]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[1]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[6]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[7]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[8]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[9]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[25]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[31]}]]
+set_property mark_debug false [get_nets [list {u_eth_top/u_udp/u_udp_rx/udp_rec_data[24]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[25]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[26]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[27]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[28]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[29]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[30]} {u_eth_top/u_udp/u_udp_rx/udp_rec_data[31]}]]
+set_property mark_debug true [get_nets [list u_eth_top/u_udp/u_udp_rx/udp_rec_pkt_done]]
+set_property mark_debug true [get_nets [list u_start_transfer_ctrl/eth_rx_clk]]
+set_property mark_debug true [get_nets [list u_eth_top/u_eth_ctrl/protocol_sw_reg_0]]
+set_property mark_debug true [get_nets [list udp_tx_start_en]]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list u_eth_top/u_gmii_to_rgmii/u_rgmii_rx/gmii_tx_clk ]]
+set_property port_width 7 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_eth_top/u_udp/u_udp_rx/cur_state[0]} {u_eth_top/u_udp/u_udp_rx/cur_state[1]} {u_eth_top/u_udp/u_udp_rx/cur_state[2]} {u_eth_top/u_udp/u_udp_rx/cur_state[3]} {u_eth_top/u_udp/u_udp_rx/cur_state[4]} {u_eth_top/u_udp/u_udp_rx/cur_state[5]} {u_eth_top/u_udp/u_udp_rx/cur_state[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[0]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[1]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[2]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[3]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[4]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[5]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[6]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[7]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[8]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[9]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[10]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[11]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[12]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[13]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[14]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list u_eth_top/u_eth_ctrl/protocol_sw_reg_0 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list u_eth_top/u_udp/u_udp_rx/udp_rec_pkt_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list udp_tx_start_en ]]
+set_property target_constrs_file C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/constrs_1/new/ov5640_udp_pc.xdc [current_fileset -constrset]
+save_constraints -force
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+set_property mark_debug false [get_nets [list u_start_transfer_ctrl/eth_rx_clk]]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list u_eth_top/u_gmii_to_rgmii/u_rgmii_rx/gmii_tx_clk ]]
+set_property port_width 7 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_eth_top/u_udp/u_udp_rx/cur_state[0]} {u_eth_top/u_udp/u_udp_rx/cur_state[1]} {u_eth_top/u_udp/u_udp_rx/cur_state[2]} {u_eth_top/u_udp/u_udp_rx/cur_state[3]} {u_eth_top/u_udp/u_udp_rx/cur_state[4]} {u_eth_top/u_udp/u_udp_rx/cur_state[5]} {u_eth_top/u_udp/u_udp_rx/cur_state[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[0]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[1]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[2]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[3]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[4]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[5]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[6]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[7]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[8]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[9]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[10]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[11]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[12]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[13]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[14]} {u_eth_top/u_udp/u_udp_rx/udp_rec_byte_num[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list u_eth_top/u_eth_ctrl/protocol_sw_reg_0 ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list u_eth_top/u_udp/u_udp_rx/udp_rec_pkt_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list udp_tx_start_en ]]
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+refresh_design
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_target {localhost:3121/xilinx_tcf/Xilinx/00000000000000}
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property mark_debug true [get_nets [list u_eth_top/u_eth_ctrl_n_0]]
+set_property mark_debug true [get_nets [list {u_eth_top/u_udp_rx/next_state__0[2]}]]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list u_eth_top/u_gmii_to_rgmii/u_rgmii_rx/gmii_tx_clk ]]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_eth_top/u_udp_rx/next_state__0[2]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list u_eth_top/u_eth_ctrl_n_0 ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_design
+open_run synth_1 -name synth_1
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list u_eth_top/u_gmii_to_rgmii/u_rgmii_rx/gmii_rx_clk ]]
+set_property port_width 7 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_eth_top/u_udp/u_udp_rx/cur_state[0]} {u_eth_top/u_udp/u_udp_rx/cur_state[1]} {u_eth_top/u_udp/u_udp_rx/cur_state[2]} {u_eth_top/u_udp/u_udp_rx/cur_state[3]} {u_eth_top/u_udp/u_udp_rx/cur_state[4]} {u_eth_top/u_udp/u_udp_rx/cur_state[5]} {u_eth_top/u_udp/u_udp_rx/cur_state[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_eth_top/u_udp/u_udp_rx/data_byte_num[0]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[1]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[2]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[3]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[4]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[5]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[6]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[7]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[8]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[9]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[10]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[11]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[12]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[13]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[14]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {u_eth_top/u_udp/u_udp_rx/rec_data[0]} {u_eth_top/u_udp/u_udp_rx/rec_data[1]} {u_eth_top/u_udp/u_udp_rx/rec_data[2]} {u_eth_top/u_udp/u_udp_rx/rec_data[3]} {u_eth_top/u_udp/u_udp_rx/rec_data[4]} {u_eth_top/u_udp/u_udp_rx/rec_data[5]} {u_eth_top/u_udp/u_udp_rx/rec_data[6]} {u_eth_top/u_udp/u_udp_rx/rec_data[7]} {u_eth_top/u_udp/u_udp_rx/rec_data[8]} {u_eth_top/u_udp/u_udp_rx/rec_data[9]} {u_eth_top/u_udp/u_udp_rx/rec_data[10]} {u_eth_top/u_udp/u_udp_rx/rec_data[11]} {u_eth_top/u_udp/u_udp_rx/rec_data[12]} {u_eth_top/u_udp/u_udp_rx/rec_data[13]} {u_eth_top/u_udp/u_udp_rx/rec_data[14]} {u_eth_top/u_udp/u_udp_rx/rec_data[15]} {u_eth_top/u_udp/u_udp_rx/rec_data[16]} {u_eth_top/u_udp/u_udp_rx/rec_data[17]} {u_eth_top/u_udp/u_udp_rx/rec_data[18]} {u_eth_top/u_udp/u_udp_rx/rec_data[19]} {u_eth_top/u_udp/u_udp_rx/rec_data[20]} {u_eth_top/u_udp/u_udp_rx/rec_data[21]} {u_eth_top/u_udp/u_udp_rx/rec_data[22]} {u_eth_top/u_udp/u_udp_rx/rec_data[23]} {u_eth_top/u_udp/u_udp_rx/rec_data[24]} {u_eth_top/u_udp/u_udp_rx/rec_data[25]} {u_eth_top/u_udp/u_udp_rx/rec_data[26]} {u_eth_top/u_udp/u_udp_rx/rec_data[27]} {u_eth_top/u_udp/u_udp_rx/rec_data[28]} {u_eth_top/u_udp/u_udp_rx/rec_data[29]} {u_eth_top/u_udp/u_udp_rx/rec_data[30]} {u_eth_top/u_udp/u_udp_rx/rec_data[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list u_eth_top/u_eth_ctrl/protocol_sw ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_pkt_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list u_eth_top/u_udp/u_udp_rx/skip_en ]]
+save_constraints
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+close_design
+set_property PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes u_eth_top/u_udp/u_udp_rx/rec_pkt_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_eth_top/u_udp/u_udp_rx/rec_pkt_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes u_eth_top/u_udp/u_udp_rx/skip_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes u_eth_top/u_udp/u_udp_rx/rec_pkt_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_eth_top/u_udp/u_udp_rx/skip_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list u_eth_top/u_gmii_to_rgmii/u_rgmii_rx/gmii_rx_clk ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_eth_top/u_udp/u_udp_rx/rec_data[0]} {u_eth_top/u_udp/u_udp_rx/rec_data[1]} {u_eth_top/u_udp/u_udp_rx/rec_data[2]} {u_eth_top/u_udp/u_udp_rx/rec_data[3]} {u_eth_top/u_udp/u_udp_rx/rec_data[4]} {u_eth_top/u_udp/u_udp_rx/rec_data[5]} {u_eth_top/u_udp/u_udp_rx/rec_data[6]} {u_eth_top/u_udp/u_udp_rx/rec_data[7]} {u_eth_top/u_udp/u_udp_rx/rec_data[8]} {u_eth_top/u_udp/u_udp_rx/rec_data[9]} {u_eth_top/u_udp/u_udp_rx/rec_data[10]} {u_eth_top/u_udp/u_udp_rx/rec_data[11]} {u_eth_top/u_udp/u_udp_rx/rec_data[12]} {u_eth_top/u_udp/u_udp_rx/rec_data[13]} {u_eth_top/u_udp/u_udp_rx/rec_data[14]} {u_eth_top/u_udp/u_udp_rx/rec_data[15]} {u_eth_top/u_udp/u_udp_rx/rec_data[16]} {u_eth_top/u_udp/u_udp_rx/rec_data[17]} {u_eth_top/u_udp/u_udp_rx/rec_data[18]} {u_eth_top/u_udp/u_udp_rx/rec_data[19]} {u_eth_top/u_udp/u_udp_rx/rec_data[20]} {u_eth_top/u_udp/u_udp_rx/rec_data[21]} {u_eth_top/u_udp/u_udp_rx/rec_data[22]} {u_eth_top/u_udp/u_udp_rx/rec_data[23]} {u_eth_top/u_udp/u_udp_rx/rec_data[24]} {u_eth_top/u_udp/u_udp_rx/rec_data[25]} {u_eth_top/u_udp/u_udp_rx/rec_data[26]} {u_eth_top/u_udp/u_udp_rx/rec_data[27]} {u_eth_top/u_udp/u_udp_rx/rec_data[28]} {u_eth_top/u_udp/u_udp_rx/rec_data[29]} {u_eth_top/u_udp/u_udp_rx/rec_data[30]} {u_eth_top/u_udp/u_udp_rx/rec_data[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_eth_top/u_udp/u_udp_rx/gmii_rxd[0]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[1]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[2]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[3]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[4]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[5]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[6]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {u_eth_top/u_udp/u_udp_rx/des_ip[0]} {u_eth_top/u_udp/u_udp_rx/des_ip[1]} {u_eth_top/u_udp/u_udp_rx/des_ip[2]} {u_eth_top/u_udp/u_udp_rx/des_ip[3]} {u_eth_top/u_udp/u_udp_rx/des_ip[4]} {u_eth_top/u_udp/u_udp_rx/des_ip[5]} {u_eth_top/u_udp/u_udp_rx/des_ip[6]} {u_eth_top/u_udp/u_udp_rx/des_ip[7]} {u_eth_top/u_udp/u_udp_rx/des_ip[8]} {u_eth_top/u_udp/u_udp_rx/des_ip[9]} {u_eth_top/u_udp/u_udp_rx/des_ip[10]} {u_eth_top/u_udp/u_udp_rx/des_ip[11]} {u_eth_top/u_udp/u_udp_rx/des_ip[12]} {u_eth_top/u_udp/u_udp_rx/des_ip[13]} {u_eth_top/u_udp/u_udp_rx/des_ip[14]} {u_eth_top/u_udp/u_udp_rx/des_ip[15]} {u_eth_top/u_udp/u_udp_rx/des_ip[16]} {u_eth_top/u_udp/u_udp_rx/des_ip[17]} {u_eth_top/u_udp/u_udp_rx/des_ip[18]} {u_eth_top/u_udp/u_udp_rx/des_ip[19]} {u_eth_top/u_udp/u_udp_rx/des_ip[20]} {u_eth_top/u_udp/u_udp_rx/des_ip[21]} {u_eth_top/u_udp/u_udp_rx/des_ip[22]} {u_eth_top/u_udp/u_udp_rx/des_ip[23]} {u_eth_top/u_udp/u_udp_rx/des_ip[24]} {u_eth_top/u_udp/u_udp_rx/des_ip[25]} {u_eth_top/u_udp/u_udp_rx/des_ip[26]} {u_eth_top/u_udp/u_udp_rx/des_ip[27]} {u_eth_top/u_udp/u_udp_rx/des_ip[28]} {u_eth_top/u_udp/u_udp_rx/des_ip[29]} {u_eth_top/u_udp/u_udp_rx/des_ip[30]} {u_eth_top/u_udp/u_udp_rx/des_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {u_eth_top/u_udp/u_udp_rx/cur_state[0]} {u_eth_top/u_udp/u_udp_rx/cur_state[1]} {u_eth_top/u_udp/u_udp_rx/cur_state[2]} {u_eth_top/u_udp/u_udp_rx/cur_state[3]} {u_eth_top/u_udp/u_udp_rx/cur_state[4]} {u_eth_top/u_udp/u_udp_rx/cur_state[5]} {u_eth_top/u_udp/u_udp_rx/cur_state[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {u_eth_top/u_udp/u_udp_rx/data_byte_num[0]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[1]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[2]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[3]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[4]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[5]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[6]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[7]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[8]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[9]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[10]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[11]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[12]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[13]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[14]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list u_eth_top/u_udp/u_udp_rx/error_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list u_eth_top/u_udp/u_udp_rx/gmii_rx_dv ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list u_eth_top/u_eth_ctrl/protocol_sw ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_pkt_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list u_eth_top/u_udp/u_udp_rx/skip_en ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+refresh_hw_target {localhost:3121/xilinx_tcf/Xilinx/00000000000000}
+set_property PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_eth_top/u_udp/u_udp_rx/des_ip} {u_eth_top/u_udp/u_udp_rx/error_en} {u_eth_top/u_udp/u_udp_rx/gmii_rx_dv} {u_eth_top/u_udp/u_udp_rx/gmii_rxd} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_eth_top/u_udp/u_udp_rx/rec_pkt_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes u_eth_top/u_udp/u_udp_rx/skip_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+close_design
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list u_eth_top/u_gmii_to_rgmii/u_rgmii_rx/gmii_rx_clk ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_ip[0]} {u_eth_top/u_arp/u_arp_rx/src_ip[1]} {u_eth_top/u_arp/u_arp_rx/src_ip[2]} {u_eth_top/u_arp/u_arp_rx/src_ip[3]} {u_eth_top/u_arp/u_arp_rx/src_ip[4]} {u_eth_top/u_arp/u_arp_rx/src_ip[5]} {u_eth_top/u_arp/u_arp_rx/src_ip[6]} {u_eth_top/u_arp/u_arp_rx/src_ip[7]} {u_eth_top/u_arp/u_arp_rx/src_ip[8]} {u_eth_top/u_arp/u_arp_rx/src_ip[9]} {u_eth_top/u_arp/u_arp_rx/src_ip[10]} {u_eth_top/u_arp/u_arp_rx/src_ip[11]} {u_eth_top/u_arp/u_arp_rx/src_ip[12]} {u_eth_top/u_arp/u_arp_rx/src_ip[13]} {u_eth_top/u_arp/u_arp_rx/src_ip[14]} {u_eth_top/u_arp/u_arp_rx/src_ip[15]} {u_eth_top/u_arp/u_arp_rx/src_ip[16]} {u_eth_top/u_arp/u_arp_rx/src_ip[17]} {u_eth_top/u_arp/u_arp_rx/src_ip[18]} {u_eth_top/u_arp/u_arp_rx/src_ip[19]} {u_eth_top/u_arp/u_arp_rx/src_ip[20]} {u_eth_top/u_arp/u_arp_rx/src_ip[21]} {u_eth_top/u_arp/u_arp_rx/src_ip[22]} {u_eth_top/u_arp/u_arp_rx/src_ip[23]} {u_eth_top/u_arp/u_arp_rx/src_ip[24]} {u_eth_top/u_arp/u_arp_rx/src_ip[25]} {u_eth_top/u_arp/u_arp_rx/src_ip[26]} {u_eth_top/u_arp/u_arp_rx/src_ip[27]} {u_eth_top/u_arp/u_arp_rx/src_ip[28]} {u_eth_top/u_arp/u_arp_rx/src_ip[29]} {u_eth_top/u_arp/u_arp_rx/src_ip[30]} {u_eth_top/u_arp/u_arp_rx/src_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_eth_top/u_udp/u_udp_rx/cur_state[0]} {u_eth_top/u_udp/u_udp_rx/cur_state[1]} {u_eth_top/u_udp/u_udp_rx/cur_state[2]} {u_eth_top/u_udp/u_udp_rx/cur_state[3]} {u_eth_top/u_udp/u_udp_rx/cur_state[4]} {u_eth_top/u_udp/u_udp_rx/cur_state[5]} {u_eth_top/u_udp/u_udp_rx/cur_state[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {u_eth_top/u_udp/u_udp_rx/data_byte_num[0]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[1]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[2]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[3]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[4]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[5]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[6]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[7]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[8]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[9]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[10]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[11]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[12]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[13]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[14]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {u_eth_top/u_udp/u_udp_rx/des_ip[0]} {u_eth_top/u_udp/u_udp_rx/des_ip[1]} {u_eth_top/u_udp/u_udp_rx/des_ip[2]} {u_eth_top/u_udp/u_udp_rx/des_ip[3]} {u_eth_top/u_udp/u_udp_rx/des_ip[4]} {u_eth_top/u_udp/u_udp_rx/des_ip[5]} {u_eth_top/u_udp/u_udp_rx/des_ip[6]} {u_eth_top/u_udp/u_udp_rx/des_ip[7]} {u_eth_top/u_udp/u_udp_rx/des_ip[8]} {u_eth_top/u_udp/u_udp_rx/des_ip[9]} {u_eth_top/u_udp/u_udp_rx/des_ip[10]} {u_eth_top/u_udp/u_udp_rx/des_ip[11]} {u_eth_top/u_udp/u_udp_rx/des_ip[12]} {u_eth_top/u_udp/u_udp_rx/des_ip[13]} {u_eth_top/u_udp/u_udp_rx/des_ip[14]} {u_eth_top/u_udp/u_udp_rx/des_ip[15]} {u_eth_top/u_udp/u_udp_rx/des_ip[16]} {u_eth_top/u_udp/u_udp_rx/des_ip[17]} {u_eth_top/u_udp/u_udp_rx/des_ip[18]} {u_eth_top/u_udp/u_udp_rx/des_ip[19]} {u_eth_top/u_udp/u_udp_rx/des_ip[20]} {u_eth_top/u_udp/u_udp_rx/des_ip[21]} {u_eth_top/u_udp/u_udp_rx/des_ip[22]} {u_eth_top/u_udp/u_udp_rx/des_ip[23]} {u_eth_top/u_udp/u_udp_rx/des_ip[24]} {u_eth_top/u_udp/u_udp_rx/des_ip[25]} {u_eth_top/u_udp/u_udp_rx/des_ip[26]} {u_eth_top/u_udp/u_udp_rx/des_ip[27]} {u_eth_top/u_udp/u_udp_rx/des_ip[28]} {u_eth_top/u_udp/u_udp_rx/des_ip[29]} {u_eth_top/u_udp/u_udp_rx/des_ip[30]} {u_eth_top/u_udp/u_udp_rx/des_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {u_eth_top/u_udp/u_udp_rx/gmii_rxd[0]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[1]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[2]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[3]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[4]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[5]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[6]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {u_eth_top/u_udp/u_udp_rx/rec_data[0]} {u_eth_top/u_udp/u_udp_rx/rec_data[1]} {u_eth_top/u_udp/u_udp_rx/rec_data[2]} {u_eth_top/u_udp/u_udp_rx/rec_data[3]} {u_eth_top/u_udp/u_udp_rx/rec_data[4]} {u_eth_top/u_udp/u_udp_rx/rec_data[5]} {u_eth_top/u_udp/u_udp_rx/rec_data[6]} {u_eth_top/u_udp/u_udp_rx/rec_data[7]} {u_eth_top/u_udp/u_udp_rx/rec_data[8]} {u_eth_top/u_udp/u_udp_rx/rec_data[9]} {u_eth_top/u_udp/u_udp_rx/rec_data[10]} {u_eth_top/u_udp/u_udp_rx/rec_data[11]} {u_eth_top/u_udp/u_udp_rx/rec_data[12]} {u_eth_top/u_udp/u_udp_rx/rec_data[13]} {u_eth_top/u_udp/u_udp_rx/rec_data[14]} {u_eth_top/u_udp/u_udp_rx/rec_data[15]} {u_eth_top/u_udp/u_udp_rx/rec_data[16]} {u_eth_top/u_udp/u_udp_rx/rec_data[17]} {u_eth_top/u_udp/u_udp_rx/rec_data[18]} {u_eth_top/u_udp/u_udp_rx/rec_data[19]} {u_eth_top/u_udp/u_udp_rx/rec_data[20]} {u_eth_top/u_udp/u_udp_rx/rec_data[21]} {u_eth_top/u_udp/u_udp_rx/rec_data[22]} {u_eth_top/u_udp/u_udp_rx/rec_data[23]} {u_eth_top/u_udp/u_udp_rx/rec_data[24]} {u_eth_top/u_udp/u_udp_rx/rec_data[25]} {u_eth_top/u_udp/u_udp_rx/rec_data[26]} {u_eth_top/u_udp/u_udp_rx/rec_data[27]} {u_eth_top/u_udp/u_udp_rx/rec_data[28]} {u_eth_top/u_udp/u_udp_rx/rec_data[29]} {u_eth_top/u_udp/u_udp_rx/rec_data[30]} {u_eth_top/u_udp/u_udp_rx/rec_data[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list u_eth_top/u_arp/u_arp_rx/arp_rx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list u_eth_top/u_udp/u_udp_rx/error_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list u_eth_top/u_udp/u_udp_rx/gmii_rx_dv ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list u_eth_top/u_eth_ctrl/protocol_sw ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_pkt_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list u_eth_top/u_udp/u_udp_rx/skip_en ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+refresh_hw_target {localhost:3121/xilinx_tcf/Xilinx/00000000000000}
+set_property PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_eth_top/u_arp/u_arp_rx/arp_rx_done} {u_eth_top/u_arp/u_arp_rx/src_ip} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix bin { {u_eth_top/u_udp/u_udp_rx/cur_state} }
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_eth_top/u_arp/u_arp_rx/arp_rx_done} {u_eth_top/u_arp/u_arp_rx/src_ip} {u_eth_top/u_eth_ctrl/protocol_sw} {u_eth_top/u_udp/u_udp_rx/data_byte_num} {u_eth_top/u_udp/u_udp_rx/des_ip} {u_eth_top/u_udp/u_udp_rx/error_en} {u_eth_top/u_udp/u_udp_rx/gmii_rx_dv} {u_eth_top/u_udp/u_udp_rx/gmii_rxd} {u_eth_top/u_udp/u_udp_rx/rec_data} {u_eth_top/u_udp/u_udp_rx/rec_en} {u_eth_top/u_udp/u_udp_rx/rec_pkt_done} {u_eth_top/u_udp/u_udp_rx/skip_en} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_eth_top/u_udp/u_udp_rx/skip_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b0 [get_hw_probes u_eth_top/u_eth_ctrl/protocol_sw -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list u_eth_top/u_gmii_to_rgmii/u_rgmii_rx/gmii_rx_clk ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_ip[0]} {u_eth_top/u_arp/u_arp_rx/src_ip[1]} {u_eth_top/u_arp/u_arp_rx/src_ip[2]} {u_eth_top/u_arp/u_arp_rx/src_ip[3]} {u_eth_top/u_arp/u_arp_rx/src_ip[4]} {u_eth_top/u_arp/u_arp_rx/src_ip[5]} {u_eth_top/u_arp/u_arp_rx/src_ip[6]} {u_eth_top/u_arp/u_arp_rx/src_ip[7]} {u_eth_top/u_arp/u_arp_rx/src_ip[8]} {u_eth_top/u_arp/u_arp_rx/src_ip[9]} {u_eth_top/u_arp/u_arp_rx/src_ip[10]} {u_eth_top/u_arp/u_arp_rx/src_ip[11]} {u_eth_top/u_arp/u_arp_rx/src_ip[12]} {u_eth_top/u_arp/u_arp_rx/src_ip[13]} {u_eth_top/u_arp/u_arp_rx/src_ip[14]} {u_eth_top/u_arp/u_arp_rx/src_ip[15]} {u_eth_top/u_arp/u_arp_rx/src_ip[16]} {u_eth_top/u_arp/u_arp_rx/src_ip[17]} {u_eth_top/u_arp/u_arp_rx/src_ip[18]} {u_eth_top/u_arp/u_arp_rx/src_ip[19]} {u_eth_top/u_arp/u_arp_rx/src_ip[20]} {u_eth_top/u_arp/u_arp_rx/src_ip[21]} {u_eth_top/u_arp/u_arp_rx/src_ip[22]} {u_eth_top/u_arp/u_arp_rx/src_ip[23]} {u_eth_top/u_arp/u_arp_rx/src_ip[24]} {u_eth_top/u_arp/u_arp_rx/src_ip[25]} {u_eth_top/u_arp/u_arp_rx/src_ip[26]} {u_eth_top/u_arp/u_arp_rx/src_ip[27]} {u_eth_top/u_arp/u_arp_rx/src_ip[28]} {u_eth_top/u_arp/u_arp_rx/src_ip[29]} {u_eth_top/u_arp/u_arp_rx/src_ip[30]} {u_eth_top/u_arp/u_arp_rx/src_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_eth_top/u_udp/u_udp_rx/cur_state[0]} {u_eth_top/u_udp/u_udp_rx/cur_state[1]} {u_eth_top/u_udp/u_udp_rx/cur_state[2]} {u_eth_top/u_udp/u_udp_rx/cur_state[3]} {u_eth_top/u_udp/u_udp_rx/cur_state[4]} {u_eth_top/u_udp/u_udp_rx/cur_state[5]} {u_eth_top/u_udp/u_udp_rx/cur_state[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {u_eth_top/u_udp/u_udp_rx/data_byte_num[0]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[1]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[2]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[3]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[4]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[5]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[6]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[7]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[8]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[9]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[10]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[11]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[12]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[13]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[14]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {u_eth_top/u_udp/u_udp_rx/des_ip[0]} {u_eth_top/u_udp/u_udp_rx/des_ip[1]} {u_eth_top/u_udp/u_udp_rx/des_ip[2]} {u_eth_top/u_udp/u_udp_rx/des_ip[3]} {u_eth_top/u_udp/u_udp_rx/des_ip[4]} {u_eth_top/u_udp/u_udp_rx/des_ip[5]} {u_eth_top/u_udp/u_udp_rx/des_ip[6]} {u_eth_top/u_udp/u_udp_rx/des_ip[7]} {u_eth_top/u_udp/u_udp_rx/des_ip[8]} {u_eth_top/u_udp/u_udp_rx/des_ip[9]} {u_eth_top/u_udp/u_udp_rx/des_ip[10]} {u_eth_top/u_udp/u_udp_rx/des_ip[11]} {u_eth_top/u_udp/u_udp_rx/des_ip[12]} {u_eth_top/u_udp/u_udp_rx/des_ip[13]} {u_eth_top/u_udp/u_udp_rx/des_ip[14]} {u_eth_top/u_udp/u_udp_rx/des_ip[15]} {u_eth_top/u_udp/u_udp_rx/des_ip[16]} {u_eth_top/u_udp/u_udp_rx/des_ip[17]} {u_eth_top/u_udp/u_udp_rx/des_ip[18]} {u_eth_top/u_udp/u_udp_rx/des_ip[19]} {u_eth_top/u_udp/u_udp_rx/des_ip[20]} {u_eth_top/u_udp/u_udp_rx/des_ip[21]} {u_eth_top/u_udp/u_udp_rx/des_ip[22]} {u_eth_top/u_udp/u_udp_rx/des_ip[23]} {u_eth_top/u_udp/u_udp_rx/des_ip[24]} {u_eth_top/u_udp/u_udp_rx/des_ip[25]} {u_eth_top/u_udp/u_udp_rx/des_ip[26]} {u_eth_top/u_udp/u_udp_rx/des_ip[27]} {u_eth_top/u_udp/u_udp_rx/des_ip[28]} {u_eth_top/u_udp/u_udp_rx/des_ip[29]} {u_eth_top/u_udp/u_udp_rx/des_ip[30]} {u_eth_top/u_udp/u_udp_rx/des_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {u_eth_top/u_udp/u_udp_rx/gmii_rxd[0]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[1]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[2]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[3]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[4]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[5]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[6]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {u_eth_top/u_udp/u_udp_rx/rec_data[0]} {u_eth_top/u_udp/u_udp_rx/rec_data[1]} {u_eth_top/u_udp/u_udp_rx/rec_data[2]} {u_eth_top/u_udp/u_udp_rx/rec_data[3]} {u_eth_top/u_udp/u_udp_rx/rec_data[4]} {u_eth_top/u_udp/u_udp_rx/rec_data[5]} {u_eth_top/u_udp/u_udp_rx/rec_data[6]} {u_eth_top/u_udp/u_udp_rx/rec_data[7]} {u_eth_top/u_udp/u_udp_rx/rec_data[8]} {u_eth_top/u_udp/u_udp_rx/rec_data[9]} {u_eth_top/u_udp/u_udp_rx/rec_data[10]} {u_eth_top/u_udp/u_udp_rx/rec_data[11]} {u_eth_top/u_udp/u_udp_rx/rec_data[12]} {u_eth_top/u_udp/u_udp_rx/rec_data[13]} {u_eth_top/u_udp/u_udp_rx/rec_data[14]} {u_eth_top/u_udp/u_udp_rx/rec_data[15]} {u_eth_top/u_udp/u_udp_rx/rec_data[16]} {u_eth_top/u_udp/u_udp_rx/rec_data[17]} {u_eth_top/u_udp/u_udp_rx/rec_data[18]} {u_eth_top/u_udp/u_udp_rx/rec_data[19]} {u_eth_top/u_udp/u_udp_rx/rec_data[20]} {u_eth_top/u_udp/u_udp_rx/rec_data[21]} {u_eth_top/u_udp/u_udp_rx/rec_data[22]} {u_eth_top/u_udp/u_udp_rx/rec_data[23]} {u_eth_top/u_udp/u_udp_rx/rec_data[24]} {u_eth_top/u_udp/u_udp_rx/rec_data[25]} {u_eth_top/u_udp/u_udp_rx/rec_data[26]} {u_eth_top/u_udp/u_udp_rx/rec_data[27]} {u_eth_top/u_udp/u_udp_rx/rec_data[28]} {u_eth_top/u_udp/u_udp_rx/rec_data[29]} {u_eth_top/u_udp/u_udp_rx/rec_data[30]} {u_eth_top/u_udp/u_udp_rx/rec_data[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list u_eth_top/u_arp/u_arp_rx/arp_rx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list u_eth_top/u_udp/u_udp_rx/error_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list u_eth_top/u_udp/u_udp_rx/gmii_rx_dv ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list u_eth_top/u_eth_ctrl/protocol_sw ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_pkt_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list u_eth_top/u_udp/u_udp_rx/skip_en ]]
+save_constraints -force
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+refresh_design
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list u_eth_top/u_gmii_to_rgmii/u_rgmii_rx/gmii_rx_clk ]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_eth_top/u_arp/u_arp_rx/eth_type[0]} {u_eth_top/u_arp/u_arp_rx/eth_type[1]} {u_eth_top/u_arp/u_arp_rx/eth_type[2]} {u_eth_top/u_arp/u_arp_rx/eth_type[3]} {u_eth_top/u_arp/u_arp_rx/eth_type[4]} {u_eth_top/u_arp/u_arp_rx/eth_type[5]} {u_eth_top/u_arp/u_arp_rx/eth_type[6]} {u_eth_top/u_arp/u_arp_rx/eth_type[7]} {u_eth_top/u_arp/u_arp_rx/eth_type[8]} {u_eth_top/u_arp/u_arp_rx/eth_type[9]} {u_eth_top/u_arp/u_arp_rx/eth_type[10]} {u_eth_top/u_arp/u_arp_rx/eth_type[11]} {u_eth_top/u_arp/u_arp_rx/eth_type[12]} {u_eth_top/u_arp/u_arp_rx/eth_type[13]} {u_eth_top/u_arp/u_arp_rx/eth_type[14]} {u_eth_top/u_arp/u_arp_rx/eth_type[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_ip_t[0]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[1]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[2]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[3]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[4]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[5]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[6]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[7]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[8]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[9]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[10]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[11]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[12]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[13]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[14]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[15]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[16]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[17]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[18]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[19]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[20]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[21]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[22]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[23]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[24]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[25]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[26]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[27]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[28]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[29]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[30]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 48 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {u_eth_top/u_arp/u_arp_rx/des_mac_t[0]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[1]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[2]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[3]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[4]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[5]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[6]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[7]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[8]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[9]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[10]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[11]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[12]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[13]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[14]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[15]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[16]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[17]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[18]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[19]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[20]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[21]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[22]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[23]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[24]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[25]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[26]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[27]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[28]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[29]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[30]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[31]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[32]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[33]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[34]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[35]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[36]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[37]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[38]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[39]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[40]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[41]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[42]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[43]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[44]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[45]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[46]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[47]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {u_eth_top/u_arp/u_arp_rx/cur_state[0]} {u_eth_top/u_arp/u_arp_rx/cur_state[1]} {u_eth_top/u_arp/u_arp_rx/cur_state[2]} {u_eth_top/u_arp/u_arp_rx/cur_state[3]} {u_eth_top/u_arp/u_arp_rx/cur_state[4]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_ip[0]} {u_eth_top/u_arp/u_arp_rx/src_ip[1]} {u_eth_top/u_arp/u_arp_rx/src_ip[2]} {u_eth_top/u_arp/u_arp_rx/src_ip[3]} {u_eth_top/u_arp/u_arp_rx/src_ip[4]} {u_eth_top/u_arp/u_arp_rx/src_ip[5]} {u_eth_top/u_arp/u_arp_rx/src_ip[6]} {u_eth_top/u_arp/u_arp_rx/src_ip[7]} {u_eth_top/u_arp/u_arp_rx/src_ip[8]} {u_eth_top/u_arp/u_arp_rx/src_ip[9]} {u_eth_top/u_arp/u_arp_rx/src_ip[10]} {u_eth_top/u_arp/u_arp_rx/src_ip[11]} {u_eth_top/u_arp/u_arp_rx/src_ip[12]} {u_eth_top/u_arp/u_arp_rx/src_ip[13]} {u_eth_top/u_arp/u_arp_rx/src_ip[14]} {u_eth_top/u_arp/u_arp_rx/src_ip[15]} {u_eth_top/u_arp/u_arp_rx/src_ip[16]} {u_eth_top/u_arp/u_arp_rx/src_ip[17]} {u_eth_top/u_arp/u_arp_rx/src_ip[18]} {u_eth_top/u_arp/u_arp_rx/src_ip[19]} {u_eth_top/u_arp/u_arp_rx/src_ip[20]} {u_eth_top/u_arp/u_arp_rx/src_ip[21]} {u_eth_top/u_arp/u_arp_rx/src_ip[22]} {u_eth_top/u_arp/u_arp_rx/src_ip[23]} {u_eth_top/u_arp/u_arp_rx/src_ip[24]} {u_eth_top/u_arp/u_arp_rx/src_ip[25]} {u_eth_top/u_arp/u_arp_rx/src_ip[26]} {u_eth_top/u_arp/u_arp_rx/src_ip[27]} {u_eth_top/u_arp/u_arp_rx/src_ip[28]} {u_eth_top/u_arp/u_arp_rx/src_ip[29]} {u_eth_top/u_arp/u_arp_rx/src_ip[30]} {u_eth_top/u_arp/u_arp_rx/src_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 48 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_mac_t[0]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[1]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[2]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[3]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[4]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[5]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[6]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[7]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[8]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[9]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[10]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[11]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[12]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[13]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[14]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[15]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[16]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[17]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[18]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[19]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[20]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[21]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[22]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[23]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[24]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[25]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[26]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[27]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[28]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[29]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[30]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[31]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[32]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[33]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[34]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[35]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[36]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[37]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[38]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[39]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[40]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[41]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[42]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[43]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[44]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[45]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[46]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[47]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list {u_eth_top/u_arp/u_arp_rx/des_ip_t[0]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[1]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[2]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[3]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[4]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[5]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[6]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[7]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[8]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[9]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[10]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[11]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[12]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[13]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[14]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[15]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[16]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[17]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[18]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[19]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[20]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[21]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[22]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[23]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[24]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[25]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[26]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[27]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[28]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[29]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[30]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {u_eth_top/u_arp/gmii_txd[0]} {u_eth_top/u_arp/gmii_txd[1]} {u_eth_top/u_arp/gmii_txd[2]} {u_eth_top/u_arp/gmii_txd[3]} {u_eth_top/u_arp/gmii_txd[4]} {u_eth_top/u_arp/gmii_txd[5]} {u_eth_top/u_arp/gmii_txd[6]} {u_eth_top/u_arp/gmii_txd[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list {u_eth_top/u_udp/u_udp_rx/data_byte_num[0]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[1]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[2]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[3]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[4]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[5]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[6]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[7]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[8]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[9]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[10]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[11]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[12]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[13]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[14]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {u_eth_top/u_udp/u_udp_rx/rec_data[0]} {u_eth_top/u_udp/u_udp_rx/rec_data[1]} {u_eth_top/u_udp/u_udp_rx/rec_data[2]} {u_eth_top/u_udp/u_udp_rx/rec_data[3]} {u_eth_top/u_udp/u_udp_rx/rec_data[4]} {u_eth_top/u_udp/u_udp_rx/rec_data[5]} {u_eth_top/u_udp/u_udp_rx/rec_data[6]} {u_eth_top/u_udp/u_udp_rx/rec_data[7]} {u_eth_top/u_udp/u_udp_rx/rec_data[8]} {u_eth_top/u_udp/u_udp_rx/rec_data[9]} {u_eth_top/u_udp/u_udp_rx/rec_data[10]} {u_eth_top/u_udp/u_udp_rx/rec_data[11]} {u_eth_top/u_udp/u_udp_rx/rec_data[12]} {u_eth_top/u_udp/u_udp_rx/rec_data[13]} {u_eth_top/u_udp/u_udp_rx/rec_data[14]} {u_eth_top/u_udp/u_udp_rx/rec_data[15]} {u_eth_top/u_udp/u_udp_rx/rec_data[16]} {u_eth_top/u_udp/u_udp_rx/rec_data[17]} {u_eth_top/u_udp/u_udp_rx/rec_data[18]} {u_eth_top/u_udp/u_udp_rx/rec_data[19]} {u_eth_top/u_udp/u_udp_rx/rec_data[20]} {u_eth_top/u_udp/u_udp_rx/rec_data[21]} {u_eth_top/u_udp/u_udp_rx/rec_data[22]} {u_eth_top/u_udp/u_udp_rx/rec_data[23]} {u_eth_top/u_udp/u_udp_rx/rec_data[24]} {u_eth_top/u_udp/u_udp_rx/rec_data[25]} {u_eth_top/u_udp/u_udp_rx/rec_data[26]} {u_eth_top/u_udp/u_udp_rx/rec_data[27]} {u_eth_top/u_udp/u_udp_rx/rec_data[28]} {u_eth_top/u_udp/u_udp_rx/rec_data[29]} {u_eth_top/u_udp/u_udp_rx/rec_data[30]} {u_eth_top/u_udp/u_udp_rx/rec_data[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list {u_eth_top/u_udp/u_udp_rx/cur_state[0]} {u_eth_top/u_udp/u_udp_rx/cur_state[1]} {u_eth_top/u_udp/u_udp_rx/cur_state[2]} {u_eth_top/u_udp/u_udp_rx/cur_state[3]} {u_eth_top/u_udp/u_udp_rx/cur_state[4]} {u_eth_top/u_udp/u_udp_rx/cur_state[5]} {u_eth_top/u_udp/u_udp_rx/cur_state[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list {u_eth_top/u_udp/u_udp_rx/des_ip[0]} {u_eth_top/u_udp/u_udp_rx/des_ip[1]} {u_eth_top/u_udp/u_udp_rx/des_ip[2]} {u_eth_top/u_udp/u_udp_rx/des_ip[3]} {u_eth_top/u_udp/u_udp_rx/des_ip[4]} {u_eth_top/u_udp/u_udp_rx/des_ip[5]} {u_eth_top/u_udp/u_udp_rx/des_ip[6]} {u_eth_top/u_udp/u_udp_rx/des_ip[7]} {u_eth_top/u_udp/u_udp_rx/des_ip[8]} {u_eth_top/u_udp/u_udp_rx/des_ip[9]} {u_eth_top/u_udp/u_udp_rx/des_ip[10]} {u_eth_top/u_udp/u_udp_rx/des_ip[11]} {u_eth_top/u_udp/u_udp_rx/des_ip[12]} {u_eth_top/u_udp/u_udp_rx/des_ip[13]} {u_eth_top/u_udp/u_udp_rx/des_ip[14]} {u_eth_top/u_udp/u_udp_rx/des_ip[15]} {u_eth_top/u_udp/u_udp_rx/des_ip[16]} {u_eth_top/u_udp/u_udp_rx/des_ip[17]} {u_eth_top/u_udp/u_udp_rx/des_ip[18]} {u_eth_top/u_udp/u_udp_rx/des_ip[19]} {u_eth_top/u_udp/u_udp_rx/des_ip[20]} {u_eth_top/u_udp/u_udp_rx/des_ip[21]} {u_eth_top/u_udp/u_udp_rx/des_ip[22]} {u_eth_top/u_udp/u_udp_rx/des_ip[23]} {u_eth_top/u_udp/u_udp_rx/des_ip[24]} {u_eth_top/u_udp/u_udp_rx/des_ip[25]} {u_eth_top/u_udp/u_udp_rx/des_ip[26]} {u_eth_top/u_udp/u_udp_rx/des_ip[27]} {u_eth_top/u_udp/u_udp_rx/des_ip[28]} {u_eth_top/u_udp/u_udp_rx/des_ip[29]} {u_eth_top/u_udp/u_udp_rx/des_ip[30]} {u_eth_top/u_udp/u_udp_rx/des_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list {u_eth_top/u_udp/u_udp_rx/gmii_rxd[0]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[1]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[2]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[3]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[4]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[5]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[6]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list u_eth_top/u_arp/u_arp_rx/arp_rx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe14]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list u_eth_top/u_arp/arp_tx_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe15]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe15]
+connect_debug_port u_ila_0/probe15 [get_nets [list u_eth_top/u_arp/u_arp_rx/error_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe16]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe16]
+connect_debug_port u_ila_0/probe16 [get_nets [list u_eth_top/u_udp/u_udp_rx/error_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe17]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe17]
+connect_debug_port u_ila_0/probe17 [get_nets [list u_eth_top/u_udp/u_udp_rx/gmii_rx_dv ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe18]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe18]
+connect_debug_port u_ila_0/probe18 [get_nets [list u_eth_top/u_eth_ctrl/protocol_sw ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe19]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe19]
+connect_debug_port u_ila_0/probe19 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe20]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe20]
+connect_debug_port u_ila_0/probe20 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_pkt_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe21]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe21]
+connect_debug_port u_ila_0/probe21 [get_nets [list u_eth_top/u_arp/u_arp_rx/skip_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe22]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe22]
+connect_debug_port u_ila_0/probe22 [get_nets [list u_eth_top/u_udp/u_udp_rx/skip_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe23]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe23]
+connect_debug_port u_ila_0/probe23 [get_nets [list u_eth_top/u_arp/u_arp_tx/tx_done ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+save_wave_config {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+set_property PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix bin { {u_eth_top/u_udp/u_udp_rx/cur_state} }
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_eth_top/u_arp/arp_tx_en} {u_eth_top/u_arp/gmii_txd} {u_eth_top/u_arp/u_arp_rx/arp_rx_done} {u_eth_top/u_arp/u_arp_rx/cur_state} {u_eth_top/u_arp/u_arp_rx/des_ip_t} {u_eth_top/u_arp/u_arp_rx/des_mac_t} {u_eth_top/u_arp/u_arp_rx/error_en} {u_eth_top/u_arp/u_arp_rx/eth_type} {u_eth_top/u_arp/u_arp_rx/skip_en} {u_eth_top/u_arp/u_arp_rx/src_ip} {u_eth_top/u_arp/u_arp_rx/src_ip_t} {u_eth_top/u_arp/u_arp_rx/src_mac_t} {u_eth_top/u_arp/u_arp_tx/tx_done} {u_eth_top/u_eth_ctrl/protocol_sw} {u_eth_top/u_udp/u_udp_rx/data_byte_num} {u_eth_top/u_udp/u_udp_rx/des_ip} {u_eth_top/u_udp/u_udp_rx/error_en} {u_eth_top/u_udp/u_udp_rx/gmii_rx_dv} {u_eth_top/u_udp/u_udp_rx/gmii_rxd} {u_eth_top/u_udp/u_udp_rx/rec_data} {u_eth_top/u_udp/u_udp_rx/rec_en} {u_eth_top/u_udp/u_udp_rx/rec_pkt_done} {u_eth_top/u_udp/u_udp_rx/skip_en} }
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_eth_top/u_eth_ctrl/protocol_sw -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes u_eth_top/u_arp/u_arp_rx/skip_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_eth_top/u_arp/u_arp_rx/skip_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes u_eth_top/u_arp/arp_tx_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_eth_top/u_arp/arp_tx_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes u_eth_top/u_arp/u_arp_rx/skip_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property -dict [list CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {200.000}] [get_ips clk_wiz_0]
+generate_target all [get_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+catch { config_ip_cache -export [get_ips -all clk_wiz_0] }
+export_ip_user_files -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci]
+launch_runs clk_wiz_0_synth_1 -jobs 8
+wait_on_run clk_wiz_0_synth_1
+export_simulation -of_objects [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz_0/clk_wiz_0.xci] -directory C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/sim_scripts -ip_user_files_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files -ipstatic_source_dir C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.ip_user_files/ipstatic -lib_map_path [list {modelsim=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/modelsim} {questa=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/questa} {riviera=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/riviera} {activehdl=C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 8
+wait_on_run synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list u_eth_top/u_gmii_to_rgmii/u_rgmii_rx/gmii_rx_clk ]]
+set_property port_width 16 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_eth_top/u_arp/u_arp_rx/eth_type[0]} {u_eth_top/u_arp/u_arp_rx/eth_type[1]} {u_eth_top/u_arp/u_arp_rx/eth_type[2]} {u_eth_top/u_arp/u_arp_rx/eth_type[3]} {u_eth_top/u_arp/u_arp_rx/eth_type[4]} {u_eth_top/u_arp/u_arp_rx/eth_type[5]} {u_eth_top/u_arp/u_arp_rx/eth_type[6]} {u_eth_top/u_arp/u_arp_rx/eth_type[7]} {u_eth_top/u_arp/u_arp_rx/eth_type[8]} {u_eth_top/u_arp/u_arp_rx/eth_type[9]} {u_eth_top/u_arp/u_arp_rx/eth_type[10]} {u_eth_top/u_arp/u_arp_rx/eth_type[11]} {u_eth_top/u_arp/u_arp_rx/eth_type[12]} {u_eth_top/u_arp/u_arp_rx/eth_type[13]} {u_eth_top/u_arp/u_arp_rx/eth_type[14]} {u_eth_top/u_arp/u_arp_rx/eth_type[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_ip_t[0]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[1]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[2]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[3]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[4]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[5]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[6]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[7]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[8]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[9]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[10]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[11]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[12]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[13]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[14]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[15]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[16]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[17]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[18]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[19]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[20]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[21]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[22]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[23]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[24]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[25]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[26]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[27]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[28]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[29]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[30]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 48 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {u_eth_top/u_arp/u_arp_rx/des_mac_t[0]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[1]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[2]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[3]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[4]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[5]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[6]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[7]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[8]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[9]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[10]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[11]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[12]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[13]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[14]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[15]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[16]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[17]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[18]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[19]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[20]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[21]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[22]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[23]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[24]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[25]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[26]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[27]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[28]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[29]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[30]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[31]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[32]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[33]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[34]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[35]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[36]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[37]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[38]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[39]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[40]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[41]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[42]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[43]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[44]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[45]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[46]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[47]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {u_eth_top/u_arp/u_arp_rx/cur_state[0]} {u_eth_top/u_arp/u_arp_rx/cur_state[1]} {u_eth_top/u_arp/u_arp_rx/cur_state[2]} {u_eth_top/u_arp/u_arp_rx/cur_state[3]} {u_eth_top/u_arp/u_arp_rx/cur_state[4]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_ip[0]} {u_eth_top/u_arp/u_arp_rx/src_ip[1]} {u_eth_top/u_arp/u_arp_rx/src_ip[2]} {u_eth_top/u_arp/u_arp_rx/src_ip[3]} {u_eth_top/u_arp/u_arp_rx/src_ip[4]} {u_eth_top/u_arp/u_arp_rx/src_ip[5]} {u_eth_top/u_arp/u_arp_rx/src_ip[6]} {u_eth_top/u_arp/u_arp_rx/src_ip[7]} {u_eth_top/u_arp/u_arp_rx/src_ip[8]} {u_eth_top/u_arp/u_arp_rx/src_ip[9]} {u_eth_top/u_arp/u_arp_rx/src_ip[10]} {u_eth_top/u_arp/u_arp_rx/src_ip[11]} {u_eth_top/u_arp/u_arp_rx/src_ip[12]} {u_eth_top/u_arp/u_arp_rx/src_ip[13]} {u_eth_top/u_arp/u_arp_rx/src_ip[14]} {u_eth_top/u_arp/u_arp_rx/src_ip[15]} {u_eth_top/u_arp/u_arp_rx/src_ip[16]} {u_eth_top/u_arp/u_arp_rx/src_ip[17]} {u_eth_top/u_arp/u_arp_rx/src_ip[18]} {u_eth_top/u_arp/u_arp_rx/src_ip[19]} {u_eth_top/u_arp/u_arp_rx/src_ip[20]} {u_eth_top/u_arp/u_arp_rx/src_ip[21]} {u_eth_top/u_arp/u_arp_rx/src_ip[22]} {u_eth_top/u_arp/u_arp_rx/src_ip[23]} {u_eth_top/u_arp/u_arp_rx/src_ip[24]} {u_eth_top/u_arp/u_arp_rx/src_ip[25]} {u_eth_top/u_arp/u_arp_rx/src_ip[26]} {u_eth_top/u_arp/u_arp_rx/src_ip[27]} {u_eth_top/u_arp/u_arp_rx/src_ip[28]} {u_eth_top/u_arp/u_arp_rx/src_ip[29]} {u_eth_top/u_arp/u_arp_rx/src_ip[30]} {u_eth_top/u_arp/u_arp_rx/src_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 48 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_mac_t[0]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[1]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[2]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[3]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[4]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[5]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[6]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[7]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[8]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[9]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[10]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[11]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[12]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[13]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[14]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[15]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[16]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[17]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[18]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[19]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[20]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[21]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[22]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[23]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[24]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[25]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[26]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[27]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[28]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[29]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[30]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[31]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[32]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[33]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[34]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[35]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[36]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[37]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[38]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[39]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[40]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[41]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[42]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[43]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[44]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[45]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[46]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[47]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list {u_eth_top/u_arp/u_arp_rx/des_ip_t[0]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[1]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[2]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[3]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[4]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[5]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[6]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[7]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[8]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[9]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[10]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[11]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[12]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[13]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[14]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[15]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[16]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[17]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[18]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[19]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[20]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[21]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[22]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[23]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[24]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[25]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[26]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[27]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[28]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[29]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[30]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {u_eth_top/u_arp/gmii_txd[0]} {u_eth_top/u_arp/gmii_txd[1]} {u_eth_top/u_arp/gmii_txd[2]} {u_eth_top/u_arp/gmii_txd[3]} {u_eth_top/u_arp/gmii_txd[4]} {u_eth_top/u_arp/gmii_txd[5]} {u_eth_top/u_arp/gmii_txd[6]} {u_eth_top/u_arp/gmii_txd[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list {u_eth_top/u_udp/u_udp_rx/data_byte_num[0]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[1]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[2]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[3]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[4]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[5]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[6]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[7]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[8]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[9]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[10]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[11]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[12]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[13]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[14]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {u_eth_top/u_udp/u_udp_rx/rec_data[0]} {u_eth_top/u_udp/u_udp_rx/rec_data[1]} {u_eth_top/u_udp/u_udp_rx/rec_data[2]} {u_eth_top/u_udp/u_udp_rx/rec_data[3]} {u_eth_top/u_udp/u_udp_rx/rec_data[4]} {u_eth_top/u_udp/u_udp_rx/rec_data[5]} {u_eth_top/u_udp/u_udp_rx/rec_data[6]} {u_eth_top/u_udp/u_udp_rx/rec_data[7]} {u_eth_top/u_udp/u_udp_rx/rec_data[8]} {u_eth_top/u_udp/u_udp_rx/rec_data[9]} {u_eth_top/u_udp/u_udp_rx/rec_data[10]} {u_eth_top/u_udp/u_udp_rx/rec_data[11]} {u_eth_top/u_udp/u_udp_rx/rec_data[12]} {u_eth_top/u_udp/u_udp_rx/rec_data[13]} {u_eth_top/u_udp/u_udp_rx/rec_data[14]} {u_eth_top/u_udp/u_udp_rx/rec_data[15]} {u_eth_top/u_udp/u_udp_rx/rec_data[16]} {u_eth_top/u_udp/u_udp_rx/rec_data[17]} {u_eth_top/u_udp/u_udp_rx/rec_data[18]} {u_eth_top/u_udp/u_udp_rx/rec_data[19]} {u_eth_top/u_udp/u_udp_rx/rec_data[20]} {u_eth_top/u_udp/u_udp_rx/rec_data[21]} {u_eth_top/u_udp/u_udp_rx/rec_data[22]} {u_eth_top/u_udp/u_udp_rx/rec_data[23]} {u_eth_top/u_udp/u_udp_rx/rec_data[24]} {u_eth_top/u_udp/u_udp_rx/rec_data[25]} {u_eth_top/u_udp/u_udp_rx/rec_data[26]} {u_eth_top/u_udp/u_udp_rx/rec_data[27]} {u_eth_top/u_udp/u_udp_rx/rec_data[28]} {u_eth_top/u_udp/u_udp_rx/rec_data[29]} {u_eth_top/u_udp/u_udp_rx/rec_data[30]} {u_eth_top/u_udp/u_udp_rx/rec_data[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list {u_eth_top/u_udp/u_udp_rx/cur_state[0]} {u_eth_top/u_udp/u_udp_rx/cur_state[1]} {u_eth_top/u_udp/u_udp_rx/cur_state[2]} {u_eth_top/u_udp/u_udp_rx/cur_state[3]} {u_eth_top/u_udp/u_udp_rx/cur_state[4]} {u_eth_top/u_udp/u_udp_rx/cur_state[5]} {u_eth_top/u_udp/u_udp_rx/cur_state[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list {u_eth_top/u_udp/u_udp_rx/des_ip[0]} {u_eth_top/u_udp/u_udp_rx/des_ip[1]} {u_eth_top/u_udp/u_udp_rx/des_ip[2]} {u_eth_top/u_udp/u_udp_rx/des_ip[3]} {u_eth_top/u_udp/u_udp_rx/des_ip[4]} {u_eth_top/u_udp/u_udp_rx/des_ip[5]} {u_eth_top/u_udp/u_udp_rx/des_ip[6]} {u_eth_top/u_udp/u_udp_rx/des_ip[7]} {u_eth_top/u_udp/u_udp_rx/des_ip[8]} {u_eth_top/u_udp/u_udp_rx/des_ip[9]} {u_eth_top/u_udp/u_udp_rx/des_ip[10]} {u_eth_top/u_udp/u_udp_rx/des_ip[11]} {u_eth_top/u_udp/u_udp_rx/des_ip[12]} {u_eth_top/u_udp/u_udp_rx/des_ip[13]} {u_eth_top/u_udp/u_udp_rx/des_ip[14]} {u_eth_top/u_udp/u_udp_rx/des_ip[15]} {u_eth_top/u_udp/u_udp_rx/des_ip[16]} {u_eth_top/u_udp/u_udp_rx/des_ip[17]} {u_eth_top/u_udp/u_udp_rx/des_ip[18]} {u_eth_top/u_udp/u_udp_rx/des_ip[19]} {u_eth_top/u_udp/u_udp_rx/des_ip[20]} {u_eth_top/u_udp/u_udp_rx/des_ip[21]} {u_eth_top/u_udp/u_udp_rx/des_ip[22]} {u_eth_top/u_udp/u_udp_rx/des_ip[23]} {u_eth_top/u_udp/u_udp_rx/des_ip[24]} {u_eth_top/u_udp/u_udp_rx/des_ip[25]} {u_eth_top/u_udp/u_udp_rx/des_ip[26]} {u_eth_top/u_udp/u_udp_rx/des_ip[27]} {u_eth_top/u_udp/u_udp_rx/des_ip[28]} {u_eth_top/u_udp/u_udp_rx/des_ip[29]} {u_eth_top/u_udp/u_udp_rx/des_ip[30]} {u_eth_top/u_udp/u_udp_rx/des_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list {u_eth_top/u_udp/u_udp_rx/gmii_rxd[0]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[1]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[2]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[3]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[4]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[5]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[6]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list u_eth_top/u_arp/u_arp_rx/arp_rx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe14]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list u_eth_top/u_arp/arp_tx_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe15]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe15]
+connect_debug_port u_ila_0/probe15 [get_nets [list u_eth_top/u_arp/u_arp_rx/error_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe16]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe16]
+connect_debug_port u_ila_0/probe16 [get_nets [list u_eth_top/u_udp/u_udp_rx/error_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe17]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe17]
+connect_debug_port u_ila_0/probe17 [get_nets [list u_eth_top/u_udp/u_udp_rx/gmii_rx_dv ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe18]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe18]
+connect_debug_port u_ila_0/probe18 [get_nets [list u_eth_top/u_eth_ctrl/protocol_sw ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe19]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe19]
+connect_debug_port u_ila_0/probe19 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe20]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe20]
+connect_debug_port u_ila_0/probe20 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_pkt_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe21]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe21]
+connect_debug_port u_ila_0/probe21 [get_nets [list u_eth_top/u_arp/u_arp_rx/skip_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe22]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe22]
+connect_debug_port u_ila_0/probe22 [get_nets [list u_eth_top/u_udp/u_udp_rx/skip_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe23]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe23]
+connect_debug_port u_ila_0/probe23 [get_nets [list u_eth_top/u_arp/u_arp_tx/tx_done ]]
+refresh_design
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 2048 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+connect_debug_port u_ila_0/clk [get_nets [list u_eth_top/u_gmii_to_rgmii/u_rgmii_rx/gmii_rx_clk ]]
+set_property port_width 5 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {u_eth_top/u_arp/u_arp_rx/cur_state[0]} {u_eth_top/u_arp/u_arp_rx/cur_state[1]} {u_eth_top/u_arp/u_arp_rx/cur_state[2]} {u_eth_top/u_arp/u_arp_rx/cur_state[3]} {u_eth_top/u_arp/u_arp_rx/cur_state[4]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {u_eth_top/u_arp/u_arp_rx/des_ip_t[0]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[1]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[2]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[3]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[4]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[5]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[6]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[7]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[8]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[9]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[10]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[11]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[12]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[13]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[14]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[15]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[16]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[17]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[18]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[19]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[20]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[21]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[22]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[23]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[24]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[25]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[26]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[27]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[28]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[29]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[30]} {u_eth_top/u_arp/u_arp_rx/des_ip_t[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 48 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {u_eth_top/u_arp/u_arp_rx/des_mac_t[0]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[1]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[2]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[3]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[4]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[5]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[6]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[7]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[8]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[9]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[10]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[11]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[12]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[13]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[14]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[15]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[16]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[17]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[18]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[19]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[20]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[21]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[22]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[23]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[24]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[25]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[26]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[27]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[28]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[29]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[30]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[31]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[32]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[33]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[34]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[35]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[36]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[37]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[38]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[39]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[40]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[41]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[42]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[43]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[44]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[45]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[46]} {u_eth_top/u_arp/u_arp_rx/des_mac_t[47]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {u_eth_top/u_arp/u_arp_rx/op_data[0]} {u_eth_top/u_arp/u_arp_rx/op_data[1]} {u_eth_top/u_arp/u_arp_rx/op_data[2]} {u_eth_top/u_arp/u_arp_rx/op_data[3]} {u_eth_top/u_arp/u_arp_rx/op_data[4]} {u_eth_top/u_arp/u_arp_rx/op_data[5]} {u_eth_top/u_arp/u_arp_rx/op_data[6]} {u_eth_top/u_arp/u_arp_rx/op_data[7]} {u_eth_top/u_arp/u_arp_rx/op_data[8]} {u_eth_top/u_arp/u_arp_rx/op_data[9]} {u_eth_top/u_arp/u_arp_rx/op_data[10]} {u_eth_top/u_arp/u_arp_rx/op_data[11]} {u_eth_top/u_arp/u_arp_rx/op_data[12]} {u_eth_top/u_arp/u_arp_rx/op_data[13]} {u_eth_top/u_arp/u_arp_rx/op_data[14]} {u_eth_top/u_arp/u_arp_rx/op_data[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {u_eth_top/u_arp/u_arp_rx/eth_type[0]} {u_eth_top/u_arp/u_arp_rx/eth_type[1]} {u_eth_top/u_arp/u_arp_rx/eth_type[2]} {u_eth_top/u_arp/u_arp_rx/eth_type[3]} {u_eth_top/u_arp/u_arp_rx/eth_type[4]} {u_eth_top/u_arp/u_arp_rx/eth_type[5]} {u_eth_top/u_arp/u_arp_rx/eth_type[6]} {u_eth_top/u_arp/u_arp_rx/eth_type[7]} {u_eth_top/u_arp/u_arp_rx/eth_type[8]} {u_eth_top/u_arp/u_arp_rx/eth_type[9]} {u_eth_top/u_arp/u_arp_rx/eth_type[10]} {u_eth_top/u_arp/u_arp_rx/eth_type[11]} {u_eth_top/u_arp/u_arp_rx/eth_type[12]} {u_eth_top/u_arp/u_arp_rx/eth_type[13]} {u_eth_top/u_arp/u_arp_rx/eth_type[14]} {u_eth_top/u_arp/u_arp_rx/eth_type[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 5 [get_debug_ports u_ila_0/probe5]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {u_eth_top/u_arp/u_arp_rx/cnt[0]} {u_eth_top/u_arp/u_arp_rx/cnt[1]} {u_eth_top/u_arp/u_arp_rx/cnt[2]} {u_eth_top/u_arp/u_arp_rx/cnt[3]} {u_eth_top/u_arp/u_arp_rx/cnt[4]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe6]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe6]
+connect_debug_port u_ila_0/probe6 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_ip[0]} {u_eth_top/u_arp/u_arp_rx/src_ip[1]} {u_eth_top/u_arp/u_arp_rx/src_ip[2]} {u_eth_top/u_arp/u_arp_rx/src_ip[3]} {u_eth_top/u_arp/u_arp_rx/src_ip[4]} {u_eth_top/u_arp/u_arp_rx/src_ip[5]} {u_eth_top/u_arp/u_arp_rx/src_ip[6]} {u_eth_top/u_arp/u_arp_rx/src_ip[7]} {u_eth_top/u_arp/u_arp_rx/src_ip[8]} {u_eth_top/u_arp/u_arp_rx/src_ip[9]} {u_eth_top/u_arp/u_arp_rx/src_ip[10]} {u_eth_top/u_arp/u_arp_rx/src_ip[11]} {u_eth_top/u_arp/u_arp_rx/src_ip[12]} {u_eth_top/u_arp/u_arp_rx/src_ip[13]} {u_eth_top/u_arp/u_arp_rx/src_ip[14]} {u_eth_top/u_arp/u_arp_rx/src_ip[15]} {u_eth_top/u_arp/u_arp_rx/src_ip[16]} {u_eth_top/u_arp/u_arp_rx/src_ip[17]} {u_eth_top/u_arp/u_arp_rx/src_ip[18]} {u_eth_top/u_arp/u_arp_rx/src_ip[19]} {u_eth_top/u_arp/u_arp_rx/src_ip[20]} {u_eth_top/u_arp/u_arp_rx/src_ip[21]} {u_eth_top/u_arp/u_arp_rx/src_ip[22]} {u_eth_top/u_arp/u_arp_rx/src_ip[23]} {u_eth_top/u_arp/u_arp_rx/src_ip[24]} {u_eth_top/u_arp/u_arp_rx/src_ip[25]} {u_eth_top/u_arp/u_arp_rx/src_ip[26]} {u_eth_top/u_arp/u_arp_rx/src_ip[27]} {u_eth_top/u_arp/u_arp_rx/src_ip[28]} {u_eth_top/u_arp/u_arp_rx/src_ip[29]} {u_eth_top/u_arp/u_arp_rx/src_ip[30]} {u_eth_top/u_arp/u_arp_rx/src_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 48 [get_debug_ports u_ila_0/probe7]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe7]
+connect_debug_port u_ila_0/probe7 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_mac_t[0]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[1]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[2]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[3]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[4]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[5]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[6]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[7]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[8]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[9]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[10]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[11]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[12]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[13]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[14]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[15]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[16]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[17]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[18]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[19]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[20]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[21]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[22]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[23]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[24]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[25]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[26]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[27]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[28]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[29]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[30]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[31]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[32]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[33]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[34]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[35]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[36]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[37]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[38]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[39]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[40]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[41]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[42]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[43]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[44]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[45]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[46]} {u_eth_top/u_arp/u_arp_rx/src_mac_t[47]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe8]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe8]
+connect_debug_port u_ila_0/probe8 [get_nets [list {u_eth_top/u_arp/gmii_txd[0]} {u_eth_top/u_arp/gmii_txd[1]} {u_eth_top/u_arp/gmii_txd[2]} {u_eth_top/u_arp/gmii_txd[3]} {u_eth_top/u_arp/gmii_txd[4]} {u_eth_top/u_arp/gmii_txd[5]} {u_eth_top/u_arp/gmii_txd[6]} {u_eth_top/u_arp/gmii_txd[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe9]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe9]
+connect_debug_port u_ila_0/probe9 [get_nets [list {u_eth_top/u_arp/u_arp_rx/src_ip_t[0]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[1]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[2]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[3]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[4]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[5]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[6]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[7]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[8]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[9]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[10]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[11]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[12]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[13]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[14]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[15]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[16]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[17]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[18]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[19]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[20]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[21]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[22]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[23]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[24]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[25]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[26]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[27]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[28]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[29]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[30]} {u_eth_top/u_arp/u_arp_rx/src_ip_t[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe10]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe10]
+connect_debug_port u_ila_0/probe10 [get_nets [list {u_eth_top/u_udp/u_udp_rx/des_ip[0]} {u_eth_top/u_udp/u_udp_rx/des_ip[1]} {u_eth_top/u_udp/u_udp_rx/des_ip[2]} {u_eth_top/u_udp/u_udp_rx/des_ip[3]} {u_eth_top/u_udp/u_udp_rx/des_ip[4]} {u_eth_top/u_udp/u_udp_rx/des_ip[5]} {u_eth_top/u_udp/u_udp_rx/des_ip[6]} {u_eth_top/u_udp/u_udp_rx/des_ip[7]} {u_eth_top/u_udp/u_udp_rx/des_ip[8]} {u_eth_top/u_udp/u_udp_rx/des_ip[9]} {u_eth_top/u_udp/u_udp_rx/des_ip[10]} {u_eth_top/u_udp/u_udp_rx/des_ip[11]} {u_eth_top/u_udp/u_udp_rx/des_ip[12]} {u_eth_top/u_udp/u_udp_rx/des_ip[13]} {u_eth_top/u_udp/u_udp_rx/des_ip[14]} {u_eth_top/u_udp/u_udp_rx/des_ip[15]} {u_eth_top/u_udp/u_udp_rx/des_ip[16]} {u_eth_top/u_udp/u_udp_rx/des_ip[17]} {u_eth_top/u_udp/u_udp_rx/des_ip[18]} {u_eth_top/u_udp/u_udp_rx/des_ip[19]} {u_eth_top/u_udp/u_udp_rx/des_ip[20]} {u_eth_top/u_udp/u_udp_rx/des_ip[21]} {u_eth_top/u_udp/u_udp_rx/des_ip[22]} {u_eth_top/u_udp/u_udp_rx/des_ip[23]} {u_eth_top/u_udp/u_udp_rx/des_ip[24]} {u_eth_top/u_udp/u_udp_rx/des_ip[25]} {u_eth_top/u_udp/u_udp_rx/des_ip[26]} {u_eth_top/u_udp/u_udp_rx/des_ip[27]} {u_eth_top/u_udp/u_udp_rx/des_ip[28]} {u_eth_top/u_udp/u_udp_rx/des_ip[29]} {u_eth_top/u_udp/u_udp_rx/des_ip[30]} {u_eth_top/u_udp/u_udp_rx/des_ip[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 32 [get_debug_ports u_ila_0/probe11]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe11]
+connect_debug_port u_ila_0/probe11 [get_nets [list {u_eth_top/u_udp/u_udp_rx/rec_data[0]} {u_eth_top/u_udp/u_udp_rx/rec_data[1]} {u_eth_top/u_udp/u_udp_rx/rec_data[2]} {u_eth_top/u_udp/u_udp_rx/rec_data[3]} {u_eth_top/u_udp/u_udp_rx/rec_data[4]} {u_eth_top/u_udp/u_udp_rx/rec_data[5]} {u_eth_top/u_udp/u_udp_rx/rec_data[6]} {u_eth_top/u_udp/u_udp_rx/rec_data[7]} {u_eth_top/u_udp/u_udp_rx/rec_data[8]} {u_eth_top/u_udp/u_udp_rx/rec_data[9]} {u_eth_top/u_udp/u_udp_rx/rec_data[10]} {u_eth_top/u_udp/u_udp_rx/rec_data[11]} {u_eth_top/u_udp/u_udp_rx/rec_data[12]} {u_eth_top/u_udp/u_udp_rx/rec_data[13]} {u_eth_top/u_udp/u_udp_rx/rec_data[14]} {u_eth_top/u_udp/u_udp_rx/rec_data[15]} {u_eth_top/u_udp/u_udp_rx/rec_data[16]} {u_eth_top/u_udp/u_udp_rx/rec_data[17]} {u_eth_top/u_udp/u_udp_rx/rec_data[18]} {u_eth_top/u_udp/u_udp_rx/rec_data[19]} {u_eth_top/u_udp/u_udp_rx/rec_data[20]} {u_eth_top/u_udp/u_udp_rx/rec_data[21]} {u_eth_top/u_udp/u_udp_rx/rec_data[22]} {u_eth_top/u_udp/u_udp_rx/rec_data[23]} {u_eth_top/u_udp/u_udp_rx/rec_data[24]} {u_eth_top/u_udp/u_udp_rx/rec_data[25]} {u_eth_top/u_udp/u_udp_rx/rec_data[26]} {u_eth_top/u_udp/u_udp_rx/rec_data[27]} {u_eth_top/u_udp/u_udp_rx/rec_data[28]} {u_eth_top/u_udp/u_udp_rx/rec_data[29]} {u_eth_top/u_udp/u_udp_rx/rec_data[30]} {u_eth_top/u_udp/u_udp_rx/rec_data[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 7 [get_debug_ports u_ila_0/probe12]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe12]
+connect_debug_port u_ila_0/probe12 [get_nets [list {u_eth_top/u_udp/u_udp_rx/cur_state[0]} {u_eth_top/u_udp/u_udp_rx/cur_state[1]} {u_eth_top/u_udp/u_udp_rx/cur_state[2]} {u_eth_top/u_udp/u_udp_rx/cur_state[3]} {u_eth_top/u_udp/u_udp_rx/cur_state[4]} {u_eth_top/u_udp/u_udp_rx/cur_state[5]} {u_eth_top/u_udp/u_udp_rx/cur_state[6]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 8 [get_debug_ports u_ila_0/probe13]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe13]
+connect_debug_port u_ila_0/probe13 [get_nets [list {u_eth_top/u_udp/u_udp_rx/gmii_rxd[0]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[1]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[2]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[3]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[4]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[5]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[6]} {u_eth_top/u_udp/u_udp_rx/gmii_rxd[7]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 16 [get_debug_ports u_ila_0/probe14]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe14]
+connect_debug_port u_ila_0/probe14 [get_nets [list {u_eth_top/u_udp/u_udp_rx/data_byte_num[0]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[1]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[2]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[3]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[4]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[5]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[6]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[7]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[8]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[9]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[10]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[11]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[12]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[13]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[14]} {u_eth_top/u_udp/u_udp_rx/data_byte_num[15]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe15]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe15]
+connect_debug_port u_ila_0/probe15 [get_nets [list u_eth_top/u_arp/u_arp_rx/arp_rx_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe16]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe16]
+connect_debug_port u_ila_0/probe16 [get_nets [list u_eth_top/u_arp/arp_tx_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe17]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe17]
+connect_debug_port u_ila_0/probe17 [get_nets [list u_eth_top/u_arp/u_arp_rx/error_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe18]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe18]
+connect_debug_port u_ila_0/probe18 [get_nets [list u_eth_top/u_udp/u_udp_rx/error_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe19]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe19]
+connect_debug_port u_ila_0/probe19 [get_nets [list u_eth_top/u_udp/u_udp_rx/gmii_rx_dv ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe20]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe20]
+connect_debug_port u_ila_0/probe20 [get_nets [list u_eth_top/u_eth_ctrl/protocol_sw ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe21]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe21]
+connect_debug_port u_ila_0/probe21 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe22]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe22]
+connect_debug_port u_ila_0/probe22 [get_nets [list u_eth_top/u_udp/u_udp_rx/rec_pkt_done ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe23]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe23]
+connect_debug_port u_ila_0/probe23 [get_nets [list u_eth_top/u_arp/u_arp_rx/skip_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe24]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe24]
+connect_debug_port u_ila_0/probe24 [get_nets [list u_eth_top/u_udp/u_udp_rx/skip_en ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe25]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe25]
+connect_debug_port u_ila_0/probe25 [get_nets [list u_eth_top/u_arp/u_arp_tx/tx_done ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+save_wave_config {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+set_property PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_eth_top/u_udp/u_udp_rx/gmii_rxd} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_eth_top/u_arp/u_arp_rx/cnt} }
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {u_eth_top/u_arp/u_arp_rx/op_data} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+save_wave_config {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+set_property PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_eth_top/u_arp/u_arp_rx/skip_en -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}] -trigger_now
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bR [get_hw_probes u_eth_top/u_udp/u_udp_rx/rec_pkt_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq1'bX [get_hw_probes u_eth_top/u_udp/u_udp_rx/rec_pkt_done -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'hC0A8_010A [get_hw_probes u_eth_top/u_arp/u_arp_rx/des_ip_t -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq32'b1100_0000_1010_1000_0000_0001_0000_1010 [get_hw_probes u_eth_top/u_arp/u_arp_rx/des_ip_t -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property TRIGGER_COMPARE_VALUE eq32'hC0A8_010A [get_hw_probes u_eth_top/u_arp/u_arp_rx/des_ip_t -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+save_wave_config {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+export_ip_user_files -of_objects  [get_files C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci] -no_script -reset -force -quiet
+remove_files  C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz/clk_wiz.xci
+file delete -force C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz
+file delete -force c:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.srcs/sources_1/ip/clk_wiz
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]

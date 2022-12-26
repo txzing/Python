@@ -10,10 +10,12 @@ BUG：
     1、上位机被拖动，视频显示有问题
     2、一旦分辨率增大，帧率会受影响？未测试
 
+---
+
+# memory access and msg access framework
 
 ---
-# memory access and msg access framework
----
+
 ## udp_logic
 
 basic class open a udp socket and bind to port, then create a thread to recieve
@@ -162,10 +164,9 @@ PC向服务器发出
 
 | 0x0E 0x00 | 0x00 0x00 | 0x11     | 0x00 0x00 0x20 0x07 0x78 0x56 0x34 0x12 | 0xA5   |
 
-
-
+* 
 * 消息长		 预留段		 消息代码		通道标识		控制段
-0x00 0x07	 0x00 0x00	 0x80		   0x01 		  0x01
+  0x00 0x07	 0x00 0x00	 0x80		   0x01 		  0x01
 
 其中通道标识为摄像头通道选择，数值1代表仅打开摄像头1，数值2代表仅打开摄像头2，数值3代表同时打开两个摄像头，以此类推
 
@@ -180,5 +181,3 @@ PC向服务器发出
     0x?? 0x??	    0x00 0x00	        0x81		0x01 		0x?? 0x?? 0x??    N*bytes
 
     序列号代表以太网包序号，用于上位机识别，一副图像拆分成多次传输
-
-

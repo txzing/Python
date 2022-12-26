@@ -43,8 +43,8 @@ class picshow (threading.Thread):
     def run(self):
         print("开始线程" + str(self.threadID))
         while(~frame_queue.empty()):
-            # start = 0.0
-            # start = time.time()
+            start = 0.0
+            start = time.time()
             frame_bytes = frame_queue.get()
 
             # pic_data=bytearray(frame_bytes).hex()
@@ -93,10 +93,10 @@ class picshow (threading.Thread):
             #     video_queue.put(image)
             # self.Label.setPixmap(QPixmap.fromImage(image))
 
-            # end = time.time()
-            # seconds = end - start
-            # fps = 1 / seconds
-            # print('fps = %f'%fps)
+            end = time.time()
+            seconds = end - start
+            fps = 1 / seconds
+            print('fps = %f'%fps)
         
 # 00 07 00 00 80 01 00
 
@@ -510,7 +510,7 @@ class InitForm(QWidget):
                     frame = frame + Byte_data[9:]
                     self.cnt_index  = self.cnt_index  + 1             
             else :
-                print("cnt_index:%d != sn_index:%d"%(self.cnt_index,sn_index))
+                # print("cnt_index:%d != sn_index:%d"%(self.cnt_index,sn_index))
                 self.cnt_index  = 1
                 # print('send error, lose data')
 

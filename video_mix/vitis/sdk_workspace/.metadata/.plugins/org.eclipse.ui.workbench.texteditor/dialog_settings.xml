@@ -2,12 +2,14 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="false" key="isRegEx"/>
-		<item value="udp_qlen" key="selection"/>
+		<item value="send_video_channel" key="selection"/>
 		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="true" key="wrap"/>
 		<item value="false" key="wholeword"/>
 		<list key="findhistory">
+			<item value="send_video_channel"/>
+			<item value="sendchannel"/>
 			<item value="udp_qlen"/>
 			<item value="pFrames1"/>
 			<item value="pFrames0"/>
@@ -21,10 +23,9 @@
 			<item value="DEFAULT_IP_ADDRESS"/>
 			<item value="IP4_ADDR"/>
 			<item value="addr"/>
-			<item value="target_addr"/>
-			<item value="upcb"/>
 		</list>
 		<list key="replacehistory">
+			<item value="send_video_channel"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">

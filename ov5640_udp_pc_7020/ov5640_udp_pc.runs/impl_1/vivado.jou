@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Dec 26 17:24:29 2022
+# Process ID: 2400
+# Current directory: D:/workdir/pic_lwip_udp/ov5640_udp_pc_7020/ov5640_udp_pc.runs/impl_1
+# Command line: vivado.exe -log ov5640_udp_pc.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ov5640_udp_pc.tcl -notrace
+# Log file: D:/workdir/pic_lwip_udp/ov5640_udp_pc_7020/ov5640_udp_pc.runs/impl_1/ov5640_udp_pc.vdi
+# Journal file: D:/workdir/pic_lwip_udp/ov5640_udp_pc_7020/ov5640_udp_pc.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ov5640_udp_pc.tcl -notrace

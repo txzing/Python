@@ -1,0 +1,4 @@
+ERROR: Exception caught trying to open file C:\Users\txzing\Desktop\1_FPGA_Design\MPSoC_XCZU4EV_FPGA\XCZU4EV\23_ov5640_udp_pc\ov5640_udp_pc.runs\impl_1/runme.log
+	Exception name: Error
+	Exception error code: 70
+	Exception message: 没有权限

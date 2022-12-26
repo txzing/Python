@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Dec 23 16:04:15 2022
+# Process ID: 2680
+# Current directory: C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7620 C:\Users\txzing\Desktop\1_FPGA_Design\MPSoC_XCZU4EV_FPGA\XCZU4EV\23_ov5640_udp_pc\ov5640_udp_pc.xpr
+# Log file: C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/vivado.log
+# Journal file: C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/txzing/Desktop/1_FPGA_Design/MPSoC_XCZU4EV_FPGA/XCZU4EV/23_ov5640_udp_pc/ov5640_udp_pc.xpr
+report_ip_status -name ip_status 
+update_compile_order -fileset sources_1
+upgrade_ip -srcset clk_wiz [get_ips  {clk_wiz clk_wiz_0}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {clk_wiz clk_wiz_0}] -no_script -sync -force -quiet
+update_compile_order -fileset sources_1

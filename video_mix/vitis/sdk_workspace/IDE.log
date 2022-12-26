@@ -11649,3 +11649,227 @@ con
 17:29:31 INFO  : Platform repository initialization has completed.
 17:29:31 INFO  : Registering command handlers for Vitis TCF services
 17:29:48 INFO  : Successfully done query RDI_DATADIR 
+09:46:17 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\temp_xsdb_launch_script.tcl
+09:46:21 INFO  : XSCT server has started successfully.
+09:46:21 INFO  : plnx-install-location is set to ''
+09:46:21 INFO  : Successfully done setting XSCT server connection channel  
+09:46:21 INFO  : Successfully done setting workspace for the tool. 
+09:46:33 INFO  : Platform repository initialization has completed.
+09:46:34 INFO  : Registering command handlers for Vitis TCF services
+09:46:45 INFO  : Successfully done query RDI_DATADIR 
+10:13:37 INFO  : Result from executing command 'getProjects': system_wrapper
+10:13:37 INFO  : Result from executing command 'getPlatforms': system_wrapper|D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/system_wrapper.xpfm
+10:13:38 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:36:11 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+10:36:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:36:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+10:36:51 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+10:38:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:38:30 INFO  : Jtag cable 'Platform Cable USB 00000000000000' is selected.
+10:38:30 INFO  : 'jtag frequency' command is executed.
+10:38:30 INFO  : Sourcing of 'D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+10:38:30 INFO  : Context for 'APU' is selected.
+10:38:32 INFO  : System reset is completed.
+10:38:35 INFO  : 'after 3000' command is executed.
+10:38:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-5ba00477-0"}' command is executed.
+10:38:44 INFO  : FPGA configured successfully with bitstream "D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit"
+10:38:44 INFO  : Context for 'APU' is selected.
+10:38:45 INFO  : Hardware design and registers information is loaded from 'D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa'.
+10:38:45 INFO  : 'configparams force-mem-access 1' command is executed.
+10:38:45 INFO  : Context for 'APU' is selected.
+10:38:45 INFO  : Boot mode is read from the target.
+10:38:45 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:38:45 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:38:49 INFO  : The application 'D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:38:50 INFO  : 'set bp_38_49_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+10:38:51 INFO  : 'con -block -timeout 60' command is executed.
+10:38:51 INFO  : 'bpremove $bp_38_49_fsbl_bp' command is executed.
+10:38:51 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:38:51 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+10:38:58 INFO  : The application 'D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf' is downloaded to processor 'psu_cortexa53_0'.
+10:38:58 INFO  : 'configparams force-mem-access 0' command is executed.
+10:38:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-5ba00477-0"}
+fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf
+set bp_38_49_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_38_49_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:38:58 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+10:38:58 INFO  : 'con' command is executed.
+10:38:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+10:38:58 INFO  : Launch script is exported to file 'D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\.sdk\launch_scripts\single_application_debug\debugger_test-default.tcl'
+11:02:35 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:02:48 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:02:52 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:02:57 INFO  : Disconnected from the channel tcfchan#2.
+11:02:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:02:58 INFO  : Jtag cable 'Platform Cable USB 00000000000000' is selected.
+11:02:58 INFO  : 'jtag frequency' command is executed.
+11:02:58 INFO  : Sourcing of 'D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+11:02:58 INFO  : Context for 'APU' is selected.
+11:02:59 INFO  : System reset is completed.
+11:03:02 INFO  : 'after 3000' command is executed.
+11:03:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-5ba00477-0"}' command is executed.
+11:03:11 INFO  : FPGA configured successfully with bitstream "D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit"
+11:03:11 INFO  : Context for 'APU' is selected.
+11:03:11 INFO  : Hardware design and registers information is loaded from 'D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa'.
+11:03:11 INFO  : 'configparams force-mem-access 1' command is executed.
+11:03:11 INFO  : Context for 'APU' is selected.
+11:03:11 INFO  : Boot mode is read from the target.
+11:03:11 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+11:03:11 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+11:03:16 INFO  : The application 'D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+11:03:16 INFO  : 'set bp_3_16_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+11:03:17 INFO  : 'con -block -timeout 60' command is executed.
+11:03:17 INFO  : 'bpremove $bp_3_16_fsbl_bp' command is executed.
+11:03:17 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+11:03:17 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+11:03:24 INFO  : The application 'D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf' is downloaded to processor 'psu_cortexa53_0'.
+11:03:24 INFO  : 'configparams force-mem-access 0' command is executed.
+11:03:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-5ba00477-0"}
+fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf
+set bp_3_16_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_3_16_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:03:24 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+11:03:24 INFO  : 'con' command is executed.
+11:03:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+11:03:24 INFO  : Launch script is exported to file 'D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\.sdk\launch_scripts\single_application_debug\debugger_test-default.tcl'
+11:06:20 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:06:23 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:06:26 INFO  : Disconnected from the channel tcfchan#4.
+11:06:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:06:36 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+11:06:36 ERROR : Could not find ARM device on the board for connection 'Local'.
+Check if the target is in:
+1. Split JTAG - No operations are possible with ARM DAP.
+2. Non JTAG bootmode - Bootrom may need time to enable DAP.
+Please try again.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+2. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+3. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+11:06:57 INFO  : Checking for BSP changes to sync application flags for project 'test'...
+11:14:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:14:59 INFO  : Jtag cable 'Platform Cable USB 00000000000000' is selected.
+11:14:59 INFO  : 'jtag frequency' command is executed.
+11:14:59 INFO  : Sourcing of 'D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl' is done.
+11:15:00 INFO  : Context for 'APU' is selected.
+11:15:01 INFO  : System reset is completed.
+11:15:04 INFO  : 'after 3000' command is executed.
+11:15:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-14711093-0"}' command is executed.
+11:15:13 INFO  : FPGA configured successfully with bitstream "D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit"
+11:15:13 INFO  : Context for 'APU' is selected.
+11:15:13 INFO  : Hardware design and registers information is loaded from 'D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa'.
+11:15:13 INFO  : 'configparams force-mem-access 1' command is executed.
+11:15:13 INFO  : Context for 'APU' is selected.
+11:15:13 INFO  : Boot mode is read from the target.
+11:15:13 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+11:15:13 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+11:15:17 INFO  : The application 'D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf' is downloaded to processor 'psu_cortexa53_0'.
+11:15:17 INFO  : 'set bp_15_17_fsbl_bp [bpadd -addr &XFsbl_Exit]' command is executed.
+11:15:18 INFO  : 'con -block -timeout 60' command is executed.
+11:15:18 INFO  : 'bpremove $bp_15_17_fsbl_bp' command is executed.
+11:15:18 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+11:15:18 INFO  : Processor reset is completed for 'psu_cortexa53_0'.
+11:15:24 INFO  : The application 'D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf' is downloaded to processor 'psu_cortexa53_0'.
+11:15:24 INFO  : 'configparams force-mem-access 0' command is executed.
+11:15:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+source D:/Vivado/Vitis/2020.1/scripts/vitis/util/zynqmp_utils.tcl
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Platform Cable USB 00000000000000" && level==0 && jtag_device_ctx=="jsn-DLC9LP-00000000000000-14711093-0"}
+fpga -file D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/_ide/bitstream/system_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/hw/system_wrapper.xsa -mem-ranges [list {0x80000000 0xbfffffff} {0x400000000 0x5ffffffff} {0x1000000000 0x7fffffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+set mode [expr [mrd -value 0xFF5E0200] & 0xf]
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/system_wrapper/export/system_wrapper/sw/system_wrapper/boot/fsbl.elf
+set bp_15_17_fsbl_bp [bpadd -addr &XFsbl_Exit]
+con -block -timeout 60
+bpremove $bp_15_17_fsbl_bp
+targets -set -nocase -filter {name =~ "*A53*#0"}
+rst -processor
+dow D:/workdir/pic_lwip_udp/video_mix/vitis/sdk_workspace/test/Debug/test.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:15:24 INFO  : Context for processor 'psu_cortexa53_0' is selected.
+11:15:25 INFO  : 'con' command is executed.
+11:15:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A53*#0"}
+con
+----------------End of Script----------------
+
+11:15:25 INFO  : Launch script is exported to file 'D:\workdir\pic_lwip_udp\video_mix\vitis\sdk_workspace\.sdk\launch_scripts\single_application_debug\debugger_test-default.tcl'
+11:59:09 INFO  : Disconnected from the channel tcfchan#5.
